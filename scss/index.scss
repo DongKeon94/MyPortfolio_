@@ -1,0 +1,1187 @@
+@import "_style.scss";
+@import "_common.scss";
+@import "_mixin.scss"; 
+
+
+body {
+    color: #f2f2f2;
+    background-color: $main-backgroundcolor;
+    header {
+        position: absolute;
+        top: 1.4%; left: 50%;
+        transform: translateX(-50%);
+
+        h1 {
+            font-size: 0.7em;
+            @include responsive(tablet-size) {
+                font-size: 1em;
+            }
+        }
+    }
+    
+    main {
+
+        // TITLE 섹션
+        section.description-1 {
+            overflow: hidden;
+
+            .banner-img {
+                display: block;
+                width: 100%;
+                position: absolute;
+                padding-top: 20%;
+                z-index: -1;
+                
+                @include responsive(tablet-size) {
+                    padding-top: 0;
+                }
+            }
+            
+            .confix {
+                .main-top {
+                    @include padding-set();
+                    @include confix();
+                    
+                    height: 580px;
+
+                    @include responsive(tablet-size) {
+                        height: 780px;
+                    }
+
+                    @include responsive(pc-size) {
+                        height: 980px;
+                    }
+
+                    // 숫자 LIST
+                    .num-motion {
+                        position: absolute;
+                        left: 3%;
+                        text-align: center;
+                        cursor: default;
+
+                        // 넘버 호버시 돌아가는 모션
+                        ul {
+                            li {
+                                &:hover {
+                                    animation: num-spin 0.5s ease;
+            
+                                    @keyframes num-spin {
+                                        0% {transform: rotateZ(0deg);}
+                                        100% {transform: rotateZ(360deg);}
+                                    }
+                                }
+                            }
+                        }
+                        @include responsive(tablet-size) {
+                            font-size: 3vmin;
+                        }
+    
+                        @include responsive(pc-size) {
+                            height: 900px;
+                            line-height: 36px;
+                        }
+    
+                    }
+
+                    // DOCTYPE
+                    .docty {
+                        position: absolute;
+                        left: 10%;
+                        color: #003c8f;
+                        @include responsive(tablet-size) {
+                            font-size: 3vmin;
+                        }
+    
+                        @include responsive(pc-size) {
+                            height: 900px;
+                            line-height: 36px;
+                        }
+                    }
+
+                    // HELLO
+                    .hello {
+                        position: absolute;
+                        top: 18%; left: 50%; 
+                        transform: translateX(-50%);
+                        
+                        //Hello 텍스트 나타나는 애니메이션
+                        animation: side-right-text 1.2s both;
+                        @keyframes side-right-text  {
+                            0% {
+                                transform: translateX(150%);
+                                opacity: 0;
+                            }
+                            100% {
+                                transform: translateX(-50%);
+                                opacity: 1;
+                            }
+                        }
+
+                        .hello-left {
+                            font-size: 0.9em;
+                            color: #b6c017;
+                            transform: translateY(-1px);
+
+                            @include responsive(tablet-size) {
+                                font-size: 2.5vmin;
+                            }
+                        }
+
+                        .hello-text {
+                            width: 250px; height: 60px;
+                            line-height: 60px;
+                            border-radius: 10px;
+                            background-color: white;
+                            cursor: pointer;
+                            filter: drop-shadow(3px 4px 1px rgba(255,255,255,0.7));
+                            transition: background 0.5s;
+
+                            @include responsive(tablet-size) {
+                                width: 40vmax; height: 10vmin;
+                                line-height: 10vmin;
+                            }
+                            
+                            @include responsive(pc-size) {
+                                width: 35vmax; height: 11vmin;
+                                line-height: 11vmin;
+                            }
+                            
+                            p {
+                                font-size: 1.4em;
+                                text-align: center;
+                                color: #333;
+                                
+                                @include responsive(tablet-size) {
+                                    font-size: 3vw;
+                                }
+                                @include responsive(pc-size) {
+                                    font-size: 2.5vw;
+                                }
+                            }
+                        }
+
+                        .balloon_triangle {
+                            position: absolute;
+                            bottom: 0%; left: 50%;
+                            display: block;
+                            width: 0px; height: 0px;
+                            border-top: solid 30px #fff;
+                            border-left: solid 15px transparent;
+                            border-right: solid 15px transparent;
+                            filter: drop-shadow(1px 4px 1px rgba(255,255,255,0.7));
+                            transform: translate(-50%,42%);
+                            transition: all 0.5s;
+
+                            @include responsive(tablet-size) {
+                                border-top: solid 50px #fff;
+                                border-left: solid 25px transparent;
+                                border-right: solid 25px transparent;
+                                transform: translate(-50%,35%);
+
+                            }
+
+                            @include responsive(pc-size) {
+                                border-top: solid 70px #fff;
+                                border-left: solid 35px transparent;
+                                border-right: solid 35px transparent;
+                                transform: translate(-50%,50%);
+                            }
+                        }
+
+                        .hello-right {
+                            float: right;
+                            font-size: 0.9em;
+                            color: #b6c017;
+                            transform: translateY(3px);
+                            
+                            @include responsive(tablet-size) {
+                                font-size: 2.5vmin;
+                            }
+                        }
+                    }
+
+                    // ITS_ME
+                    .its-me {
+                        position: absolute;
+                        top: 42%; left: 50%;
+                        transform: translateX(-50%);
+                        
+                        // ITS_ME 텍스트 나타나는 애니메이션
+                        animation: side-left-text 1.2s both;
+                        @keyframes side-left-text  {
+                            0% {
+                                transform: translateX(-600%);
+                                opacity: 0;
+                            }
+                            100% {
+                                transform: translateX(-50%);
+                                opacity: 1;
+                            }
+                        }
+
+                        .its-left {
+                            position: absolute;
+                            top: 0; left: 0;
+                            font-size: 0.9em;
+                            color: #d38e44;
+                            transform: translateX(-90%);
+
+                            @include responsive(tablet-size) {
+                                font-size: 2.5vmin;
+                            }
+                        }
+
+                        .its-images {
+                            width: 100px; height: 100px;
+                            text-align: center;
+                            border-radius: 50%;
+                            background-color: #656565;
+
+                            @include responsive(tablet-size) {
+                                width: 13vmax; height: 13vmax; 
+                            }
+                            @include responsive(pc-size) {
+                                width: 7vmax; height: 7vmax; 
+                            }
+                            
+                            .image {
+                                width: 90px; height: 90px;
+                                border-radius: 100%;
+                                background-color: #fff;
+                                transform: translateY(5%);
+
+                                @include responsive(tablet-size) {
+                                    width: 12vmax; height: 12vmax;
+                                }
+                                @include responsive(pc-size) {
+                                    width: 6.4vmax; height: 6.4vmax;
+                                }
+                            }
+                        }
+
+                        .its-right {
+                            position: absolute;
+                            bottom: 0; right: 0;
+                            font-size: 0.9em;
+                            color: #d38e44;
+                            transform: translateX(90%);
+                            @include responsive(tablet-size) {
+                                font-size: 2.5vmin;
+                            }
+                        }
+                    } // ITS_ME 종료
+
+                    // TITLE
+                    .title {
+                        position: absolute;
+                        top: 70%; left: 50%;
+                        transform: translateX(-50%);
+
+                        // TITLE 텍스트 애니메이션
+                        animation: text-up 3s ease;
+                        @keyframes text-up {
+                            0% { opacity: 0; }
+                            100% { opacity: 1; }
+                        }
+                        .title-left {
+                            font-size: 0.9em;
+                            color: #ab47bc;
+                            transform: translateX(-20%);
+                            @include responsive(tablet-size) {
+                                font-size: 2.5vmin;
+                            }
+                        }
+
+                        p {
+                            font-size: 0.99em;
+                            text-align: center;
+                            @include responsive(tablet-size) {
+                                font-size: 3.3vmin;
+                                line-height: 50px;
+                                letter-spacing: 1px;
+                            }
+                            .title-text {
+                                font-size: 1.3em;
+                                font-weight: bold;
+                                @include responsive(tablet-size) {
+                                    font-size: 4.5vmin;
+                                }
+                            }
+                        }
+
+                        .title-right {
+                            position: absolute;
+                            bottom: 0; right: 0;
+                            font-size: 0.9em;
+                            color: #ab47bc;
+                            transform: translate(50%, 50%);
+                            @include responsive(tablet-size) {
+                                font-size: 2.5vmin;
+                                transform: translate(50%, 80%);
+                            }
+                            @include responsive(pc-size) {
+                                font-size: 2.5vmin;
+                                transform: translate(60%, 80%);
+                            }
+                        }
+                    }// TITLE 종료
+
+                    // 회전하는 우주이미지
+                    .main-image1 {
+                        float: right;
+                        width: 35%;
+                        transform: translate(67%, -60%);
+                        opacity: 0.9;
+                        @include responsive(tablet-size) {
+                            transform: translate(57%, -65%);
+                        }
+
+                        // 회전하는 우주이미지 애니메이션
+                        img {
+                            width: 100%;
+                            animation: spin-space 3s linear infinite;
+                
+                            @keyframes spin-space {
+                                0% {
+                                    transform: rotateZ(0deg);
+                                }
+                                100% {
+                                    transform: rotateZ(360deg);
+                                }
+                            }
+                        }
+                        
+                    }
+
+                    // 외계인이랑 손잡는 이미지
+                    .main-image2 {
+                        position: absolute;
+                        bottom: 0; left: 0;
+                        display: none;
+                        padding-left: 1%;
+                        transform: translateY(-40%);
+                        opacity: 0.9;
+
+                        @include responsive(tablet-size) {
+                            display: block;
+                            img {
+                                width: 18vmax;
+                            }
+                        }
+                        @include responsive(pc-size) {
+                            img {
+                                width: 38vmin;
+                                transform: translate(-10%);
+                            }
+                        }
+                    } 
+
+                    // 풍선 올라가는 이미지1
+                    .main-image3 {
+                        position: absolute;
+                        bottom: 0; right: 0;
+                        display: none;
+                        @include responsive(tablet-size) {
+                            display: block;
+                        }
+                        
+                        img {
+                            transform: translate(-90%, -70%);
+                            animation: up-img1 15s ease;
+                            animation-fill-mode: both;
+    
+                            @keyframes up-img1 {
+                                0% {
+                                    margin-bottom: 0px;
+                                    transform: scale(0);
+                                }
+                                100% {
+                                    margin-bottom: 80em;
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+
+                    } 
+                }
+            }
+        } // section.description-1 종료
+        
+
+        // INTRODUCE 섹션
+        section.description-2 {
+            .confix {
+                @include padding-set();
+                @include confix();
+
+                // introduce
+                .introduce {
+                    display: flex;
+
+                    img {
+                        width: 5.5em;
+                        margin-right: 10px;
+                        @include responsive(tablet-size) {
+                            width: 6em;
+                        }
+                    }
+                    .type-text {
+                        font-size: 1.1em;
+                        font-weight: bold;
+                        @include responsive(tablet-size) {
+                            font-size: 1.3em;
+                        }
+                        .typing-txt{display: none;}
+
+                        .typing ul li.on {  
+                            display: inline-block; 
+                            animation: cursor 0.5s infinite; 
+                        }
+                        @keyframes cursor{ 
+                            0%{border-right: 1px solid #fff} 
+                            50%{border-right: 1px solid #000} 
+                            100%{border-right: 1px solid #fff} 
+                        }
+                    }
+                }
+
+                // VISION
+                .vision {
+                    margin-top: 4em;
+                    h2 {
+                        text-align: center;
+
+                        span {
+                            font-size: 1.7em;
+                            background: $vision-text;
+                            @include gradienttitle();
+                        }
+                    }
+
+                    p {
+                        margin-top: 3em;
+                        text-align: center;
+                        line-height: 30px;
+                        
+                        @include responsive(tablet-size) {
+                            .br-none {
+                                display: none;
+                            }
+                        }
+                        @include responsive(pc-size) {
+                            font-size: 1.1em;
+                        }
+                    }
+                }
+
+                // 풍선올라가는 이미지2
+                .up-img2 {
+                    position: absolute;
+                    bottom: -10%; right: 5%;
+                    width: 4vmax;
+                    display: none;
+                    @include responsive(tablet-size) {
+                        display: block;
+                        z-index: 2;
+                    }
+                }
+
+                // INTRODUCTION
+                .introduction {
+                    margin-top: 4em;
+
+                    // <introduction> 상위 텍스트
+                    h2 {
+                        text-align: left;
+                        margin-bottom: 0.5em;
+                        @include responsive(pc-size) {
+                            padding-left: 150px;
+                        }
+                        span {
+                            font-size: 1.6em;
+                            background: $int-text;
+                            @include gradienttitle();
+                        }
+                    } 
+
+                    .introduction-flex {
+                        
+                        width: 100%;
+                        @include responsive(tablet-size) {
+                            display: flex;
+                            gap: 2em;
+                        }
+                        @include responsive(pc-size) {
+                            justify-content: center;
+                            gap: 4em;
+                        }
+
+                        // personal
+                        .personal {
+                            display: flex;
+                            flex-direction: column;
+                            justify-content: center;
+                            padding: 10px;
+                            border-radius: 5px;
+                            box-shadow: 0px 0px 7px #fff;
+                            color: #000;
+                            background-color: #e8f5e9;
+
+                            @include responsive(tablet-size) {
+                                width: 50%; height: 30em;
+                            }
+
+                            @include responsive(pc-size) {
+                                width: 35%;
+                            }
+                    
+                            ul {
+                                li {
+                                    .personal-text {
+                                        font-size: 1.4em;
+                                        margin-bottom: 5px;
+                                    }
+    
+                                    ol {
+                                        margin-bottom: 20px;
+    
+                                        li {
+                                            font-size: 1em;
+                                            text-align: justify;
+                                            line-height: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        } // personal 종료
+                        
+                        // ability
+                        .ability {
+                            margin-top: 1.5em;
+                            padding: 10px;
+                            border-radius: 5px;
+                            box-shadow: 0px 0px 7px #fff;
+                            color: #000;
+                            background-color: #e8f5e9;
+                            @include responsive(tablet-size) {
+                                width: 50%;
+                                margin-top: 0;
+                                transform: translateY(10%);
+                            }
+                            @include responsive(pc-size) {
+                                width: 39%;
+                            }
+
+                            .ability-text {
+                                font-size: 1.4em;
+                                margin-bottom: 1em;
+                            }
+
+                            .skills {
+                                width: 100%;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-wrap: wrap;
+
+                                .skills-charts {
+                                    display: flex;
+                                    justify-content: center;
+                                    flex-wrap: wrap;
+                                    gap:15px;
+
+                                    .skills-chart{
+                                        position: relative;
+                                        border: 1px solid black;
+                                        border-radius: 50%;
+                                        cursor: pointer;
+                                        z-index: 2;
+
+                                        img {
+                                            position: absolute;
+                                            left: 50%;
+                                            top: 50%;
+                                            transform: translate(-50%,-50%);
+                                            width: 60%;
+                                            
+                                        }
+                                        
+                                        h2 {
+                                            font-size: 0;
+                                        }
+                                        
+                                        &:nth-child(1) circle {
+                                            stroke: #4e88e1;
+                                        }
+                                        &:nth-child(2) circle {
+                                            stroke: #b02629;
+                                        }
+                                        &:nth-child(3) circle {
+                                            stroke: #19cdca;
+                                        }
+                                        &:nth-child(4) circle {
+                                            stroke: #e4732a;
+                                        }
+                                        &:nth-child(5) circle {
+                                            stroke: #b24a9c;
+                                        }
+                                        &:nth-child(6) circle {
+                                            stroke: #4550a3;
+                                        }
+                                        
+                                        svg {
+                                            width: 200px;
+                                            height: 200px;
+                                            
+                                            circle {
+                                                fill : #e8f5e9;
+                                                stroke-width: 50;
+                                                stroke-dasharray: 440;
+                                                stroke-dashoffset: 440;
+                                                // animation: line 2s forwards;  
+                                                transform: rotate(-90deg);
+                                                transform-origin: 50.5% 50.5%;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            .modal-on {
+                                position: fixed;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                overflow: hidden;
+                                z-index: 3;
+                                backdrop-filter: blur(2px);
+                            }
+                            .skills-modal {
+                                
+                                .skills-modal-box {
+                                    position: fixed;
+                                    top: 73%; left: 50%;
+                                    transform: translate(-50%,-50%);
+                                    width: 15rem;
+                                    height: 30rem;
+                                    border-radius: 10px;
+                                    background-color: #bdbdbd;
+                                    display: none;
+                                    z-index: 4;
+    
+                                    @include responsive(tablet-size) {
+                                        top: 52%; left: 50%;
+                                    }
+    
+                                    .closeBtn {
+                                        position: absolute;
+                                        top: 1%; right: 7%;
+                                        font-size: 3.5em;
+                                        transform: translate(-1%, -7%);
+                                        cursor: pointer;
+                                    }
+    
+                                    .skills-text {
+                                        padding: 1em;
+                                        width: 100%;
+                                        height: 100%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        gap: 3em;
+    
+                                        img {
+                                            width: 10em;
+                                        }
+                                        p {
+                                            font-size: 0.9em;
+                                            text-align: justify;
+                                            @include responsive(tablet-size) {
+                                                font-size: 1em;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        } // ability종료
+                    } // introduction-flex종료
+
+                    
+
+                    // </introdoution> 하위 텍스트
+                    .introdoution-bottom {
+                        float: right;
+                        margin: 0.5em 0;
+                        @include responsive(tablet-size) {
+                            margin: 5em 0;
+                        }
+                        @include responsive(pc-size) {
+                            padding-right: 120px;
+                        }
+                        span {
+                            font-size: 1.1em;
+                            background: $int-text;
+                            @include gradienttitle();
+                        }
+                    } 
+
+                } // introduction 종료
+            } // confix
+        } // section.description-2 종료
+
+
+        // 움직이는 배경과 우주선
+        section.description-3 {
+            margin: 5em 0;
+            overflow: hidden;
+            width: 100%;
+            height: 18vmin;
+            background: url(../images/movebackground01.png) 0 center / 100px repeat-x;
+            background-size: cover;
+            opacity: 0.9;
+            
+            // 움직이는 배경과 애니메이션
+            animation: movebg1 20s linear infinite ;
+            @keyframes movebg1 {
+                0% {
+                    background-position:0 center;
+                }
+                100% {
+                    background-position: -5000px center;
+                }
+            }
+
+            @include responsive(tablet-size) {
+                height: 18vmax;
+                margin-top: 15em;
+                margin-bottom: 4em;
+
+                animation: movebg2 10s linear infinite ;
+                @keyframes movebg2 {
+                    0% {
+                        background-position:0 center;
+                    }
+                    100% {
+                        background-position: -5000px center;
+                    }
+                }   
+            }
+            
+
+            .move-bg {
+                position: relative;
+                
+                .moving-ship {
+                    position: absolute;
+                    top: 0; left: 0;
+                    transform: translate(10%, 50%);
+                    @include responsive(tablet-size) {
+                        transform: translate(10%, 40%);
+                    }
+                    @include responsive(pc-size) {
+                        transform: translate(10%, 35%);
+                    }
+
+                    // 움직이는 비행선 애니메이션
+                    animation: moveimg 8s linear infinite;
+                    @keyframes moveimg {
+                        0% {
+                            left : -10%;
+                        }
+                        100% {
+                            left : 100%;
+                        }
+                    }
+                    
+
+                    img {
+                        width: 9vw;
+                        opacity: 0.9;
+                        @include responsive(tablet-size) {
+                            width: 11vw;
+                        }
+                        
+                    }
+                } // moving-ship 종료
+            } // move-bg 종료
+        } // section.description-3 종료
+
+
+        // DIRECTION 섹션
+        section.description-4 {
+            
+            .confix {
+                @include padding-set();
+                @include confix();
+                overflow: hidden;
+                .direction-text {
+                    display: flex;
+                    width: 100%;
+                    @include responsive(tablet-size) {
+                        margin-bottom: 5em;
+                        margin-top: 80px;
+                    }
+                    
+                    // <direction> 상위 텍스트
+                    h2 {
+                        text-align: left;
+                        
+                        span {
+                            font-size: 1.6em;
+                            background: $dire-text;
+                            @include gradienttitle();
+                        }
+                    } 
+
+                    img {
+                        width: 2.5em;
+                        margin-left: 20px;
+                        transform: translateY(-50%);
+                    }
+                } // direction-text 종료
+
+                // direction의 코딩 박스
+                .direction-box {
+                    overflow: hidden;
+                    
+                    .coding-box {
+                        @include responsive(tablet-size) {
+                            margin-top: 22px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            margin-bottom: 6em;
+                        }
+
+                        > img {
+                            width: 100%;
+                            padding: 5px;
+                            filter: drop-shadow(0px 0px 3px rgba(255,255,255,1));
+                            border-radius: 5px;
+                            @include responsive(tablet-size) {
+                                width: 41vmin;
+                                padding: 0px;
+                                transition: all 0.5s ;
+
+                                &:hover {
+                                    transform: scale(1.1);
+                                    transition: all 0.5s ;
+                                }
+                            }
+                           
+                        }
+
+                        .coding-box-textbox {
+                            display: flex;
+                            margin-top: 1em;
+                            @include responsive(tablet-size) {
+                                width: 32%;
+                                padding-left: 2em;
+                            }
+
+                            img {
+                                width: 23px; height: 23px;
+                                margin-right: 0.6em;
+                                transform: translateY(22%);
+                            }
+                            .coding-box-text{
+                                margin-bottom: 3em;
+                                h2 {
+                                    margin-bottom: 20px;
+                                    text-align: justify;
+                                }
+                                p { 
+                                    text-align: justify;
+                                    line-height: 24px;
+                                }
+                            }
+                        }
+                    } 
+                    .reverse-box {
+                        flex-direction: row-reverse;
+                        gap: 50px;
+                    }
+
+                    .coding-port {
+                        display: none;
+                        @include responsive(tablet-size) {
+                            display: block;
+                            position: absolute;
+                            top: 50%; right: 0%;
+                            transform: translate(45%) rotate(90deg);
+                            z-index: -1;
+                            p {
+                                font-size: 130px;
+                                opacity: 0.2;
+                            }
+                        }
+                        @include responsive(pc-size) {
+                            transform: translate(20%) rotate(90deg);
+                            
+                        }
+                    }
+                }// direction-box 종료
+
+                // </direction> 하위 텍스트
+                .direction-bottom {
+                    float: right;
+                    // padding-right: 170px;
+
+                    span {
+                        font-size: 1.1em;
+                        background: $dire-text;
+                        @include gradienttitle();
+                    }
+                } 
+
+            } // confix 종료
+        } // section.description-4 종료
+
+
+        // PORTFOLIO 섹션
+        section.description-5 {
+            clear: both;
+            overflow: hidden;
+            .confix {
+                @include padding-set();
+                @include confix();
+
+                .portfolio-1 {
+                    position: relative;
+                    z-index: 5;
+                    margin-top: 4em;
+
+                    .portfolio-header-text {
+                        position: absolute;
+                        left: 4%; top: 20%;
+                        z-index: 9;
+                        display: flex;
+                        width: 100%;
+                        // <portfolio> 상위 텍스트
+                        h2 {
+                            text-align: left;
+                            
+                            span {
+                                font-size: 1.6em;
+                                background: $port-text;
+                                @include gradienttitle();
+                            }
+                        } 
+                        
+                        img {
+                            width: 3.5em;
+                            margin-left: 20px;
+                            transform: translateY(-40%);
+                        }
+                    } // direction-text 종료
+                    
+                    .portfolio-1-parallelogra{
+                        display: block;
+                        width: 370%;
+                        background: linear-gradient(90deg, #515259, #515259);
+                        height: 1100px;
+                        @include responsive(tablet-size) {
+                            height: 825px;
+                        }
+                        transform: translateX(-50%) skewY(10deg);
+                    }
+                    @include port-text();
+                }
+
+                .portfolio-2 {
+                    position: relative;
+                    z-index: 4;
+
+                    .portfolio-2-parallelogra{
+                        display: block;
+                        background: linear-gradient(90deg, #58a56b, #58a56b);
+                        width: 350%;
+                        height: 1100px;
+                        @include responsive(tablet-size) {
+                            height: 825px;
+                        }
+                        transform: translateX(-30%) skewY(-10deg);
+                    }
+                    @include port-text();
+                }
+
+                .portfolio-3 {
+                    position: relative;
+                    z-index: 2;
+                    height: 1180px;
+                    .portfolio-3-parallelogra{
+                        display: block;
+                        background: linear-gradient(90deg, #f1b37e, #f1b37e);
+                        opacity: 0.9;
+                        width: 350%;
+                        height: 1100px;
+                        @include responsive(tablet-size) {
+                            height: 825px;
+                        }
+                        transform: translateX(-40%) skewY(10deg);
+                    }
+                    @include port-text();
+                    // </portfolio> 하위 텍스트
+                    .portfolio-bottom {
+                        position: relative;
+                        float: right;
+                        z-index: 1;
+                        span {
+                            font-size: 1.1em;
+                            background: $port-text;
+                            @include gradienttitle();
+                        }
+                    } 
+                }
+
+            } // confix
+        } // section.description-5 종료
+
+
+        // CONTACT 섹션
+        section.description-6 {
+            clear: both;
+            overflow: hidden;
+            height: 550px;
+            .confix {
+                @include padding-set();
+                @include confix();
+
+                // <contact> 상위 텍스트
+                h2 {
+                    text-align: left;
+                    margin-bottom: 50px;
+                    @include responsive(tablet-size) {
+                        margin-bottom: 100px;
+                    }
+                    span {
+                        font-size: 1.6em;
+                        background: $cont-text;
+                        @include gradienttitle();
+                    }
+                }
+
+                // 달위에 깃발 들고있는 이미지
+                
+                .moon-up-img {
+                    display: none;
+                    
+                    @include responsive(tablet-size) {
+                        display: inline-block;
+                        position: absolute;
+                        left: 50%; top: 50%;
+                        
+                        .on {
+                            animation: moon-img-turn 0.7s linear both;
+                            @keyframes moon-img-turn {
+                                0% {transform: translate(750%,0%) rotateZ(-360deg);}
+                                100% {transform: translate(190%,-132%) rotateZ(360deg);}
+                            }
+                        }
+                    }
+                    @include responsive(pc-size) {
+                        
+                        .on1 {
+
+                            animation: moon-img-turns 1s linear both;
+                            @keyframes moon-img-turns {
+                                0% {transform: translate(1600%,0%) rotate(-720deg);}
+                                100% {transform: translate(190%,-122%) rotate(360deg);}
+                            }
+                        }
+                    }
+                }
+
+                // contact 가운데 텍스트
+                .contact-text {
+                    font-size: 1.3em;
+                    text-align: center;
+                    line-height: 30px;
+                    .contact-text-me {
+                        margin-bottom: 30px;
+                        .contact-br {
+                            @include responsive(tablet-size) {
+                                display: none;
+                            }
+                        }
+                    }
+
+                    .email-address{
+                        font-size: 2em;
+                    }
+                    .email-address-smalltext {
+                        font-size: 0.7em;
+                        margin-top: 10px;
+                        color: #666;
+                    }
+                    .email_greeting {
+                        margin-top: 30px;
+                    }
+                }
+
+                // 달위에-낚시하는-이미지
+                .moon-star-img {
+                    display: none;
+                    @include responsive(tablet-size) {
+                        display: block;
+                        position: absolute;
+                        bottom: -17%; left: 2%; 
+                        img {
+                            width: 96px; height: 117px;
+                            position: absolute;
+                            animation: jump-img 0.8s infinite alternate;
+                            @keyframes jump-img {
+                                0% {top: -100px;}
+                                100% {top: -200px;}
+                            }
+                        }
+                    }
+                    @include responsive(pc-size) {
+                        left: 17%;
+                    }
+                }
+
+                // </contact> 하위 텍스트
+                .contact-bottom {
+                    float: right;
+                    margin-top: 60px;
+                    span {
+                        font-size: 1.1em;
+                        background: $cont-text;
+                        @include gradienttitle();
+                    }
+                } 
+            } // confix
+        } // section.description-6 종료
+
+        #up-arrow {
+			position: fixed;
+			right: 4%; bottom: 15%;
+			cursor: pointer;
+			z-index: 100; 
+            img {
+                width: 40px; height: 80px;
+                animation: up-arrow 2s linear infinite alternate;
+
+                @keyframes up-arrow  {
+                    0% {transform: translateY(0%);}
+                    100% {transform: translateY(-15%);}
+                }
+            }
+        }
+
+    } // main
+    footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 100px;
+        padding: 50px;
+        background-color: #333;
+        h2 {
+            margin-left: 30px;
+        }
+    }
+}

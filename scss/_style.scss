@@ -1,0 +1,18 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap');
+
+
+$break-moblie: 375px;
+$break-tablet: 768px;
+$break-pc: 1320px;
+$break-pc2: 1920px;
+
+$main-backgroundcolor : rgba(0,0,0,1);
+$vision-text : linear-gradient(to right, #55cc7c, #f5f97f); 
+$int-text : linear-gradient(to right, #19fff4, #aeffae);
+$dire-text : linear-gradient(to right, #7530e3, #e1afcc);
+$port-text : linear-gradient(to right, #f83600, #facc22);
+$cont-text : linear-gradient(to right, #0dccff, #4760ff);
+
+$font-sans: Pretendard;
+$font-cons: Inconsolata;

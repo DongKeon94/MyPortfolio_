@@ -1,0 +1,140 @@
+@mixin confix {
+    position: relative;
+    width: 100%;
+    max-width: 1320px;
+    margin: 0 auto;
+}
+
+@mixin responsive($break) {
+    
+    @if $break == mobile-size {
+        @media screen and (min-width:$break-moblie) {
+            @content;
+        }
+    }
+
+    @else if $break == tablet-size {
+        @media screen and (min-width:$break-tablet) {
+            @content;
+        }
+    }
+
+    @else if $break == pc-size {
+        @media screen and (min-width:$break-pc) {
+            @content;
+        }
+    }
+
+    @else if $break == pc2-size {
+        @media screen and (min-width:$break-pc2) {
+            @content;
+        }
+    }
+}
+
+// section title gradient
+@mixin gradienttitle() {
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+@mixin padding-set {
+    padding-top: 2%;
+    padding-left: 4%;
+    padding-right: 4%;
+}
+
+// 포트폴리오 박스
+@mixin port-text() {
+    .portfolio-box {
+        width: 80%;
+        position: absolute;
+        top: 220px;
+        left: 50%;
+        transform: translateX(-50%);
+        @include responsive(tablet-size) {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-bottom: 6em;
+        }
+        @include responsive(tablet-size) {
+            width: 100%;
+        }
+
+        // 포트폴리오 이미지
+        img {
+            width: 100%;
+            margin-bottom: 30px;
+            @include responsive(tablet-size) {
+                width: 50%;
+            }
+            
+        }
+
+        // 포트폴리오 텍스트
+        .portfolio-text-box {
+            margin-bottom: 6em;
+            font-family: Pretendard;
+            @include responsive(tablet-size) {
+                width: 40%;
+                padding-left: 80px;
+            }
+
+            @include responsive(pc-size) {
+                width: 30%;
+                padding-left: 100px;
+            }
+
+            h3 {
+                width: 12em;
+                font-size: 1.5em;
+                margin-bottom: 30px;
+                @include responsive(pc-size) {
+                    font-size: 2em;
+                    margin-bottom: 60px;
+                }
+            }
+
+            p {
+                width: 21em;
+                line-height: 40px;
+                @include responsive(pc-size) {
+                    line-height: 50px;
+                }
+                span {
+                    display: inline-block;
+                    width: 15px; height: 15px;
+                    margin-left: 5px;
+                    border-radius: 50%;
+                    background-color: #000;
+                    transform: translateY(3px);
+                }
+                strong {
+                    font-size: 1.3em;
+                }
+            }
+
+            a {
+                font-size: 1em;
+                letter-spacing: 1px;
+                margin-top: 20px;
+                margin-right: 10px;
+                padding: 5px 15px;
+                border: 1px solid #fff;
+                color: #fff;
+                background-color: transparent;
+                transition: all 0.5s;
+
+                &:hover {
+                    color: #000;
+                    background-color: #fff;
+                    transform: translateY(-10%);
+                    transition: all 0.5s;
+                }                
+            }
+        }
+
+    }
+}

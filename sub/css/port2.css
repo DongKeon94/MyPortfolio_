@@ -1,0 +1,99 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap");
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Pretendard;
+}
+
+p {
+  font: 16px;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: #f2f2f2;
+}
+a:hover {
+  color: #777;
+  transition: all 0.3s;
+}
+
+header,
+section,
+nav,
+article,
+aside,
+footer {
+  display: block;
+}
+
+* {
+  position: relative;
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  width: auto;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f2ece4;
+}
+
+.tablet-size {
+  position: absolute;
+  top: 3.1%;
+  left: 5%;
+  background: url(../images/tablet-monitor.png) no-repeat center center/contain;
+  width: 300px;
+  height: 400px;
+}
+.tablet-size .tablet-img {
+  overflow: hidden;
+  position: absolute;
+  top: 15px;
+  left: 11px;
+  width: 278px;
+  height: 370px;
+  border-radius: 8px;
+}
+.tablet-size .tablet-img img {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-size {
+  position: absolute;
+  top: 4%;
+  left: 30%;
+  background: url(../images/mobile-monitor.png) no-repeat center center/contain;
+  width: 110px;
+  height: 300px;
+}
+.mobile-size .mobile-img {
+  position: absolute;
+  overflow: hidden;
+  top: 46px;
+  left: 6px;
+  width: 98px;
+  height: 208px;
+  border-radius: 10px;
+}
+.mobile-size .mobile-img img {
+  width: 100%;
+  height: 100%;
+}
