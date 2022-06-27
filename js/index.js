@@ -188,7 +188,7 @@ $(document).ready(function(){
     $(function() {
         var charts = $(".skills-charts");
         var chart = $('.skills-chart');
-        var chartOST = chart.offset().top - 430; // chart의 화면에서 떨어진 높이가 1000
+        var chartOST = chart.offset().top - 600; // chart의 화면에서 떨어진 높이가 1000
 
 
         $(window).scroll(function() {
@@ -215,7 +215,7 @@ $(document).ready(function(){
                     duration: 1500,
                     progress: function() { // 애니메이션이 변화할때마다 할일을 지정해준다.
                         var now = this.rate; // this는 애니메이트 전체를 말한다.
-                        circle.css({strokeDashoffset: 440-(440*now/100)});
+                        circle.css({strokeDashoffset: 220-(220*now/100)});
                     }
                 })
             });
@@ -278,6 +278,10 @@ $(document).ready(function(){
             $("header").fadeOut(500)
         }
     })
+
+    $(function(){
+		$("html, body").animate({ scrollTop: 0 }, "slow"); 
+	});
 }); 
 
 

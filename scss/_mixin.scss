@@ -18,6 +18,11 @@
             @content;
         }
     }
+    @else if $break == tablet2-size {
+        @media screen and (min-width:$break-tablet2) {
+            @content;
+        }
+    }
 
     @else if $break == pc-size {
         @media screen and (min-width:$break-pc) {
@@ -25,11 +30,6 @@
         }
     }
 
-    @else if $break == pc2-size {
-        @media screen and (min-width:$break-pc2) {
-            @content;
-        }
-    }
 }
 
 // section title gradient
