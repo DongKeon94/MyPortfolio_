@@ -134,7 +134,7 @@ $(document).ready(function(){
     if (typingBool == false) {
         // 타이핑이 진행되지 않았다면
         typingBool = true;
-        var tyInt = setInterval(typing, 100); // 반복동작
+        var tyInt = setInterval(typing, 200); // 반복동작
     }
 
     function typing() {
@@ -162,27 +162,11 @@ $(document).ready(function(){
 
                 setTimeout(function () {
                     //1초후에 다시 타이핑 반복 시작
-                    tyInt = setInterval(typing, 100);
+                    tyInt = setInterval(typing, 150);
                 }, 1500);
             } else if (liIndex == liLength - 1) {
-                //마지막 문장까지 써지면 반복종료
-                clearInterval(tyInt);
-
-                //1초후
-                setTimeout(function () {
-                    //사용했던 변수 초기화
-                    typingBool = false;
-                    liIndex = 0;
-                    typingIdx = -0;
-
-                    //첫번째 문장으로 셋팅
-                    typingTxt = $(".typing-txt>ul>li").eq(liIndex).text();
-                    //타이핑 결과 모두 지우기
-                    $(".typing ul li").html("");
-
-                    //반복시작
-                    tyInt = setInterval(typing, 100);
-                }, 2000);
+                $(".typing ul li").delay(1200);
+                $(".typing ul li").fadeOut(1000);
             }
         }
     } 
@@ -281,6 +265,18 @@ $(document).ready(function(){
         $("#up-arrow  img").animate({
             marginBottom : "0px"
         }, 500)
+    })
+
+    $(document).on('scroll', function(){
+        if($(window).scrollTop() > 700){
+            $("header").removeClass("deactive");
+            $("header").addClass("active");
+            $("header").fadeIn(500)
+        }else{
+            $("header").removeClass("active");
+            $("header").addClass("deactive");
+            $("header").fadeOut(500)
+        }
     })
 }); 
 

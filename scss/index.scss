@@ -7,10 +7,14 @@ body {
     color: #f2f2f2;
     background-color: $main-backgroundcolor;
     header {
-        position: absolute;
-        top: 1.4%; left: 50%;
+        display: none;
+        position: fixed;
+        top: 0%; left: 50%;
+        width: 100%; height: 20px;
+        line-height: 20px;
+        text-align: center;
         transform: translateX(-50%);
-
+        z-index: 9;
         h1 {
             font-size: 0.7em;
             @include responsive(tablet-size) {
@@ -18,7 +22,16 @@ body {
             }
         }
     }
-    
+    .active{
+        background-color: #000;
+        transition: all 1s ease;
+      }
+      
+    .deactive{
+    background-color: transparent;
+    transition: all 1s ease;
+    }
+
     main {
 
         // TITLE 섹션
@@ -52,52 +65,6 @@ body {
                         height: 980px;
                     }
 
-                    // 숫자 LIST
-                    .num-motion {
-                        position: absolute;
-                        left: 3%;
-                        text-align: center;
-                        cursor: default;
-
-                        // 넘버 호버시 돌아가는 모션
-                        ul {
-                            li {
-                                &:hover {
-                                    animation: num-spin 0.5s ease;
-            
-                                    @keyframes num-spin {
-                                        0% {transform: rotateZ(0deg);}
-                                        100% {transform: rotateZ(360deg);}
-                                    }
-                                }
-                            }
-                        }
-                        @include responsive(tablet-size) {
-                            font-size: 3vmin;
-                        }
-    
-                        @include responsive(pc-size) {
-                            height: 900px;
-                            line-height: 36px;
-                        }
-    
-                    }
-
-                    // DOCTYPE
-                    .docty {
-                        position: absolute;
-                        left: 10%;
-                        color: #003c8f;
-                        @include responsive(tablet-size) {
-                            font-size: 3vmin;
-                        }
-    
-                        @include responsive(pc-size) {
-                            height: 900px;
-                            line-height: 36px;
-                        }
-                    }
-
                     // HELLO
                     .hello {
                         position: absolute;
@@ -118,12 +85,16 @@ body {
                         }
 
                         .hello-left {
-                            font-size: 0.9em;
-                            color: #b6c017;
-                            transform: translateY(-1px);
+                            position: absolute;
+                            top: 0; right: 0;
+                            font-size: 0.8em;
+                            color: #ccc;
+                            opacity: 0.4;
+                            z-index: 1;
+                            transform: translateY(-110%);
 
                             @include responsive(tablet-size) {
-                                font-size: 2.5vmin;
+                                font-size: 1em;
                             }
                         }
 
@@ -169,14 +140,14 @@ body {
                             border-left: solid 15px transparent;
                             border-right: solid 15px transparent;
                             filter: drop-shadow(1px 4px 1px rgba(255,255,255,0.7));
-                            transform: translate(-50%,42%);
+                            transform: translate(-50%,90%);
                             transition: all 0.5s;
 
                             @include responsive(tablet-size) {
                                 border-top: solid 50px #fff;
                                 border-left: solid 25px transparent;
                                 border-right: solid 25px transparent;
-                                transform: translate(-50%,35%);
+                                transform: translate(-50%,95%);
 
                             }
 
@@ -184,146 +155,123 @@ body {
                                 border-top: solid 70px #fff;
                                 border-left: solid 35px transparent;
                                 border-right: solid 35px transparent;
-                                transform: translate(-50%,50%);
+                                transform: translate(-50%,95%);
                             }
                         }
+                    }
+                    
+                    
+                    .title-rotate-img {
+                        position: absolute;
+                        width: 4.5em;
+                        top: 36%; left: 65%;
+                        opacity: 0;
+                        animation: title-rotate-img 2s 7000ms ease;
+                        animation-fill-mode: both;
+                        @keyframes title-rotate-img {
+                            0% { transform: rotate(0deg) scale(0); opacity: 0; }
+                            100% { transform: rotate(1080deg) scale(1); opacity: 1;}
+                        }
 
-                        .hello-right {
-                            float: right;
-                            font-size: 0.9em;
-                            color: #b6c017;
-                            transform: translateY(3px);
-                            
+                        @include responsive(tablet-size) {
+                            top: 39%; 
+                            width: 6.5em;
+                        }
+                        @include responsive(pc-size) {
+                            top: 42%; left: 69%;
+                        }
+                    }
+
+                    // introduce
+                    .introduce {
+                        position: absolute;
+                        top: 43%; left: 0%;
+                        width: 100%; 
+                        @include responsive(tablet-size) {
+                            top: 47%;
+                        }
+                        @include responsive(pc-size) {
+                            top: 49%;
+                        }
+
+                        .type-text {
+                            font-size: 1.7em;
+                            font-weight: bold;
+                            text-align: center;
                             @include responsive(tablet-size) {
-                                font-size: 2.5vmin;
+                                font-size: 3em;
+                                line-height: 55px;
+                            }
+                            @include responsive(pc-size) {
+                                font-size: 4em;
+                                line-height: 80px;
+                            }
+
+                            .typing-txt{display: none;}
+    
+                            .typing ul li.on {  
+                                display: inline-block; 
+                                animation: cursor 0.5s infinite; 
+                            }
+
+                            @keyframes cursor{ 
+                                0%{border-right: 1px solid #fff} 
+                                50%{border-right: 1px solid #000} 
+                                100%{border-right: 1px solid #fff} 
                             }
                         }
                     }
 
-                    // ITS_ME
-                    .its-me {
-                        position: absolute;
-                        top: 42%; left: 50%;
-                        transform: translateX(-50%);
-                        
-                        // ITS_ME 텍스트 나타나는 애니메이션
-                        animation: side-left-text 1.2s both;
-                        @keyframes side-left-text  {
-                            0% {
-                                transform: translateX(-600%);
-                                opacity: 0;
-                            }
-                            100% {
-                                transform: translateX(-50%);
-                                opacity: 1;
-                            }
-                        }
-
-                        .its-left {
-                            position: absolute;
-                            top: 0; left: 0;
-                            font-size: 0.9em;
-                            color: #d38e44;
-                            transform: translateX(-90%);
-
-                            @include responsive(tablet-size) {
-                                font-size: 2.5vmin;
-                            }
-                        }
-
-                        .its-images {
-                            width: 100px; height: 100px;
-                            text-align: center;
-                            border-radius: 50%;
-                            background-color: #656565;
-
-                            @include responsive(tablet-size) {
-                                width: 13vmax; height: 13vmax; 
-                            }
-                            @include responsive(pc-size) {
-                                width: 7vmax; height: 7vmax; 
-                            }
-                            
-                            .image {
-                                width: 90px; height: 90px;
-                                border-radius: 100%;
-                                background-color: #fff;
-                                transform: translateY(5%);
-
-                                @include responsive(tablet-size) {
-                                    width: 12vmax; height: 12vmax;
-                                }
-                                @include responsive(pc-size) {
-                                    width: 6.4vmax; height: 6.4vmax;
-                                }
-                            }
-                        }
-
-                        .its-right {
-                            position: absolute;
-                            bottom: 0; right: 0;
-                            font-size: 0.9em;
-                            color: #d38e44;
-                            transform: translateX(90%);
-                            @include responsive(tablet-size) {
-                                font-size: 2.5vmin;
-                            }
-                        }
-                    } // ITS_ME 종료
-
                     // TITLE
                     .title {
                         position: absolute;
-                        top: 70%; left: 50%;
-                        transform: translateX(-50%);
+                        top: 50%; left: 50%;
+                        transform: translate(-50%,-50%);
+                        width: 100%;                  
+                        opacity: 1;
+                        @include responsive(tablet-size) {
+                            top: 54%
+                        }
+                        @include responsive(pc-size) {
+                            top: 57%
+                        }
 
                         // TITLE 텍스트 애니메이션
-                        animation: text-up 3s ease;
+                        animation: text-up 5s 6500ms ease;
+                        animation-fill-mode: both;
+
                         @keyframes text-up {
                             0% { opacity: 0; }
                             100% { opacity: 1; }
                         }
-                        .title-left {
-                            font-size: 0.9em;
-                            color: #ab47bc;
-                            transform: translateX(-20%);
-                            @include responsive(tablet-size) {
-                                font-size: 2.5vmin;
-                            }
-                        }
-
+                        
                         p {
-                            font-size: 0.99em;
+                            font-size: 1.5em;
                             text-align: center;
                             @include responsive(tablet-size) {
-                                font-size: 3.3vmin;
+                                font-size: 2.4rem;
                                 line-height: 50px;
-                                letter-spacing: 1px;
                             }
+                            @include responsive(pc-size) {
+                                font-size: 3.5rem;
+                                line-height: 80px;
+                            }
+                            
                             .title-text {
                                 font-size: 1.3em;
                                 font-weight: bold;
+                                background: $title-text;
+                                @include gradienttitle();
+
                                 @include responsive(tablet-size) {
-                                    font-size: 4.5vmin;
+                                    font-size: 3.3rem;
+                                }
+                                @include responsive(tablet-size) {
+                                    font-size: 4.0rem;
                                 }
                             }
                         }
 
-                        .title-right {
-                            position: absolute;
-                            bottom: 0; right: 0;
-                            font-size: 0.9em;
-                            color: #ab47bc;
-                            transform: translate(50%, 50%);
-                            @include responsive(tablet-size) {
-                                font-size: 2.5vmin;
-                                transform: translate(50%, 80%);
-                            }
-                            @include responsive(pc-size) {
-                                font-size: 2.5vmin;
-                                transform: translate(60%, 80%);
-                            }
-                        }
                     }// TITLE 종료
 
                     // 회전하는 우주이미지
@@ -335,11 +283,11 @@ body {
                         @include responsive(tablet-size) {
                             transform: translate(57%, -65%);
                         }
-
+                        
                         // 회전하는 우주이미지 애니메이션
                         img {
                             width: 100%;
-                            animation: spin-space 3s linear infinite;
+                            animation: spin-space 20s linear infinite;
                 
                             @keyframes spin-space {
                                 0% {
@@ -414,62 +362,34 @@ body {
                 @include padding-set();
                 @include confix();
 
-                // introduce
-                .introduce {
-                    display: flex;
-
-                    img {
-                        width: 5.5em;
-                        margin-right: 10px;
-                        @include responsive(tablet-size) {
-                            width: 6em;
-                        }
-                    }
-                    .type-text {
-                        font-size: 1.1em;
-                        font-weight: bold;
-                        @include responsive(tablet-size) {
-                            font-size: 1.3em;
-                        }
-                        .typing-txt{display: none;}
-
-                        .typing ul li.on {  
-                            display: inline-block; 
-                            animation: cursor 0.5s infinite; 
-                        }
-                        @keyframes cursor{ 
-                            0%{border-right: 1px solid #fff} 
-                            50%{border-right: 1px solid #000} 
-                            100%{border-right: 1px solid #fff} 
-                        }
-                    }
-                }
-
                 // VISION
                 .vision {
-                    margin-top: 4em;
+                    margin-top: 4rem;
+                    position: relative;
                     h2 {
-                        text-align: center;
-
                         span {
-                            font-size: 1.7em;
+                            font-size: 3.5rem;
                             background: $vision-text;
                             @include gradienttitle();
                         }
                     }
-
+                    
                     p {
-                        margin-top: 3em;
-                        text-align: center;
+                        margin-top: 60px;
                         line-height: 30px;
-                        
-                        @include responsive(tablet-size) {
-                            .br-none {
-                                display: none;
-                            }
-                        }
+                        padding-bottom: 20px;
+                        border-bottom: 3px solid #f9f9f9;
+
                         @include responsive(pc-size) {
                             font-size: 1.1em;
+                        }
+                    }
+                    .vision-image {
+                        position: absolute;
+                        bottom: -5.2%; right: 0;
+
+                        img {
+                            width: 6rem;
                         }
                     }
                 }
@@ -583,12 +503,12 @@ body {
                                 justify-content: center;
                                 align-items: center;
                                 flex-wrap: wrap;
-
                                 .skills-charts {
                                     display: flex;
                                     justify-content: center;
                                     flex-wrap: wrap;
                                     gap:15px;
+                                    background-color: #e8f5e9;
 
                                     .skills-chart{
                                         position: relative;
@@ -603,7 +523,6 @@ body {
                                             top: 50%;
                                             transform: translate(-50%,-50%);
                                             width: 60%;
-                                            
                                         }
                                         
                                         h2 {
