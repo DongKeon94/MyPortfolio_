@@ -238,9 +238,35 @@ $(document).ready(function(){
             if (width>=1320) {
                 $(".moon-up-img img").addClass("on1");
             }
-        } 
+            
+        } else {
+            $(".moon-up-img img").removeClass("on");
+            $(".moon-up-img img").removeClass("on1");
+        }
     });
 
+    // Coding Img - open, close
+    var description4 = $(".description-4")
+    var secLeftOST = description4.offset().top - 600;
+
+    $(window).scroll(function () {
+        var curSCTLeft = $(this).scrollTop();
+
+        if (curSCTLeft > secLeftOST) {
+            $(".side-left").addClass("ImgLeft");
+            $(".side-right").addClass("ImgRight");
+
+            if (width>=1320) {
+                $(".side-left").addClass("ImgLeft");
+                $(".side-right").addClass("ImgRight");
+            }
+
+        } else {
+            $(".side-left").removeClass("ImgLeft");
+            $(".side-right").removeClass("ImgRight");
+        }
+    });
+    
 
     // 스크롤 화살표
     $(window).on("scroll", function(){
@@ -253,6 +279,7 @@ $(document).ready(function(){
         }
     });
 
+    // Up-arrow
     $("#up-arrow").click(function(){
         $("html").animate({
             scrollTop : "0"
@@ -268,6 +295,7 @@ $(document).ready(function(){
         }, 500)
     })
 
+    // LOGO fadeIn, fadeOut
     $(document).on('scroll', function(){
         if($(window).scrollTop() > 700){
             $("header").removeClass("deactive");
@@ -283,6 +311,16 @@ $(document).ready(function(){
     // $(function(){
 	// 	$("html, body").animate({ scrollTop: 0 }, "slow"); 
 	// });
+
+    // var scroll_pos = 0;
+    // $(document).scroll(function() {
+    //     scroll_pos = $(this).scrollTop();
+    //     if(scroll_pos > 6300) {
+    //         $("body").css("background-color","white")
+    //     } else {
+    //         $("body").css("background-color","black")
+    //     }
+    // })
 }); 
 
 

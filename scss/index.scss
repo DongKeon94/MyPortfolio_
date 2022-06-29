@@ -692,8 +692,13 @@ body {
             .confix {
                 @include padding-set();
                 @include confix();
-                overflow: hidden;
 
+                @include responsive(tablet-size) {
+                    overflow: hidden;
+                }
+                @include responsive(pc-size) {
+                    overflow:visible;
+                }
                 .direction-text {
                     width: 100%;
                     margin-top: 5rem;
@@ -726,14 +731,14 @@ body {
                 // direction의 코딩 박스
                 .direction-box {
                     width: 100%;
-
+                    
                     @include responsive(tablet-size) {
                         display: flex;
                         justify-content: space-around;
                         flex-wrap: wrap;
                     }
                     
-                    .coding-box {
+                    .coding-box, .side-left, .side-right {
                         width: 100%;
 
                         @include responsive(tablet-size) {
@@ -775,14 +780,57 @@ body {
                                     text-align: justify;
                                 }
                                 p { 
+                                    width: 21rem;
                                     text-align: justify;
                                     line-height: 24px;
                                 }
                             }
                         }
+
+    
+                    }
+
+                    .ImgLeft {
+                        animation: side-left 1s ease-in-out both;
+                        opacity: 0;
+
+                        @keyframes side-left {
+                            0% {transform: translate(-300%); opacity: 0;}
+                            100% {transform: translate(0%); opacity: 1;}
+                        }
+                    }
+
+                    .ImgRight {
+                        animation: side-right 1s ease-in-out both;
+                        opacity: 0;
+
+                        @keyframes side-right {
+                            0% {transform: translate(300%); opacity: 0;}
+                            100% {transform: translate(0%); opacity: 1;}
+                        }
                     }
                 }// direction-box 종료
 
+                .coding-port {
+                    display: none;
+                    @include responsive(tablet-size) {
+                        display: block;
+                        position: absolute;
+                        top: 50%; right: 0%;
+                        transform: translate(45%) rotate(90deg);
+                        z-index: -1;
+
+                        p {
+                            font-size: 130px;
+                            opacity: 0.2;
+                        }
+                    }
+
+                    @include responsive(pc-size) {
+                        transform: translate(35%) rotate(90deg);
+                        
+                    }
+                }
             } // confix 종료
         } // section.description-4 종료
 
@@ -898,9 +946,9 @@ body {
                 // <contact> 상위 텍스트
                 h2 {
                     text-align: left;
-                    margin-bottom: 50px;
+                    margin-bottom: 150px;
                     @include responsive(tablet-size) {
-                        margin-bottom: 100px;
+                        margin-bottom: 170px;
                     }
                     span {
                         font-size: 1.6em;
@@ -943,11 +991,17 @@ body {
 
                 // contact 가운데 텍스트
                 .contact-text {
-                    font-size: 1.3em;
+                    font-size: 1rem;
                     text-align: center;
                     line-height: 30px;
+                    
+                    @include responsive(tablet-size) {
+                        font-size: 1.3rem;
+                    }
+
                     .contact-text-me {
                         margin-bottom: 30px;
+
                         .contact-br {
                             @include responsive(tablet-size) {
                                 display: none;
@@ -956,15 +1010,20 @@ body {
                     }
 
                     .email-address{
-                        font-size: 2em;
+                        font-size: 1.7rem;
+
+                        @include responsive(tablet-size) {
+                            font-size: 2rem;
+                            transform: translate(-0.2%);
+                        }
                     }
                     .email-address-smalltext {
                         font-size: 0.7em;
                         margin-top: 10px;
                         color: #666;
-                    }
-                    .email_greeting {
-                        margin-top: 30px;
+                        @include responsive(tablet-size) {
+                            transform: translate(-0.1%);
+                        }
                     }
                 }
 
