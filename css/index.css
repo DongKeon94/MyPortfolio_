@@ -829,107 +829,6 @@ body main section.description-2 .confix .introduction .introduction-flex .abilit
     font-size: 1em;
   }
 }
-body main section.description-3 {
-  margin: 5em 0;
-  overflow: hidden;
-  width: 100%;
-  height: 18vmin;
-  background: url(../images/movebackground01.png) 0 center/100px repeat-x;
-  background-size: cover;
-  opacity: 0.9;
-  -webkit-animation: movebg1 20s linear infinite;
-          animation: movebg1 20s linear infinite;
-}
-@-webkit-keyframes movebg1 {
-  0% {
-    background-position: 0 center;
-  }
-  100% {
-    background-position: -5000px center;
-  }
-}
-@keyframes movebg1 {
-  0% {
-    background-position: 0 center;
-  }
-  100% {
-    background-position: -5000px center;
-  }
-}
-@media screen and (min-width: 768px) {
-  body main section.description-3 {
-    height: 18vmax;
-    margin-top: 15em;
-    margin-bottom: 4em;
-    -webkit-animation: movebg2 10s linear infinite;
-            animation: movebg2 10s linear infinite;
-  }
-  @-webkit-keyframes movebg2 {
-    0% {
-      background-position: 0 center;
-    }
-    100% {
-      background-position: -5000px center;
-    }
-  }
-  @keyframes movebg2 {
-    0% {
-      background-position: 0 center;
-    }
-    100% {
-      background-position: -5000px center;
-    }
-  }
-}
-body main section.description-3 .move-bg {
-  position: relative;
-}
-body main section.description-3 .move-bg .moving-ship {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(10%, 50%);
-  -webkit-animation: moveimg 8s linear infinite;
-          animation: moveimg 8s linear infinite;
-}
-@media screen and (min-width: 768px) {
-  body main section.description-3 .move-bg .moving-ship {
-    transform: translate(10%, 40%);
-  }
-}
-@media screen and (min-width: 1320px) {
-  body main section.description-3 .move-bg .moving-ship {
-    transform: translate(10%, 35%);
-  }
-}
-@-webkit-keyframes moveimg {
-  0% {
-    left: -10%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-@keyframes moveimg {
-  0% {
-    left: -10%;
-  }
-  100% {
-    left: 100%;
-  }
-}
-body main section.description-3 .move-bg .moving-ship img {
-  width: 9vw;
-  opacity: 0.9;
-}
-@media screen and (min-width: 768px) {
-  body main section.description-3 .move-bg .moving-ship img {
-    width: 11vw;
-  }
-}
-body main section.description-4 {
-  background-color: #19cdca;
-}
 body main section.description-4 .confix {
   padding-top: 2%;
   padding-left: 4%;
@@ -941,14 +840,14 @@ body main section.description-4 .confix {
   overflow: hidden;
 }
 body main section.description-4 .confix .direction-text {
-  display: flex;
   width: 100%;
   margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 @media screen and (min-width: 768px) {
   body main section.description-4 .confix .direction-text {
     margin-top: 10rem;
-    margin-bottom: 5em;
+    margin-bottom: 5rem;
   }
 }
 body main section.description-4 .confix .direction-text h2 {
@@ -971,22 +870,23 @@ body main section.description-4 .confix .direction-text h2 span {
     font-size: 5.5rem;
   }
 }
-body main section.description-4 .confix .direction-text img {
-  width: 2.5em;
-  margin-left: 20px;
-  transform: translateY(-50%);
-}
 body main section.description-4 .confix .direction-box {
-  overflow: hidden;
-  background-color: #fff;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  body main section.description-4 .confix .direction-box {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+body main section.description-4 .confix .direction-box .coding-box {
+  width: 100%;
 }
 @media screen and (min-width: 768px) {
   body main section.description-4 .confix .direction-box .coding-box {
-    margin-top: 22px;
-    display: inline-block;
-    width: 45%;
-    background-color: #333;
-    margin-bottom: 6em;
+    width: 35%;
+    margin-bottom: 3.75rem;
   }
 }
 body main section.description-4 .confix .direction-box .coding-box > img {
@@ -1013,13 +913,13 @@ body main section.description-4 .confix .direction-box .coding-box .coding-box-t
 @media screen and (min-width: 768px) {
   body main section.description-4 .confix .direction-box .coding-box .coding-box-textbox {
     width: 100%;
-    padding-left: 2em;
   }
 }
 body main section.description-4 .confix .direction-box .coding-box .coding-box-textbox .coding-box-text {
-  margin-bottom: 3em;
+  margin-bottom: 5rem;
 }
 body main section.description-4 .confix .direction-box .coding-box .coding-box-textbox .coding-box-text h2 {
+  font-weight: bold;
   margin-bottom: 20px;
   text-align: justify;
 }
@@ -1048,32 +948,34 @@ body main section.description-5 .confix .portfolio-1 {
 body main section.description-5 .confix .portfolio-1 .portfolio-header-text {
   position: absolute;
   left: 4%;
-  top: 20%;
+  top: 12%;
   z-index: 9;
   display: flex;
   width: 100%;
 }
-body main section.description-5 .confix .portfolio-1 .portfolio-header-text h2 {
-  text-align: left;
-}
 body main section.description-5 .confix .portfolio-1 .portfolio-header-text h2 span {
-  font-size: 1.6em;
+  font-size: 3.5rem;
   background: linear-gradient(to right, #f83600, #facc22);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
-body main section.description-5 .confix .portfolio-1 .portfolio-header-text img {
-  width: 3.5em;
-  margin-left: 20px;
-  transform: translateY(-40%);
+@media screen and (min-width: 768px) {
+  body main section.description-5 .confix .portfolio-1 .portfolio-header-text h2 span {
+    font-size: 4.5rem;
+  }
+}
+@media screen and (min-width: 1320px) {
+  body main section.description-5 .confix .portfolio-1 .portfolio-header-text h2 span {
+    font-size: 5.5rem;
+  }
 }
 body main section.description-5 .confix .portfolio-1 .portfolio-1-parallelogra {
   display: block;
   width: 370%;
   background: linear-gradient(90deg, #515259, #515259);
-  height: 1100px;
   transform: translateX(-50%) skewY(10deg);
+  height: 1100px;
 }
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-1 .portfolio-1-parallelogra {
@@ -1111,18 +1013,17 @@ body main section.description-5 .confix .portfolio-1 .portfolio-box img {
 }
 body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box {
   margin-bottom: 6em;
-  font-family: Pretendard;
 }
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box {
     width: 40%;
-    padding-left: 80px;
+    padding-left: 2rem;
   }
 }
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box {
     width: 30%;
-    padding-left: 100px;
+    padding-left: 4rem;
   }
 }
 body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box h3 {
@@ -1137,8 +1038,9 @@ body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-t
   }
 }
 body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box p {
-  width: 21em;
+  width: 23em;
   line-height: 40px;
+  letter-spacing: 2px;
 }
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box p {
@@ -1158,12 +1060,13 @@ body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-t
   font-size: 1.3em;
 }
 body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box a {
-  font-size: 1em;
+  font-size: 1rem;
   letter-spacing: 1px;
   margin-top: 20px;
   margin-right: 10px;
   padding: 5px 15px;
   border: 1px solid #fff;
+  border-radius: 10px;
   color: #fff;
   background-color: transparent;
   transition: all 0.5s;
@@ -1171,7 +1074,6 @@ body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-t
 body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box a:hover {
   color: #000;
   background-color: #fff;
-  transform: translateY(-10%);
   transition: all 0.5s;
 }
 body main section.description-5 .confix .portfolio-2 {
@@ -1221,18 +1123,17 @@ body main section.description-5 .confix .portfolio-2 .portfolio-box img {
 }
 body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box {
   margin-bottom: 6em;
-  font-family: Pretendard;
 }
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box {
     width: 40%;
-    padding-left: 80px;
+    padding-left: 2rem;
   }
 }
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box {
     width: 30%;
-    padding-left: 100px;
+    padding-left: 4rem;
   }
 }
 body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box h3 {
@@ -1247,8 +1148,9 @@ body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-t
   }
 }
 body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box p {
-  width: 21em;
+  width: 23em;
   line-height: 40px;
+  letter-spacing: 2px;
 }
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box p {
@@ -1268,12 +1170,13 @@ body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-t
   font-size: 1.3em;
 }
 body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box a {
-  font-size: 1em;
+  font-size: 1rem;
   letter-spacing: 1px;
   margin-top: 20px;
   margin-right: 10px;
   padding: 5px 15px;
   border: 1px solid #fff;
+  border-radius: 10px;
   color: #fff;
   background-color: transparent;
   transition: all 0.5s;
@@ -1281,8 +1184,10 @@ body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-t
 body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box a:hover {
   color: #000;
   background-color: #fff;
-  transform: translateY(-10%);
   transition: all 0.5s;
+}
+body main section.description-5 .confix .portfolio-2 .portfolio-text-box p:nth-child(6) {
+  margin-left: 113px;
 }
 body main section.description-5 .confix .portfolio-3 {
   position: relative;
@@ -1333,18 +1238,17 @@ body main section.description-5 .confix .portfolio-3 .portfolio-box img {
 }
 body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box {
   margin-bottom: 6em;
-  font-family: Pretendard;
 }
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box {
     width: 40%;
-    padding-left: 80px;
+    padding-left: 2rem;
   }
 }
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box {
     width: 30%;
-    padding-left: 100px;
+    padding-left: 4rem;
   }
 }
 body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box h3 {
@@ -1359,8 +1263,9 @@ body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-t
   }
 }
 body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box p {
-  width: 21em;
+  width: 23em;
   line-height: 40px;
+  letter-spacing: 2px;
 }
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box p {
@@ -1380,12 +1285,13 @@ body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-t
   font-size: 1.3em;
 }
 body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box a {
-  font-size: 1em;
+  font-size: 1rem;
   letter-spacing: 1px;
   margin-top: 20px;
   margin-right: 10px;
   padding: 5px 15px;
   border: 1px solid #fff;
+  border-radius: 10px;
   color: #fff;
   background-color: transparent;
   transition: all 0.5s;
@@ -1393,20 +1299,10 @@ body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-t
 body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box a:hover {
   color: #000;
   background-color: #fff;
-  transform: translateY(-10%);
   transition: all 0.5s;
 }
-body main section.description-5 .confix .portfolio-3 .portfolio-bottom {
-  position: relative;
-  float: right;
-  z-index: 1;
-}
-body main section.description-5 .confix .portfolio-3 .portfolio-bottom span {
-  font-size: 1.1em;
-  background: linear-gradient(to right, #f83600, #facc22);
-  -webkit-text-fill-color: transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
+body main section.description-5 .confix .portfolio-3 .portfolio-text-box p:nth-child(6) {
+  margin-left: 113px;
 }
 body main section.description-6 {
   clear: both;

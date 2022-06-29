@@ -681,104 +681,27 @@ body {
                             }
                         } // ability종료
                     } // introduction-flex종료
-
                 } // introduction 종료
             } // confix
         } // section.description-2 종료
 
 
-        // 움직이는 배경과 우주선
-        section.description-3 {
-            margin: 5em 0;
-            overflow: hidden;
-            width: 100%;
-            height: 18vmin;
-            background: url(../images/movebackground01.png) 0 center / 100px repeat-x;
-            background-size: cover;
-            opacity: 0.9;
-            
-            // 움직이는 배경과 애니메이션
-            animation: movebg1 20s linear infinite ;
-            @keyframes movebg1 {
-                0% {
-                    background-position:0 center;
-                }
-                100% {
-                    background-position: -5000px center;
-                }
-            }
-
-            @include responsive(tablet-size) {
-                height: 18vmax;
-                margin-top: 15em;
-                margin-bottom: 4em;
-
-                animation: movebg2 10s linear infinite ;
-                @keyframes movebg2 {
-                    0% {
-                        background-position:0 center;
-                    }
-                    100% {
-                        background-position: -5000px center;
-                    }
-                }   
-            }
-            
-
-            .move-bg {
-                position: relative;
-                
-                .moving-ship {
-                    position: absolute;
-                    top: 0; left: 0;
-                    transform: translate(10%, 50%);
-                    @include responsive(tablet-size) {
-                        transform: translate(10%, 40%);
-                    }
-                    @include responsive(pc-size) {
-                        transform: translate(10%, 35%);
-                    }
-
-                    // 움직이는 비행선 애니메이션
-                    animation: moveimg 8s linear infinite;
-                    @keyframes moveimg {
-                        0% {
-                            left : -10%;
-                        }
-                        100% {
-                            left : 100%;
-                        }
-                    }
-                    
-
-                    img {
-                        width: 9vw;
-                        opacity: 0.9;
-                        @include responsive(tablet-size) {
-                            width: 11vw;
-                        }
-                        
-                    }
-                } // moving-ship 종료
-            } // move-bg 종료
-        } // section.description-3 종료
-
-
         // DIRECTION 섹션
         section.description-4 {
-            background-color: #19cdca;
+
             .confix {
                 @include padding-set();
                 @include confix();
                 overflow: hidden;
+
                 .direction-text {
-                    display: flex;
                     width: 100%;
                     margin-top: 5rem;
+                    margin-bottom: 2rem;
 
                     @include responsive(tablet-size) {
                         margin-top: 10rem;
-                        margin-bottom: 5em;
+                        margin-bottom: 5rem;
                     }
                     
                     // <direction> 상위 텍스트
@@ -789,6 +712,7 @@ body {
                             font-size: 3.5rem;
                             background: $dire-text;
                             @include gradienttitle();
+
                             @include responsive(tablet-size) {
                                 font-size: 4.5rem;
                             }
@@ -797,26 +721,24 @@ body {
                             }
                         }
                     } 
-
-                    img {
-                        width: 2.5em;
-                        margin-left: 20px;
-                        transform: translateY(-50%);
-                    }
                 } // direction-text 종료
 
                 // direction의 코딩 박스
                 .direction-box {
-                    overflow: hidden;
-                    background-color: #fff;
+                    width: 100%;
+
+                    @include responsive(tablet-size) {
+                        display: flex;
+                        justify-content: space-around;
+                        flex-wrap: wrap;
+                    }
                     
                     .coding-box {
+                        width: 100%;
+
                         @include responsive(tablet-size) {
-                            margin-top: 22px;
-                            display: inline-block;
-                            width: 45%;
-                            background-color: #333;
-                            margin-bottom: 6em;
+                            width: 35%;
+                            margin-bottom: 3.75rem;
                         }
 
                         > img {
@@ -824,6 +746,7 @@ body {
                             padding: 5px;
                             filter: drop-shadow(0px 0px 3px rgba(255,255,255,1));
                             border-radius: 15px;
+
                             @include responsive(tablet-size) {
                                 width: 41vmin;
                                 padding: 0px;
@@ -839,20 +762,15 @@ body {
                         .coding-box-textbox {
                             display: flex;
                             margin-top: 1em;
+
                             @include responsive(tablet-size) {
                                 width: 100%;
-                                padding-left: 2em;
                             }
 
-                            // img {
-                            //     width: 23px; height: 23px;
-                            //     margin-right: 0.6em;
-                            //     transform: translateY(22%);
-                            // }
-
                             .coding-box-text{
-                                margin-bottom: 3em;
+                                margin-bottom: 5rem;
                                 h2 {
+                                    font-weight: bold;
                                     margin-bottom: 20px;
                                     text-align: justify;
                                 }
@@ -862,8 +780,7 @@ body {
                                 }
                             }
                         }
-                    } 
-
+                    }
                 }// direction-box 종료
 
             } // confix 종료
@@ -874,6 +791,7 @@ body {
         section.description-5 {
             clear: both;
             overflow: hidden;
+
             .confix {
                 @include padding-set();
                 @include confix();
@@ -885,37 +803,37 @@ body {
 
                     .portfolio-header-text {
                         position: absolute;
-                        left: 4%; top: 20%;
+                        left: 4%; top: 12%;
                         z-index: 9;
                         display: flex;
                         width: 100%;
                         // <portfolio> 상위 텍스트
                         h2 {
-                            text-align: left;
-                            
                             span {
-                                font-size: 1.6em;
+                                font-size: 3.5rem;
                                 background: $port-text;
                                 @include gradienttitle();
+                                
+                                @include responsive(tablet-size) {
+                                    font-size: 4.5rem;
+                                }
+                                @include responsive(pc-size) {
+                                    font-size: 5.5rem;
+                                }
                             }
                         } 
                         
-                        img {
-                            width: 3.5em;
-                            margin-left: 20px;
-                            transform: translateY(-40%);
-                        }
                     } // direction-text 종료
                     
                     .portfolio-1-parallelogra{
                         display: block;
                         width: 370%;
                         background: linear-gradient(90deg, #515259, #515259);
+                        transform: translateX(-50%) skewY(10deg);
                         height: 1100px;
                         @include responsive(tablet-size) {
                             height: 825px;
                         }
-                        transform: translateX(-50%) skewY(10deg);
                     }
                     @include port-text();
                 }
@@ -935,12 +853,17 @@ body {
                         transform: translateX(-30%) skewY(-10deg);
                     }
                     @include port-text();
+
+                    .portfolio-text-box p:nth-child(6){
+                        margin-left: 113px;
+                    }
                 }
 
                 .portfolio-3 {
                     position: relative;
                     z-index: 2;
                     height: 1180px;
+
                     .portfolio-3-parallelogra{
                         display: block;
                         background: linear-gradient(90deg, #f1b37e, #f1b37e);
@@ -953,17 +876,10 @@ body {
                         transform: translateX(-40%) skewY(10deg);
                     }
                     @include port-text();
-                    // </portfolio> 하위 텍스트
-                    .portfolio-bottom {
-                        position: relative;
-                        float: right;
-                        z-index: 1;
-                        span {
-                            font-size: 1.1em;
-                            background: $port-text;
-                            @include gradienttitle();
-                        }
-                    } 
+
+                    .portfolio-text-box p:nth-child(6){
+                        margin-left: 113px;
+                    }
                 }
 
             } // confix
@@ -990,6 +906,7 @@ body {
                         font-size: 1.6em;
                         background: $cont-text;
                         @include gradienttitle();
+                        
                     }
                 }
 

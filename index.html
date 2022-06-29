@@ -14,9 +14,9 @@
     <title>Myfortfolio 이동건</title>
     <link rel="stylesheet" href="./css/index.css"> <!-- css file -->
     <link rel="stylesheet" href="./aos/aos.css"> <!-- aos file -->
-    <script src="./js/jquery.js"></script> <!-- js file -->
-    <script src="./js/index.js"></script>
-    <script src="./aos/aos.js"></script>
+    <script src="./js/jquery.js"></script> <!-- plugIn file -->
+    <script src="./js/index.js"></script> <!-- js file -->
+    <script src="./aos/aos.js"></script> <!-- aos file -->
 </head>
 <body>
     <script>AOS.init({duration: 650, offset: 200})</script>
@@ -82,7 +82,7 @@
             <div class="confix">
                 
     
-                <div class="vision">
+                <div class="vision" data-aos="fade-up">
                     <h2><span>My<br>Vision</span></h2>
                     <p>
                         변화와 다양성을 선호하고 겸손하며<br>기술에 자만하지 않고
@@ -285,7 +285,7 @@
                 
                 <div class="direction-box"  >
 
-                    <div class="coding-box" data-aos="fade-right" >
+                    <div class="coding-box" data-aos="fade-up" data-aos-duration="2000" >
                         <img src="./images/direction1.png" alt="깔끔한 코드를 지향합니다." />
                         
                         <div class="coding-box-textbox">
@@ -297,19 +297,19 @@
                         </div> <!-- coding-box-textbox -->
                     </div> <!-- coding-box -->
         
-                    <div class="coding-box reverse-box" data-aos="fade-left">
+                    <div class="coding-box" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="500" >
                         <img src="./images/direction2.png" alt="가독성도 놓칠 수 없죠." />
                         
                         <div class="coding-box-textbox">
                             <!-- <img src="./images/check-1.png" alt="중요!" /> -->
                             <div class="coding-box-text">
-                                <h2>가독성도 놓칠 수 없죠.</h2>
+                                <h2>가독성은 놓칠 수 없습니다.</h2>
                                 <p>클래스와 아이디의 네이밍은 직관적입니다.<br>스타일시트의 속성들은 배경, 위치, 폰트에<br>따라 체계적으로 분류되어 있습니다.</p>
                             </div> <!-- coding-box-text -->
                         </div> <!-- coding-box-text -->
                     </div> <!-- coding-box -->
         
-                    <div class="coding-box" data-aos="fade-up-right"> 
+                    <div class="coding-box" data-aos="fade-up-right" data-aos-duration="1500" data-aos-delay="100"> 
                         <img src="./images/direction3-1.png" alt="협업은 기본입니다.">
                         
                         <div class="coding-box-textbox">    
@@ -321,34 +321,27 @@
                         </div> <!-- coding-box-textbox -->
                     </div> <!-- coding-box -->
         
-                    <div class="coding-box reverse-box" data-aos="fade-up-left">
+                    <div class="coding-box" data-aos="fade-up-left" data-aos-duration="1500" data-aos-delay="100">
                         <img src="./images/direction4.png" alt="깔끔한 코드를 지향합니다.">
                         
                         <div class="coding-box-textbox">
                             <!-- <img src="./images/check-1.png" alt="중요!" /> -->
                             <div class="coding-box-text">
                                 <h2>마지막으로 커뮤니케이션</h2>
-                                <p>독단적으로 혼자 가기보다는<br>상대방의 의견을 존중하고<br>배려하면서 끝까지 목표를<br>달성하기 위해 노력 할 것입니다.</p>
+                                <p>독단적으로 혼자 가기보다는 상대방의<br>의견을 존중하고 배려하면서 끝까지 목표를<br>달성하기 위해 노력 할 것입니다.</p>
                             </div> <!-- coding-box-text -->
                         </div> <!-- coding-box-textbox -->
                     </div> <!-- coding-box -->
 
                 </div> <!-- direction-box -->
-    
-                <div>
-                    <img src="./images/7.png" alt="풍선올라가는 이미지" style="display: none;"/>
-                </div>
-    
-                <div class="direction-bottom">&lt;<span>/DIRECTION</span>&gt;</div>
             </div> <!-- confix -->
         </section> <!-- description-4 종료 -->
 
         <section class="description-5">
             <div class="confix">
                 <div class="portfolio-1" data-aos="zoom-out-right" data-aos-delay="200">
-                    <div class="portfolio-header-text" data-aos="zoom-out-right" >
-                        <h2>&lt;<span>PORTFOLIO</span>&gt;</h2>
-                        <img src="./images/8.png" alt="달에-사람이-앉아있는-이미지" />
+                    <div class="portfolio-header-text">
+                        <h2><span>Portfolio</span></h2>
                     </div> <!-- portfolio-text -->
                     <div class="portfolio-1-parallelogra"></div>
                     <div class="portfolio-box" style="top: 275px;">
@@ -376,7 +369,8 @@
                             <p><strong>TYPE</strong>&nbsp; : &nbsp;반응형 웹페이지</p>
                             <p><strong>COLOR</strong>&nbsp; : <span style="background: #f2ece4;"></span>&nbsp;<span style="background: #a7a7a7;"></span>&nbsp;<span style="background: #2c2928;"></span></p>
                             <p><strong>FONT</strong>&nbsp; : &nbsp;Noto Serif KR , Pretendard</p>
-                            <p><strong>TOOLS</strong>&nbsp; : &nbsp;HTML · SCSS · Javascript · jQuery</p>
+                            <p><strong>TOOLS</strong>&nbsp; : &nbsp;HTML · SCSS</p>
+                            <p>Javascript · jQuery</p>
                             <p><strong>기여도</strong>&nbsp; : &nbsp;개인작업 30%</p>
                             
                             <a href="https://DongKeon94.github.io">WEB</a>
@@ -394,14 +388,14 @@
                             <p><strong>TYPE</strong>&nbsp; : &nbsp;반응형 웹페이지</p>
                             <p><strong>COLOR</strong>&nbsp; : <span style="background: #515259;"></span>&nbsp;<span style="background: #59a56c;"></span>&nbsp;<span style="background:#f1b37e"></span>&nbsp;<span></span> </p>
                             <p><strong>FONT</strong>&nbsp; : &nbsp;Pretendard</p>
-                            <p><strong>TOOLS</strong>&nbsp; : &nbsp;HTML · SCSS · Javascript · jQuery</p>
+                            <p><strong>TOOLS</strong>&nbsp; : &nbsp;HTML · SCSS</p>
+                            <p>Javascript · jQuery</p>
                             <p><strong>기여도</strong>&nbsp; : &nbsp;개인작업 100%</p>
                             
                             <a href="#">WEB</a>
                             <a href="#">DESIGN GUIDE</a>
                         </div> <!-- portfolio-text-box -->
                     </div> <!-- portfolio-box -->
-                    <div class="portfolio-bottom">&lt;<span>/PORTFOLIO</span>&gt;</div>
                 </div>
             </div> <!-- confix -->
         </section> <!-- description-5 종료 -->
@@ -409,7 +403,7 @@
         <section class="description-6">
             <div class="confix">
 
-                <h2>&lt;<span>CONTACT</span>&gt;</h2>
+                <h2><span>CONTACT</span></h2>
                 
                 <div class="moon-up-img" onclick="scrollImg();">
                     <img src="./images/9.png" alt="달위에-깃발-들고있는-이미지" />
@@ -430,7 +424,6 @@
                     <img src="./images/10.png" alt="달위에-낚시하는-이미지" />
                 </div> <!-- moon-star-img -->
 
-                <div class="contact-bottom">&lt;<span>/CONTACT</span>&gt;</div>
             </div> <!-- confix -->
         </section> <!-- description-5 종료 -->
 
