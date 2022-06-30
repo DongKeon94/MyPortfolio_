@@ -577,6 +577,7 @@ body {
                                         
                                         h2 {
                                             font-size: 1rem;
+                                            font-weight: bold;
                                             text-align: center;
                                         }
                                         
@@ -688,7 +689,7 @@ body {
 
         // DIRECTION 섹션
         section.description-4 {
-
+            overflow: hidden;
             .confix {
                 @include padding-set();
                 @include confix();
@@ -1001,7 +1002,9 @@ body {
 
                     .contact-text-me {
                         margin-bottom: 30px;
-
+                        @include responsive(tablet-size) {
+                            transform: translate(1.2%);
+                        }
                         .contact-br {
                             @include responsive(tablet-size) {
                                 display: none;
@@ -1014,16 +1017,12 @@ body {
 
                         @include responsive(tablet-size) {
                             font-size: 2rem;
-                            transform: translate(-0.2%);
                         }
                     }
                     .email-address-smalltext {
                         font-size: 0.7em;
                         margin-top: 10px;
                         color: #666;
-                        @include responsive(tablet-size) {
-                            transform: translate(-0.1%);
-                        }
                     }
                 }
 

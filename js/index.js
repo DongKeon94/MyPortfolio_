@@ -1,4 +1,10 @@
+
+
 window.onload = function() {
+    (async () => {
+        await loadFull(tsParticles);
+        await tsParticles.loadJSON("tsparticles", "../particles/particles.json");
+    })();
 
     // skill_Close 모달창
     const ovModal = document.querySelector(".skills-modal");
@@ -50,6 +56,8 @@ window.onload = function() {
     //     closeModal[5].style.display = "none"
     //     ovModal.classList.remove("modal-on");
     // });
+    
+    
 }
 
 // skill_Open 모달창
@@ -93,13 +101,14 @@ function openJQueryModals() {
     const ovModal = document.querySelector(".skills-modal");
     jQueryModal.style.display = "block";
     ovModal.classList.add("modal-on");
+
+    
 };
 
 
 
 // jQuery Start
 $(document).ready(function(){
-
     // Hello, World_Text
     $("#text2").hide();
     
@@ -251,6 +260,7 @@ $(document).ready(function(){
 
     $(window).scroll(function () {
         var curSCTLeft = $(this).scrollTop();
+        var width = $(window).width();
 
         if (curSCTLeft > secLeftOST) {
             $(".side-left").addClass("ImgLeft");
@@ -268,7 +278,7 @@ $(document).ready(function(){
     });
     
 
-    // 스크롤 화살표
+    // 스크롤 화살표 fadein,out
     $(window).on("scroll", function(){
         if($(this).scrollTop() > 400) {
             $("#up-arrow")
@@ -279,7 +289,7 @@ $(document).ready(function(){
         }
     });
 
-    // Up-arrow
+    // Up-arrow smooth
     $("#up-arrow").click(function(){
         $("html").animate({
             scrollTop : "0"
@@ -321,6 +331,6 @@ $(document).ready(function(){
     //         $("body").css("background-color","black")
     //     }
     // })
+    
 }); 
-
 
