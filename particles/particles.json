@@ -1,12 +1,4 @@
 {
-  "background": {
-    "color": {
-      "value": "#000"
-    },
-    "position": "50% 50%",
-    "repeat": "no-repeat",
-    "size": "20%"
-  },
   "fullScreen": {
     "zIndex": -2
   },
@@ -91,7 +83,7 @@
       },
       "value": {
         "min": 0,
-        "max": 0.4
+        "max": 0.6
       },
       "animation": {
         "enable": true,

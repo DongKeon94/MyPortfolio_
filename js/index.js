@@ -20,43 +20,69 @@ window.onload = function() {
         });
     };
 
-    // const closeModalBt0 = closeModal[0].children[0];
-    // const closeModalBt1 = closeModal[1].children[0];
-    // const closeModalBt2 = closeModal[2].children[0];
-    // const closeModalBt3 = closeModal[3].children[0];
-    // const closeModalBt4 = closeModal[4].children[0];
-    // const closeModalBt5 = closeModal[5].children[0];
+    class CardFlipOnScroll {
+        constructor(wrapper, sticky) {
+            this.wrapper = wrapper
+            this.sticky = sticky
+            this.cards = sticky.querySelectorAll('.card')
+            this.length = this.cards.length
     
-    // closeModalBt0.addEventListener("click", function() {
-    //     closeModal[0].style.display = "none"
-    //     ovModal.classList.remove("modal-on");
-    // });
+            this.start = 0
+            this.end = 0
+            this.step = 0
+        }
     
-    // closeModalBt1.addEventListener("click", ()=> {
-    //     closeModal[1].style.display = "none"
-    //     ovModal.classList.remove("modal-on");
-    // });
+        init() {
+            this.start = this.wrapper.offsetTop - 4500
+            this.end = this.wrapper.offsetTop + this.wrapper.offsetHeight - innerHeight * 1.2
+            this.step = (this.end - this.start) / (this.length * 2)
+        }
     
-    // closeModalBt2.addEventListener("click", ()=> {
-    //     closeModal[2].style.display = "none"
-    //     ovModal.classList.remove("modal-on");
-    // });
+        animate() {
+            this.cards.forEach((card, i) => {
+                const s = this.start + this.step * i
+                const e = s + this.step * (this.length + 1)
     
-    // closeModalBt3.addEventListener("click", ()=> {
-    //     closeModal[3].style.display = "none"
-    //     ovModal.classList.remove("modal-on");
-    // });
-    
-    // closeModalBt4.addEventListener("click", ()=> {
-    //     closeModal[4].style.display = "none"
-    //     ovModal.classList.remove("modal-on");
-    // });
-    
-    // closeModalBt5.addEventListener("click", ()=> {
-    //     closeModal[5].style.display = "none"
-    //     ovModal.classList.remove("modal-on");
-    // });
-    
+                if (scrollY <= s) {
+                card.style.transform = `
+                    perspective(50vw)
+                    translateX(70vw) 
+                    rotateY(180deg)
+                `
+                } else if (scrollY > s && scrollY <= e - this.step) {
+                card.style.transform = `
+                    perspective(50vw)
+                    translateX(${70 + (scrollY - s) / (e - s) * -70}vw)
+                    rotateY(180deg)
+                `
+                } else if (scrollY > e - this.step && scrollY <= e) {
+                card.style.transform = `
+                    perspective(50vw)
+                    translateX(${70 + (scrollY - s) / (e - s) * -70}vw)
+                    rotateY(${180 + -(scrollY - (e - this.step)) / this.step * 180}deg)
+                `
+                } else if (scrollY > e) {
+                card.style.transform = `
+                    perspective(50vw)
+                    translateX(0vw) 
+                    rotateY(0deg)
+                `
+                }
+            })
+        }
+    }
+    const mainContent1 = document.querySelector('.main-content-1')
+    const sticky = document.querySelector('.sticky')
+    const cardFlipOnScroll = new CardFlipOnScroll(mainContent1, sticky)
+    cardFlipOnScroll.init()
+
+    window.addEventListener('scroll', () => {
+        cardFlipOnScroll.animate()
+    })
+
+    window.addEventListener('resize', () => {
+        cardFlipOnScroll.init()
+    })
     
 }
 
@@ -235,7 +261,7 @@ $(document).ready(function(){
 
     // 달위에-깃발-들고있는-이미지 모션
     var description6 = $(".description-6")
-    var secImgOST = description6.offset().top - 800;
+    var secImgOST = description6.offset().top + 4700;
 
     $(window).scroll(function () {
         var curSCT = $(this).scrollTop();
@@ -322,15 +348,15 @@ $(document).ready(function(){
 	// 	$("html, body").animate({ scrollTop: 0 }, "slow"); 
 	// });
 
-    // var scroll_pos = 0;
-    // $(document).scroll(function() {
-    //     scroll_pos = $(this).scrollTop();
-    //     if(scroll_pos > 6300) {
-    //         $("body").css("background-color","white")
-    //     } else {
-    //         $("body").css("background-color","black")
-    //     }
-    // })
+    var scroll_pos = 0;
+    $(document).scroll(function() {
+        scroll_pos = $(this).scrollTop();
+        if(scroll_pos > 6000) {
+            $("body").css("background-color","#eee")
+        } else {
+            $("body").css("background-color","#000")
+        }
+    })
     
 }); 
 

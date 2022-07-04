@@ -1,4 +1,4 @@
-@import "_style.scss";
+@import "style.scss";
 
 * {
     margin: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-    font-family: $font-mont;
+    font-family: $font-pre;
 }
 
 p {
@@ -27,7 +27,11 @@ li {
 a {
     display: inline-block;
     text-decoration: none;
-    color: #000;
+    color: #f2f2f2;
+    &:hover {
+        color: #777;
+        transition: all 0.3s;
+    }
 }
 
 

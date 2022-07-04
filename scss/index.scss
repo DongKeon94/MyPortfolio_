@@ -6,6 +6,8 @@
 body {
     color: #f2f2f2;
     background-color: $main-backgroundcolor;
+    background-color: #000;
+    transition: background-color 1s;
     header {
         display: none;
         position: fixed;
@@ -931,15 +933,137 @@ body {
                     }
                 }
 
+                
             } // confix
         } // section.description-5 종료
 
+        section.description-6 {
+            .main-content-1 {
+                width: 100%;
+                height: 500vh;
+
+                .sticky {
+                    position: sticky;
+                    top: 0;
+                    height: 100vh;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                    h2 {
+                        position: absolute;
+                        top: 50%; left: 51%;
+                        transform: translate(-50%,-50%);
+                        font-size: 9vw;
+                        width: 10em;
+                        color: #2c2928;
+                        opacity: 0.5;
+                        @include responsive(tablet-size) {
+                            font-size: 9vw;
+                        }
+                        @include responsive(pc-size) {
+                            font-size: 7vw;
+                        }
+                    }
+                    .card-frame {
+                        position: absolute;
+                        width: 45vh;
+                        height: 30vh;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        gap: 50px;
+                        
+                        @include responsive(tablet-size) {
+                            width: 50vw;
+                            height: 30vw;
+                        }
+                        @include responsive(pc-size) {
+                            width: 40vw;
+                            height: 25vw;
+                        }
+
+                        .card {
+                            position: relative;
+                            width: 48%;
+                            height: 100%;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            transform-style: preserve-3d; /* 트랜스폼을 3D처럼 표현한다.*/
+                            transform: perspective(50vw) translateX(70vw) rotateY(180deg);
+                            
+                            .front, .back {
+                                position: absolute;
+                                width: 100%;
+                                height: 100%;
+                                border-radius: 1vw;
+                                overflow: hidden;
+                                backface-visibility: hidden; /* rotate시 서로의 뒷모습이 안보이게해준다.*/
+                                box-shadow: 0px 0px 5px #000;
+                            }
+                            .front {
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                text-align: center;
+                                background-color: #aaa;
+                                
+                                img {
+                                    width: 25vw;
+                                    border-radius: 1vw;
+                                    @include responsive(tablet-size) {
+                                        width: 18vw;
+                                    }
+                                    @include responsive(pc-size) {
+                                        width: 17vw;
+                                    }
+                                }
+
+                                a {
+                                    font-size: 1rem;
+                                    letter-spacing: 1px;
+                                    margin-top: 10px;
+                                    margin-right: 10px;
+                                    padding: 5px 30px;
+                                    border: 1px solid #fff;
+                                    border-radius: 10px;
+                                    color: #fff;
+                                    background-color: transparent;
+                                    transition: all 0.5s;
+                    
+                                    &:hover {
+                                        color: #000;
+                                        background-color: #fff;
+                                        transition: all 0.5s;
+                                    }                
+                                }
+                            }
+
+                            .back {
+                                font-size: 1.5rem;
+                                text-align: center;
+                                padding-top: 50%;
+                                transform: rotateY(180deg);
+                                background-color: #3b3a38;
+                                @include responsive(tablet-size) {
+                                    font-size: 2.5rem;
+                                    padding-top: 50%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
         // CONTACT 섹션
-        section.description-6 {
+        section.description-7 {
             clear: both;
             overflow: hidden;
             height: 550px;
+            padding-bottom: 650px;
             .confix {
                 @include padding-set();
                 @include confix();
@@ -955,6 +1079,9 @@ body {
                         font-size: 1.6em;
                         background: $cont-text;
                         @include gradienttitle();
+                        @include responsive(tablet-size) {
+                            font-size: 3.5rem;
+                        }
                         
                     }
                 }
@@ -995,9 +1122,11 @@ body {
                     font-size: 1rem;
                     text-align: center;
                     line-height: 30px;
-                    
+                    color: #000;
+                    font-weight: bold;
                     @include responsive(tablet-size) {
                         font-size: 1.3rem;
+                        transform: translateY(-30%);
                     }
 
                     .contact-text-me {
@@ -1014,9 +1143,15 @@ body {
 
                     .email-address{
                         font-size: 1.7rem;
-
                         @include responsive(tablet-size) {
                             font-size: 2rem;
+                        }
+                        a {
+                            color: #000;
+                            &:hover {
+                                color: #ccc;
+                                transition: all 0.3s;
+                            }
                         }
                     }
                     .email-address-smalltext {
@@ -1082,7 +1217,6 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-top: 100px;
         padding: 50px;
         background-color: #333;
         h2 {
