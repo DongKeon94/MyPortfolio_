@@ -383,7 +383,7 @@ body main section.description-1 .confix .main-top .title p {
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top .title p {
     font-size: 2.4rem;
-    line-height: 50px;
+    line-height: 60px;
   }
 }
 @media screen and (min-width: 1320px) {
@@ -770,42 +770,30 @@ body main section.description-2 .confix .introduction .introduction-flex .abilit
   transform: rotate(-90deg) translate(1%, -3%);
   transform-origin: 50% 50%;
 }
-body main section.description-2 .confix .introduction .introduction-flex .ability .modal-on {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  z-index: 3;
-  -webkit-backdrop-filter: blur(2px);
-          backdrop-filter: blur(2px);
-}
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box {
   position: fixed;
-  top: 73%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 15rem;
   height: 30rem;
-  border-radius: 10px;
+  border-radius: 50px;
   background-color: #bdbdbd;
-  display: none;
   z-index: 4;
+  opacity: 0;
+  transition: all 0.4s;
 }
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box {
-    top: 52%;
-    left: 50%;
+    top: 30%;
+    width: 70vw;
+    height: 18rem;
   }
 }
-body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box .closeBtn {
-  position: absolute;
-  top: 1%;
-  right: 7%;
-  font-size: 3.5em;
-  transform: translate(-1%, -7%);
-  cursor: pointer;
+@media screen and (min-width: 1320px) {
+  body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box {
+    width: 90vmin;
+  }
 }
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box .skills-text {
   padding: 1em;
@@ -817,16 +805,31 @@ body main section.description-2 .confix .introduction .introduction-flex .abilit
   align-items: center;
   gap: 3em;
 }
+@media screen and (min-width: 768px) {
+  body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box .skills-text {
+    flex-direction: row;
+    gap: 2rem;
+  }
+}
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box .skills-text img {
   width: 10em;
 }
+@media screen and (min-width: 768px) {
+  body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box .skills-text img {
+    width: 25%;
+  }
+}
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box .skills-text p {
-  font-size: 0.9em;
+  font-size: 1rem;
   text-align: justify;
+  color: #333;
 }
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box .skills-text p {
-    font-size: 1em;
+    width: 60%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    line-height: 30px;
   }
 }
 body main section.description-4 {
@@ -1154,7 +1157,6 @@ body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-t
   border: 1px solid #fff;
   border-radius: 10px;
   color: #fff;
-  background-color: transparent;
   transition: all 0.5s;
 }
 body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box a:hover {
@@ -1265,7 +1267,6 @@ body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-t
   border: 1px solid #fff;
   border-radius: 10px;
   color: #fff;
-  background-color: transparent;
   transition: all 0.5s;
 }
 body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box a:hover {
@@ -1381,7 +1382,6 @@ body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-t
   border: 1px solid #fff;
   border-radius: 10px;
   color: #fff;
-  background-color: transparent;
   transition: all 0.5s;
 }
 body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box a:hover {
@@ -1471,15 +1471,15 @@ body main section.description-6 .main-content-1 .sticky .card-frame .card .front
 }
 body main section.description-6 .main-content-1 .sticky .card-frame .card .front {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  text-align: center;
   background-color: #aaa;
 }
 body main section.description-6 .main-content-1 .sticky .card-frame .card .front img {
-  width: 25vw;
+  width: 18vh;
   border-radius: 1vw;
+  transition: all 1s;
 }
 @media screen and (min-width: 768px) {
   body main section.description-6 .main-content-1 .sticky .card-frame .card .front img {
@@ -1491,16 +1491,16 @@ body main section.description-6 .main-content-1 .sticky .card-frame .card .front
     width: 17vw;
   }
 }
+body main section.description-6 .main-content-1 .sticky .card-frame .card .front img:hover {
+  transform: scale(0.95);
+}
 body main section.description-6 .main-content-1 .sticky .card-frame .card .front a {
   font-size: 1rem;
   letter-spacing: 1px;
-  margin-top: 10px;
-  margin-right: 10px;
   padding: 5px 30px;
   border: 1px solid #fff;
   border-radius: 10px;
   color: #fff;
-  background-color: transparent;
   transition: all 0.5s;
 }
 body main section.description-6 .main-content-1 .sticky .card-frame .card .front a:hover {
@@ -1568,6 +1568,7 @@ body main section.description-7 .confix .moon-up-img {
     top: 50%;
   }
   body main section.description-7 .confix .moon-up-img .on {
+    display: block;
     -webkit-animation: moon-img-turn 0.7s linear both;
             animation: moon-img-turn 0.7s linear both;
   }
@@ -1590,6 +1591,7 @@ body main section.description-7 .confix .moon-up-img {
 }
 @media screen and (min-width: 1320px) {
   body main section.description-7 .confix .moon-up-img .on1 {
+    display: block;
     -webkit-animation: moon-img-turns 1s linear both;
             animation: moon-img-turns 1s linear both;
   }

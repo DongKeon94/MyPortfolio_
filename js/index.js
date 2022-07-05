@@ -6,20 +6,7 @@ window.onload = function() {
         await tsParticles.loadJSON("tsparticles", "../particles/particles.json");
     })();
 
-    // skill_Close 모달창
-    const ovModal = document.querySelector(".skills-modal");
-    const closeModal = document.querySelectorAll(".skills-modal-box");
-
-    for(let i = 0; i <= 5; i++) {
-        closeModal[i].children[0].addEventListener("click", function() {
-
-            for(let j = 0; j <= 5; j++) {
-                closeModal[j].style.display = "none";
-                ovModal.classList.remove("modal-on");
-            };
-        });
-    };
-
+    // CardSection
     class CardFlipOnScroll {
         constructor(wrapper, sticky) {
             this.wrapper = wrapper
@@ -84,53 +71,74 @@ window.onload = function() {
         cardFlipOnScroll.init()
     })
     
-}
+    // skill_Open 모달창
+    const openPsModal = document.getElementById("openPsModal");
+    const openHtmlModals = document.getElementById("openHtmlModals");
+    const openCssModals = document.getElementById("openCssModals");
+    const openJsModals = document.getElementById("openJsModals");
+    const openSassModals = document.getElementById("openSassModals");
+    const openJQueryModals = document.getElementById("openJQueryModals");
 
-// skill_Open 모달창
-function openPsModal() {
-    const psModal = document.querySelector(".psBox");
-    const ovModal = document.querySelector(".skills-modal");
-    psModal.style.display = "block";
-    ovModal.classList.add("modal-on");
-};
+    openPsModal.addEventListener("mouseover", function() {
+        const psModal = document.querySelector(".psBox");
+        psModal.style.opacity = "1";
 
-function openHtmlModals() {
-    const htmlModal = document.querySelector(".htmlBox");
-    const ovModal = document.querySelector(".skills-modal");
-    htmlModal.style.display = "block";
-    ovModal.classList.add("modal-on");
-};
-
-function openCssModals() {
-    const cssModal = document.querySelector(".cssBox");
-    const ovModal = document.querySelector(".skills-modal");
-    cssModal.style.display = "block";
-    ovModal.classList.add("modal-on");
-};
-
-function openJsModals() {
-    const jsModal = document.querySelector(".jsBox");
-    const ovModal = document.querySelector(".skills-modal");
-    jsModal.style.display = "block";
-    ovModal.classList.add("modal-on");
-};
-
-function openSassModals() {
-    const sassModal = document.querySelector(".sassBox");
-    const ovModal = document.querySelector(".skills-modal")
-    sassModal.style.display = "block";
-    ovModal.classList.add("modal-on");
-};
-
-function openJQueryModals() {
-    const jQueryModal = document.querySelector(".jQueryBox");
-    const ovModal = document.querySelector(".skills-modal");
-    jQueryModal.style.display = "block";
-    ovModal.classList.add("modal-on");
-
+        openPsModal.addEventListener("mouseout", function() {
+            const psModal = document.querySelector(".psBox");
+            psModal.style.opacity = "0";
+        });
+    });
     
-};
+    openHtmlModals.addEventListener("mouseover", function() {
+        const psModal = document.querySelector(".htmlBox");
+        psModal.style.opacity = "1";
 
+        openHtmlModals.addEventListener("mouseout", function() {
+            const psModal = document.querySelector(".htmlBox");
+            psModal.style.opacity = "0";
+        });
+    });
+
+    openCssModals.addEventListener("mouseover", function() {
+        const psModal = document.querySelector(".cssBox");
+        psModal.style.opacity = "1";
+
+        openCssModals.addEventListener("mouseout", function() {
+            const psModal = document.querySelector(".cssBox");
+            psModal.style.opacity = "0";
+        });
+    });
+
+    openJsModals.addEventListener("mouseover", function() {
+        const psModal = document.querySelector(".jsBox");
+        psModal.style.opacity = "1";
+
+        openJsModals.addEventListener("mouseout", function() {
+            const psModal = document.querySelector(".jsBox");
+            psModal.style.opacity = "0";
+        });
+    });
+
+    openSassModals.addEventListener("mouseover", function() {
+        const psModal = document.querySelector(".sassBox");
+        psModal.style.opacity = "1";
+
+        openSassModals.addEventListener("mouseout", function() {
+            const psModal = document.querySelector(".sassBox");
+            psModal.style.opacity = "0";
+        });
+    });
+
+    openJQueryModals.addEventListener("mouseover", function() {
+        const psModal = document.querySelector(".jQueryBox");
+        psModal.style.opacity = "1";
+
+        openJQueryModals.addEventListener("mouseout", function() {
+            const psModal = document.querySelector(".jQueryBox");
+            psModal.style.opacity = "0";
+        });
+    });
+}
 
 
 // jQuery Start
@@ -261,16 +269,19 @@ $(document).ready(function(){
 
     // 달위에-깃발-들고있는-이미지 모션
     var description6 = $(".description-6")
-    var secImgOST = description6.offset().top + 4700;
+    var secImgOST = description6.offset().top + 4500;
 
     $(window).scroll(function () {
         var curSCT = $(this).scrollTop();
         var width = $(window).width();
-
+        
+        $(".moon-up-img img").hide()
         if (curSCT > secImgOST) {
+            $(".moon-up-img img").fadeIn(500)
             $(".moon-up-img img").addClass("on");
 
             if (width>=1320) {
+                $(".moon-up-img img").fadeIn(500)
                 $(".moon-up-img img").addClass("on1");
             }
             
@@ -305,6 +316,7 @@ $(document).ready(function(){
     
 
     // 스크롤 화살표 fadein,out
+    $("#up-arrow").hide();
     $(window).on("scroll", function(){
         if($(this).scrollTop() > 400) {
             $("#up-arrow")

@@ -256,7 +256,7 @@ body {
                             text-align: center;
                             @include responsive(tablet-size) {
                                 font-size: 2.4rem;
-                                line-height: 50px;
+                                line-height: 60px;
                             }
                             @include responsive(pc-size) {
                                 font-size: 3.5rem;
@@ -623,41 +623,31 @@ body {
                                 }
                             }
 
-                            .modal-on {
-                                position: fixed;
-                                top: 0;
-                                left: 0;
-                                width: 100%;
-                                height: 100%;
-                                overflow: hidden;
-                                z-index: 3;
-                                backdrop-filter: blur(2px);
-                            }
 
                             .skills-modal {
                                 
                                 .skills-modal-box {
                                     position: fixed;
-                                    top: 73%; left: 50%;
+                                    top:50%; left: 50%;
                                     transform: translate(-50%,-50%);
                                     width: 15rem;
                                     height: 30rem;
-                                    border-radius: 10px;
+                                    border-radius: 50px;
                                     background-color: #bdbdbd;
-                                    display: none;
                                     z-index: 4;
-    
+                                    opacity: 0;
+                                    transition: all 0.4s;
+
                                     @include responsive(tablet-size) {
-                                        top: 52%; left: 50%;
+                                        top: 30%;
+                                        width: 70vw;
+                                        height: 18rem;
+                                    }
+
+                                    @include responsive(pc-size) {
+                                        width: 90vmin;
                                     }
     
-                                    .closeBtn {
-                                        position: absolute;
-                                        top: 1%; right: 7%;
-                                        font-size: 3.5em;
-                                        transform: translate(-1%, -7%);
-                                        cursor: pointer;
-                                    }
     
                                     .skills-text {
                                         padding: 1em;
@@ -668,15 +658,28 @@ body {
                                         justify-content: center;
                                         align-items: center;
                                         gap: 3em;
-    
+                                        @include responsive(tablet-size) {
+                                            flex-direction: row;
+                                            gap: 2rem;
+                                        }
+
                                         img {
                                             width: 10em;
-                                        }
-                                        p {
-                                            font-size: 0.9em;
-                                            text-align: justify;
                                             @include responsive(tablet-size) {
-                                                font-size: 1em;
+                                                width: 25%;
+                                            }
+                                        }
+                                        
+                                        p {
+                                            font-size: 1rem;
+                                            text-align: justify;
+                                            color: #333;
+
+                                            @include responsive(tablet-size) {
+                                                width: 60%;
+                                                font-size: 1.2rem;
+                                                font-weight: bold;
+                                                line-height: 30px;
                                             }
                                         }
                                     }
@@ -1004,33 +1007,35 @@ body {
                             }
                             .front {
                                 display: flex;
-                                justify-content: center;
+                                justify-content: space-around;
                                 align-items: center;
                                 flex-direction: column;
-                                text-align: center;
                                 background-color: #aaa;
-                                
+
+
+
                                 img {
-                                    width: 25vw;
+                                    width: 18vh;
                                     border-radius: 1vw;
+                                    transition: all 1s;
                                     @include responsive(tablet-size) {
                                         width: 18vw;
                                     }
                                     @include responsive(pc-size) {
                                         width: 17vw;
                                     }
+                                    &:hover {
+                                        transform: scale(0.95);
+                                    }
                                 }
 
                                 a {
                                     font-size: 1rem;
                                     letter-spacing: 1px;
-                                    margin-top: 10px;
-                                    margin-right: 10px;
                                     padding: 5px 30px;
                                     border: 1px solid #fff;
                                     border-radius: 10px;
                                     color: #fff;
-                                    background-color: transparent;
                                     transition: all 0.5s;
                     
                                     &:hover {
@@ -1097,6 +1102,7 @@ body {
                         left: 50%; top: 50%;
                         
                         .on {
+                            display: block;
                             animation: moon-img-turn 0.7s linear both;
                             @keyframes moon-img-turn {
                                 0% {transform: translate(750%,0%) rotateZ(-360deg);}
@@ -1107,7 +1113,7 @@ body {
                     @include responsive(pc-size) {
                         
                         .on1 {
-
+                            display: block;
                             animation: moon-img-turns 1s linear both;
                             @keyframes moon-img-turns {
                                 0% {transform: translate(1600%,0%) rotate(-720deg);}

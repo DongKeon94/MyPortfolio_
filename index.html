@@ -147,7 +147,7 @@
                             <div class="skills">
                                 <div class="skills-charts">
                                     
-                                    <div class="skills-chart" onclick="openPsModal();">
+                                    <div class="skills-chart" id="openPsModal">
                                         <img src="./images/PS-logo.svg" alt="PS-logo">
                                         <svg>
                                             <circle cx="70" cy="70" r="35"></circle>
@@ -156,7 +156,7 @@
                                         <h2 data-num="90" style="color: #4e88e1;">0</h2>
                                     </div>
 
-                                    <div class="skills-chart" onclick="openHtmlModals();">
+                                    <div class="skills-chart" id="openHtmlModals">
                                         <img src="./images/HTML-logo.svg" alt="HTML-logo">
                                         <svg>
                                             <circle cx="70" cy="70" r="35"></circle>
@@ -164,7 +164,7 @@
                                         <h2 data-num="90" style="color: #b02629;">0</h2>
                                     </div>  
 
-                                    <div class="skills-chart" onclick="openCssModals();">
+                                    <div class="skills-chart" id="openCssModals">
                                         <img src="./images/CSS-logo.svg" alt="CSS-logo">
                                         <svg>
                                             <circle cx="70" cy="70" r="35"></circle>
@@ -172,7 +172,7 @@
                                         <h2 data-num="90" style="color: #19cdca;">0</h2>
                                     </div>
 
-                                    <div class="skills-chart" onclick="openJsModals();">
+                                    <div class="skills-chart" id="openJsModals">
                                         <img src="./images/JS-logo.svg" alt="JS-logo.svg">
                                         <svg>
                                             <circle cx="70" cy="70" r="35"></circle>
@@ -180,7 +180,7 @@
                                         <h2 data-num="70" style="color: #e4732a;">0</h2>
                                     </div>
 
-                                    <div class="skills-chart" onclick="openSassModals();">
+                                    <div class="skills-chart" id="openSassModals">
                                         <img src="./images/SASS-logo.svg" alt="SASS-logo.svg">
                                         <svg>
                                             <circle cx="70" cy="70" r="35"></circle>
@@ -188,7 +188,7 @@
                                         <h2 data-num="90" style="color: #b24a9c;">0</h2>
                                     </div>
 
-                                    <div class="skills-chart" onclick="openJQueryModals();">
+                                    <div class="skills-chart" id="openJQueryModals">
                                         <img src="./images/jQuery-logo.svg" alt="jQuery-logo.svg">
                                         <svg>
                                             <circle cx="70" cy="70" r="35"></circle>
@@ -201,7 +201,6 @@
                             <div class="skills-modal">
 
                                 <div class="skills-modal-box psBox">
-                                    <span class="closeBtn">&times;</span>
                                     <div class="skills-text">
                                         <img src="./images/PS-logo.svg" alt="PS-logo">
                                         <p>
@@ -211,7 +210,6 @@
                                 </div>
 
                                 <div class="skills-modal-box htmlBox">
-                                    <span class="closeBtn">&times;</span>
                                     <div class="skills-text">
                                         <img src="./images/HTML-logo.svg" alt="HTML-logo">
                                         <p>
@@ -221,7 +219,6 @@
                                 </div>
 
                                 <div class="skills-modal-box cssBox">
-                                    <span class="closeBtn">&times;</span>
                                     <div class="skills-text">
                                         <img src="./images/CSS-logo.svg" alt="CSS-logo">
                                         <p>
@@ -232,7 +229,6 @@
                                 </div>
 
                                 <div class="skills-modal-box jsBox">
-                                    <span class="closeBtn">&times;</span>
                                     <div class="skills-text">
                                         <img src="./images/JS-logo.svg" alt="JS-logo.svg">
                                         <p>
@@ -242,7 +238,6 @@
                                 </div>
 
                                 <div class="skills-modal-box sassBox">
-                                    <span class="closeBtn">&times;</span>
                                     <div class="skills-text">
                                         <img src="./images/SASS-logo.svg" alt="SASS-logo.svg">
                                         <p>
@@ -252,7 +247,6 @@
                                 </div>
 
                                 <div class="skills-modal-box jQueryBox">
-                                    <span class="closeBtn">&times;</span>
                                     <div class="skills-text">
                                         <img src="./images/jQuery-logo.svg" alt="jQuery-logo.svg">
                                         <p>
@@ -267,15 +261,6 @@
                 </div> <!-- introduction -->
             </div> <!-- confix -->
         </section> <!-- section2 종료 -->
-        
-        <!-- <section class="description-3">
-            <h2 style="font-size:0;">움직이는 이미지</h2>
-                <div class="move-bg">
-                    <div class="moving-ship">
-                        <img src="./images/5.png" alt="움직이는 이미지" />
-                    </div> moving-ship
-                </div> move-bg
-        </section> description-3 종료 -->
 
         <section class="description-4">
             <div class="confix">
@@ -363,7 +348,7 @@
                             <a href="./sub/port1.html" target="_blank" rel="noopener noreferrer">DESIGN GUIDE</a>
                         </div> <!-- portfolio-text-box -->
                     </div> <!-- portfolio-box -->
-                </div>
+                </div> <!-- portfolio-1 -->
                 
                 <div class="portfolio-2" data-aos="fade-up-right" data-aos-delay="300">
                     <div class="portfolio-2-parallelogra"></div>
@@ -382,7 +367,7 @@
                             <a href="./sub/port2.html" target="_blank" rel="noopener noreferrer">DESIGN GUIDE</a>
                         </div> <!-- portfolio-text-box -->
                     </div> <!-- portfolio-box -->
-                </div>
+                </div> <!-- portfolio-2 -->
 
                 <div class="portfolio-3" data-aos="fade-up-left" data-aos-delay="300">
                     <div class="portfolio-3-parallelogra"></div>
@@ -401,9 +386,7 @@
                             <a href="#" rel="noopener noreferrer">DESIGN GUIDE</a>
                         </div> <!-- portfolio-text-box -->
                     </div> <!-- portfolio-box -->
-                </div>
-
-                
+                </div> <!-- portfolio-3 -->
             </div> <!-- confix -->
         </section> <!-- description-5 종료 -->
 
@@ -411,27 +394,27 @@
             <div class="main-content-1">
                 <div class="sticky">
                     <h2>Javascript Portfolio</h2>
+
                     <div class="card-frame">
                         <div class="card">
                             <div class="front">
                                 <img src="./images/Javascript-1.png" alt="Javascript-1">
                                 <a href="./sub/vendingMachine/index.html" target="_blank" rel="noopener noreferrer">WEB</a>
-                            </div>
+                            </div> <!-- front -->
                             <div class="back">Javascript<br>거스름돈<br>계산기</div>
-                        </div>
+                        </div> <!-- card -->
         
                         <div class="card">
                             <div class="front">
                                 <img src="./images/Javascript-2.png" alt="Javascript-2">
                                 <a href="./sub/calculator/index.html" target="_blank" rel="noopener noreferrer">WEB</a>
-                            </div>
+                            </div> <!-- front -->
                             <div class="back">Javascript<br>계산기</div>
-                        </div>
-            
-                    </div>
-                </div>
-            </div>
-        </section>
+                        </div> <!-- card -->
+                    </div> <!-- card-frame -->
+                </div> <!-- sticky -->
+            </div> <!-- main-content-1 -->
+        </section> <!-- description-6 -->
 
         <section class="description-7">
             <div class="confix">
@@ -457,11 +440,11 @@
                 </div> <!-- moon-star-img -->
 
             </div> <!-- confix -->
-        </section> <!-- description-5 종료 -->
+        </section> <!-- description-7 종료 -->
 
         <div id="up-arrow">
             <img src="./images/up-arrow2.png" alt="up-arrow" title="Up">
-        </div>
+        </div> <!-- up-arrow -->
     </main>
 
     <footer>
