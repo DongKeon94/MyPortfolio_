@@ -307,29 +307,6 @@ body {
                         
                     }
 
-                    // 외계인이랑 손잡는 이미지
-                    .main-image2 {
-                        position: absolute;
-                        bottom: 0; left: 0;
-                        display: none;
-                        padding-left: 1%;
-                        transform: translateY(-40%);
-                        opacity: 0.9;
-
-                        @include responsive(tablet-size) {
-                            display: block;
-                            img {
-                                width: 18vmax;
-                            }
-                        }
-                        @include responsive(pc-size) {
-                            img {
-                                width: 38vmin;
-                                transform: translate(-10%);
-                            }
-                        }
-                    } 
-
                     // 풍선 올라가는 이미지1
                     .main-image3 {
                         position: absolute;
@@ -1038,7 +1015,7 @@ body {
                                     color: #fff;
                                     transition: all 0.5s;
                     
-                                    &:hover {
+                                    &:hover, &:focus {
                                         color: #000;
                                         background-color: #fff;
                                         transition: all 0.5s;
