@@ -6,70 +6,6 @@ window.onload = function() {
         await tsParticles.loadJSON("tsparticles", "../particles/particles.json");
     })();
 
-    // CardSection
-    class CardFlipOnScroll {
-        constructor(wrapper, sticky) {
-            this.wrapper = wrapper
-            this.sticky = sticky
-            this.cards = sticky.querySelectorAll('.card')
-            this.length = this.cards.length
-    
-            this.start = 0
-            this.end = 0
-            this.step = 0
-        }
-    
-        init() {
-            this.start = this.wrapper.offsetTop - 4500
-            this.end = this.wrapper.offsetTop + this.wrapper.offsetHeight - innerHeight * 1.2
-            this.step = (this.end - this.start) / (this.length * 2)
-        }
-    
-        animate() {
-            this.cards.forEach((card, i) => {
-                const s = this.start + this.step * i
-                const e = s + this.step * (this.length + 1)
-    
-                if (scrollY <= s) {
-                card.style.transform = `
-                    perspective(50vw)
-                    translateX(70vw) 
-                    rotateY(180deg)
-                `
-                } else if (scrollY > s && scrollY <= e - this.step) {
-                card.style.transform = `
-                    perspective(50vw)
-                    translateX(${70 + (scrollY - s) / (e - s) * -70}vw)
-                    rotateY(180deg)
-                `
-                } else if (scrollY > e - this.step && scrollY <= e) {
-                card.style.transform = `
-                    perspective(50vw)
-                    translateX(${70 + (scrollY - s) / (e - s) * -70}vw)
-                    rotateY(${180 + -(scrollY - (e - this.step)) / this.step * 180}deg)
-                `
-                } else if (scrollY > e) {
-                card.style.transform = `
-                    perspective(50vw)
-                    translateX(0vw) 
-                    rotateY(0deg)
-                `
-                }
-            })
-        }
-    }
-    const mainContent1 = document.querySelector('.main-content-1')
-    const sticky = document.querySelector('.sticky')
-    const cardFlipOnScroll = new CardFlipOnScroll(mainContent1, sticky)
-    cardFlipOnScroll.init()
-
-    window.addEventListener('scroll', () => {
-        cardFlipOnScroll.animate()
-    })
-
-    window.addEventListener('resize', () => {
-        cardFlipOnScroll.init()
-    })
     
     // skill_Open 모달창
     const openPsModal = document.getElementById("openPsModal");
@@ -268,51 +204,30 @@ $(document).ready(function(){
 
 
     // 달위에-깃발-들고있는-이미지 모션
-    var description6 = $(".description-6")
-    var secImgOST = description6.offset().top + 4500;
+    // var description7 = $(".description-7")
+    // var secImgOST = description7.offset().top + 4500;
 
-    $(window).scroll(function () {
-        var curSCT = $(this).scrollTop();
-        var width = $(window).width();
+    // $(window).scroll(function () {
+    //     var curSCT = $(this).scrollTop();
+    //     var width = $(window).width();
         
-        $(".moon-up-img img").hide()
-        if (curSCT > secImgOST) {
-            $(".moon-up-img img").fadeIn(500)
-            $(".moon-up-img img").addClass("on");
+    //     $(".moon-up-img img").hide()
+    //     if (curSCT > secImgOST) {
+    //         $(".moon-up-img img").fadeIn(500)
+    //         $(".moon-up-img img").addClass("on");
 
-            if (width>=1320) {
-                $(".moon-up-img img").fadeIn(500)
-                $(".moon-up-img img").addClass("on1");
-            }
+    //         if (width>=1320) {
+    //             $(".moon-up-img img").fadeIn(500)
+    //             $(".moon-up-img img").addClass("on1");
+    //         }
             
-        } else {
-            $(".moon-up-img img").removeClass("on");
-            $(".moon-up-img img").removeClass("on1");
-        }
-    });
+    //     } else {
+    //         $(".moon-up-img img").removeClass("on");
+    //         $(".moon-up-img img").removeClass("on1");
+    //     }
+    // });
 
-    // Coding Img - open, close
-    var description4 = $(".description-4")
-    var secLeftOST = description4.offset().top - 600;
 
-    $(window).scroll(function () {
-        var curSCTLeft = $(this).scrollTop();
-        var width = $(window).width();
-
-        if (curSCTLeft > secLeftOST) {
-            $(".side-left").addClass("ImgLeft");
-            $(".side-right").addClass("ImgRight");
-
-            if (width>=1320) {
-                $(".side-left").addClass("ImgLeft");
-                $(".side-right").addClass("ImgRight");
-            }
-
-        } else {
-            $(".side-left").removeClass("ImgLeft");
-            $(".side-right").removeClass("ImgRight");
-        }
-    });
     
 
     // 스크롤 화살표 fadein,out
@@ -363,7 +278,7 @@ $(document).ready(function(){
     var scroll_pos = 0;
     $(document).scroll(function() {
         scroll_pos = $(this).scrollTop();
-        if(scroll_pos > 6000) {
+        if(scroll_pos > 6500) {
             $("body").css("background-color","#eee")
         } else {
             $("body").css("background-color","#000")

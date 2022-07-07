@@ -204,6 +204,7 @@ body {
                             font-size: 1.7em;
                             font-weight: bold;
                             text-align: center;
+                            font-family: $font-sans;
                             @include responsive(tablet-size) {
                                 font-size: 3em;
                                 line-height: 55px;
@@ -254,6 +255,7 @@ body {
                         p {
                             font-size: 1.5em;
                             text-align: center;
+                            font-family: $font-sans;
                             @include responsive(tablet-size) {
                                 font-size: 2.4rem;
                                 line-height: 60px;
@@ -306,6 +308,8 @@ body {
                         }
                         
                     }
+
+                    
 
                     // 풍선 올라가는 이미지1
                     .main-image3 {
@@ -366,18 +370,19 @@ body {
                     }
                     
                     p {
-                        font-weight: 300;
-                        font-size: 0.9rem;
-                        line-height: 30px;
                         margin-top: 60px;
                         padding-bottom: 30px;
+                        font-weight: 200;
+                        font-size: 0.9rem;
+                        line-height: 30px;
+                        font-family: $font-sans;
                         border-bottom: 3px solid #f9f9f9;
 
                         @include responsive(tablet-size) {
                             font-size: 0.9rem;
                         }
                         @include responsive(pc-size) {
-                            font-size: 1rem;
+                            font-size: 1.15rem;
                         }
                     }
 
@@ -464,8 +469,10 @@ body {
 
                                         td {
                                             font-size: 2.5vw;
+                                            font-family: $font-sans;
+                                            font-weight: 200;
                                             @include responsive(tablet-size) {
-                                                font-size: 1.1rem;
+                                                font-size: 1.3rem;
                                             }
                                         }
                                     }
@@ -493,6 +500,7 @@ body {
                                             font-size: 2.9vw;
                                             @include responsive(tablet-size) {
                                                 font-size: 1.5rem;
+                                                padding-right: 0px;
                                             }
                                             @include responsive(pc-size) {
                                                 padding-right: 70px;
@@ -501,6 +509,7 @@ body {
                                         
                                         td {
                                             font-size: 2.5vw;
+                                            font-weight: 200;
                                             @include responsive(tablet-size) {
                                                 font-size: 1.1rem;
                                             }
@@ -651,10 +660,10 @@ body {
                                             font-size: 1rem;
                                             text-align: justify;
                                             color: #333;
-
+                                            font-family: $font-sans;
                                             @include responsive(tablet-size) {
-                                                width: 60%;
-                                                font-size: 1.2rem;
+                                                width: 64%;
+                                                font-size: 1.3rem;
                                                 font-weight: bold;
                                                 line-height: 30px;
                                             }
@@ -671,7 +680,6 @@ body {
 
         // DIRECTION 섹션
         section.description-4 {
-            overflow: hidden;
             .confix {
                 @include padding-set();
                 @include confix();
@@ -712,44 +720,70 @@ body {
                 } // direction-text 종료
 
                 // direction의 코딩 박스
-                .direction-box {
+                .direction-box, .coding-box-left, .coding-box-right {
                     width: 100%;
                     
                     @include responsive(tablet-size) {
-                        display: flex;
-                        justify-content: space-around;
-                        flex-wrap: wrap;
+                        // display: flex;
+                        // justify-content: space-between;
+                        // flex-wrap: wrap;
                     }
                     
-                    .coding-box, .side-left, .side-right {
+                    .coding-box {
                         width: 100%;
-
                         @include responsive(tablet-size) {
-                            width: 35%;
-                            margin-bottom: 3.75rem;
-                        }
+                            width: 45%;
 
-                        > img {
-                            width: 100%;
-                            padding: 5px;
-                            filter: drop-shadow(0px 0px 3px rgba(255,255,255,1));
-                            border-radius: 15px;
+                            &:first-child {
+                                float: left;
+                                width: 48%;
+                            }
 
-                            @include responsive(tablet-size) {
-                                width: 41vmin;
-                                padding: 0px;
-                                transition: all 0.5s ;
+                            &:nth-child(2) {
+                                float: right;
+                                width: 44%;
+                                margin-top: 30vh;
 
-                                &:hover {
-                                    transform: scale(1.1);
-                                    transition: all 0.5s ;
+                                br {
+                                    display: none;
+                                }
+                            }
+
+                            &:last-child {
+                                float: left;
+                                margin-top: 7rem;
+                                img {
+                                    width: 80%;
+                                }
+                                p {
+                                    width: 37vw;
+                                }
+                                br {
+                                    display: none;
                                 }
                             }
                         }
+                        @include responsive(pc-size) {
+                            &:nth-child(2) {
+
+                                br {
+                                    display: block;
+                                }
+                            }
+
+                            &:last-child {
+                                br {
+                                    display: block;
+                                }
+                            }
+                        }
+                        > img {
+                            width: 100%;
+                            box-shadow: (0px 0px 4px rgba(255,255,255,0.6));
+                            border-radius: 5px;
+                        }
 
                         .coding-box-textbox {
-                            display: flex;
-                            margin-top: 1em;
 
                             @include responsive(tablet-size) {
                                 width: 100%;
@@ -757,63 +791,60 @@ body {
 
                             .coding-box-text{
                                 margin-bottom: 5rem;
-                                h2 {
-                                    font-weight: bold;
-                                    margin-bottom: 20px;
-                                    text-align: justify;
+
+                                > span {
+                                    display: block;
+                                    font-size: 4.5vw;
+                                    margin-top: 30px;
+                                    color: #8f8f8f;
+                                    @include responsive(tablet-size) {
+                                        font-size: 1.2rem;
+                                    }
                                 }
+
+                                h2 {
+                                    font-size: 7vw;
+                                    font-weight: bold;
+                                    font-family: $font-sans;
+                                    margin-top: 5px;
+                                    margin-bottom: 15px;
+                                    @include responsive(tablet-size) {
+                                        font-size: 1.6rem;
+                                    }
+                                }
+
                                 p { 
-                                    width: 21rem;
-                                    text-align: justify;
-                                    line-height: 24px;
+                                    font-size: 3.2vw;
+                                    font-family: $font-sans;
+                                    line-height: 4.5vw;
+                                    @include responsive(tablet-size) {
+                                        font-size: 1rem;
+                                        line-height: 2rem;
+                                    }
+                                }
+
+                                a {
+                                    letter-spacing: 1px;
+                                    margin-top: 3vh;
+                                    padding: 5px 15px;
+                                    border: 1px solid #fff;
+                                    border-radius: 10px;
+                                    color: #fff;
+                                    transition: background-color 0.5s;
+                                    
+                                    &:hover {
+                                        color: #000;
+                                        // background-color: #fff;
+                                        transition: box-shadow 0.5s;
+                                        box-shadow: inset 9em 0 0 0 #fff;
+                                    }                
                                 }
                             }
                         }
-
     
                     }
-
-                    .ImgLeft {
-                        animation: side-left 1s ease-in-out both;
-                        opacity: 0;
-
-                        @keyframes side-left {
-                            0% {transform: translate(-300%); opacity: 0;}
-                            100% {transform: translate(0%); opacity: 1;}
-                        }
-                    }
-
-                    .ImgRight {
-                        animation: side-right 1s ease-in-out both;
-                        opacity: 0;
-
-                        @keyframes side-right {
-                            0% {transform: translate(300%); opacity: 0;}
-                            100% {transform: translate(0%); opacity: 1;}
-                        }
-                    }
                 }// direction-box 종료
-
-                .coding-port {
-                    display: none;
-                    @include responsive(tablet-size) {
-                        display: block;
-                        position: absolute;
-                        top: 50%; right: 0%;
-                        transform: translate(45%) rotate(90deg);
-                        z-index: -1;
-
-                        p {
-                            font-size: 130px;
-                            opacity: 0.2;
-                        }
-                    }
-
-                    @include responsive(pc-size) {
-                        transform: translate(35%) rotate(90deg);
-                        
-                    }
-                }
+                
             } // confix 종료
         } // section.description-4 종료
 
@@ -822,7 +853,7 @@ body {
         section.description-5 {
             clear: both;
             overflow: hidden;
-
+            
             .confix {
                 @include padding-set();
                 @include confix();
@@ -831,7 +862,6 @@ body {
                     position: relative;
                     z-index: 5;
                     margin-top: 4em;
-
                     .portfolio-header-text {
                         position: absolute;
                         left: 4%; top: 12%;
@@ -861,7 +891,7 @@ body {
                         width: 370%;
                         background: linear-gradient(90deg, #515259, #515259);
                         transform: translateX(-50%) skewY(10deg);
-                        height: 1100px;
+                        height: 1120px;
                         @include responsive(tablet-size) {
                             height: 825px;
                         }
@@ -877,7 +907,7 @@ body {
                         display: block;
                         background: linear-gradient(90deg, #58a56b, #58a56b);
                         width: 350%;
-                        height: 1100px;
+                        height: 1120px;
                         @include responsive(tablet-size) {
                             height: 825px;
                         }
@@ -897,10 +927,9 @@ body {
 
                     .portfolio-3-parallelogra{
                         display: block;
-                        background: linear-gradient(90deg, #f1b37e, #f1b37e);
-                        opacity: 0.9;
+                        background: linear-gradient(90deg, #d8a171, #d8a171);
                         width: 350%;
-                        height: 1100px;
+                        height: 1120px;
                         @include responsive(tablet-size) {
                             height: 825px;
                         }
@@ -913,132 +942,99 @@ body {
                     }
                 }
 
-                
-            } // confix
-        } // section.description-5 종료
-
-        section.description-6 {
-            .main-content-1 {
-                width: 100%;
-                height: 500vh;
-
-                .sticky {
-                    position: sticky;
-                    top: 0;
-                    height: 100vh;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    overflow: hidden;
-                    h2 {
-                        position: absolute;
-                        top: 50%; left: 51%;
-                        transform: translate(-50%,-50%);
-                        font-size: 9vw;
-                        width: 10em;
-                        color: #2c2928;
-                        opacity: 0.5;
+                .js-portfolio {
+                    position: relative;
+                    z-index: 1;
+                    margin-bottom: 5rem;
+                    .js-portfolio-parallelogra{
+                        display: block;
+                        background: linear-gradient(90deg, #f2e9bb, #f2e9bb);
+                        width: 350%;
+                        height: 210vw;
+                        transform: translateX(-60%) skewY(-10deg);
                         @include responsive(tablet-size) {
-                            font-size: 9vw;
-                        }
-                        @include responsive(pc-size) {
-                            font-size: 7vw;
+                            height: 825px;
+                            transform: translate(-30%, -48%) skewY(-10deg);
                         }
                     }
-                    .card-frame {
+                    .js-portfolio-box {
                         position: absolute;
-                        width: 45vh;
-                        height: 30vh;
-                        display: flex;
-                        justify-content: space-around;
-                        align-items: center;
-                        gap: 50px;
-                        
+                        top:0%; left: 0;
                         @include responsive(tablet-size) {
-                            width: 50vw;
-                            height: 30vw;
-                        }
-                        @include responsive(pc-size) {
-                            width: 40vw;
-                            height: 25vw;
-                        }
-
-                        .card {
-                            position: relative;
-                            width: 48%;
-                            height: 100%;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            transform-style: preserve-3d; /* 트랜스폼을 3D처럼 표현한다.*/
-                            transform: perspective(50vw) translateX(70vw) rotateY(180deg);
+                            top: -30%; left: 0;
                             
-                            .front, .back {
-                                position: absolute;
-                                width: 100%;
-                                height: 100%;
-                                border-radius: 1vw;
-                                overflow: hidden;
-                                backface-visibility: hidden; /* rotate시 서로의 뒷모습이 안보이게해준다.*/
-                                box-shadow: 0px 0px 5px #000;
+                        }
+                        h2 {
+                            margin-bottom: 10vw;
+                            @include responsive(tablet-size) {
+                                margin-bottom: 5rem;
                             }
-                            .front {
+                            span {
+                                font-size: 9vw;
+                                background: $js-text;
+                                @include gradienttitle();
+                                
+                                @include responsive(tablet-size) {
+                                    font-size: 4.5rem;
+                                }
+                                @include responsive(pc-size) {
+                                    font-size: 5.5rem;
+                                }
+                            }
+                        } 
+                        .js-portfolio-flex-box {
+                            @include responsive(tablet-size) {
                                 display: flex;
+                                flex-direction: row;
                                 justify-content: space-around;
                                 align-items: center;
+                                transform: translate(2vw);
+                            }
+                            .js-portfolio-images {
+                                width: 100%;
+                                display: flex;
                                 flex-direction: column;
-                                background-color: #aaa;
+                                justify-content: center;
+                                align-items: center;
+                                margin-bottom: 5rem;
 
-
-
-                                img {
-                                    width: 18vh;
-                                    border-radius: 1vw;
-                                    transition: all 1s;
-                                    @include responsive(tablet-size) {
-                                        width: 18vw;
-                                    }
-                                    @include responsive(pc-size) {
-                                        width: 17vw;
-                                    }
-                                    &:hover {
-                                        transform: scale(0.95);
-                                    }
+                                @include responsive(tablet-size) {
+                                    width: 30%;
                                 }
 
+                                img {
+                                    width: 50vw;
+                                    border-radius: 30px;
+                                    box-shadow: 0px 0px 5px #ccc;
+                                    @include responsive(tablet-size) {
+                                        width: 100%;
+                                    }
+                                }
                                 a {
                                     font-size: 1rem;
                                     letter-spacing: 1px;
-                                    padding: 5px 30px;
-                                    border: 1px solid #fff;
+                                    margin-top: 20px;
+                                    margin-right: 10px;
+                                    padding: 5px 15px;
+                                    border: 1px solid #000;
                                     border-radius: 10px;
-                                    color: #fff;
+                                    color: #000;
                                     transition: all 0.5s;
                     
                                     &:hover, &:focus {
-                                        color: #000;
-                                        background-color: #fff;
+                                        color: #fff;
+                                        background-color: #000;
                                         transition: all 0.5s;
                                     }                
-                                }
-                            }
-
-                            .back {
-                                font-size: 1.5rem;
-                                text-align: center;
-                                padding-top: 50%;
-                                transform: rotateY(180deg);
-                                background-color: #3b3a38;
-                                @include responsive(tablet-size) {
-                                    font-size: 2.5rem;
-                                    padding-top: 50%;
                                 }
                             }
                         }
                     }
                 }
-            }
-        }
+            } // confix
+        } // section.description-5 종료
+
+  
 
         // CONTACT 섹션
         section.description-7 {
