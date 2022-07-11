@@ -1233,36 +1233,6 @@ body main section.description-4 .confix .direction-box .coding-box .coding-box-t
   transition: background-color 1s;
 }
 
-body main section.description-4 .confix .readability-modal-box {
-  position: fixed;
-  top: 50%;
-  left: 30%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 30rem;
-  background-color: #bdbdbd;
-  z-index: 99;
-  opacity: 1;
-  -webkit-transition: all 0.4s;
-  transition: all 0.4s;
-}
-
-body main section.description-4 .confix .readability-modal-box .readability-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 10px;
-  width: 100%;
-}
-
-body main section.description-4 .confix .readability-modal-box .readability-box img {
-  width: 100%;
-}
-
 body main section.description-5 {
   clear: both;
   overflow: hidden;
