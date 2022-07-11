@@ -7,7 +7,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -49,7 +50,8 @@ footer {
   max-width: 1320px;
   margin: 0 auto;
   width: auto;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
@@ -64,6 +66,7 @@ body {
   width: 300px;
   height: 400px;
 }
+
 .tablet-size .tablet-img {
   overflow: hidden;
   position: absolute;
@@ -73,6 +76,7 @@ body {
   height: 370px;
   border-radius: 8px;
 }
+
 .tablet-size .tablet-img img {
   width: 100%;
   height: 100%;
@@ -86,6 +90,7 @@ body {
   width: 110px;
   height: 300px;
 }
+
 .mobile-size .mobile-img {
   position: absolute;
   overflow: hidden;
@@ -95,7 +100,9 @@ body {
   height: 208px;
   border-radius: 10px;
 }
+
 .mobile-size .mobile-img img {
   width: 100%;
   height: 100%;
 }
+/*# sourceMappingURL=port2.css.map */

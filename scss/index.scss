@@ -857,7 +857,25 @@ body {
                 } // direction-box
 
                 .readability-modal-box {
-                    background-color: #19cdca;
+                    position: fixed;
+                    top:50%; left: 30%;
+                    transform: translate(-50%,-50%);
+                    width: 30rem;
+                    background-color: #bdbdbd;
+                    z-index: 99;
+                    opacity: 1;
+                    transition: all 0.4s;
+
+                    .readability-box {
+                        display: flex;
+                        flex-direction: row;
+                        // flex-wrap: wrap;
+                        gap: 10px;
+                        width: 100%;
+                        img {
+                            width: 100%;
+                        }
+                    }
                 }
             } // confix
         } // section.description-4
