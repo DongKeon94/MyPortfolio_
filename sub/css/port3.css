@@ -9,8 +9,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -51,7 +50,6 @@ body {
   height: 5000px;
   font-family: Pretendard;
 }
-
 body header {
   position: relative;
   width: 100%;
@@ -61,51 +59,35 @@ body header {
   height: 940px;
   background-color: #f9f9f9;
 }
-
 body header .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 447px;
   gap: 10px;
   text-align: center;
   background-color: #ffa801;
-  -webkit-transform: translateY(-15%);
-          transform: translateY(-15%);
+  transform: translateY(-15%);
 }
-
 body header .title h1 {
   font-size: 80px;
   border-bottom: 4px solid black;
 }
-
 body header .title p {
   font-weight: bold;
   font-size: 18px;
 }
-
 body header .monitors .pc-monitor {
   position: absolute;
   top: 62%;
   left: 50%;
   width: 730px;
   height: 700px;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   background: url(../images/pc-monitor.png) no-repeat center center/contain;
 }
-
 body header .monitors .pc-monitor .pc-img {
   position: absolute;
   top: 12.2%;
@@ -114,12 +96,10 @@ body header .monitors .pc-monitor .pc-img {
   height: 345px;
   overflow: hidden;
 }
-
 body header .monitors .pc-monitor .pc-img img {
   width: 100%;
   height: 120%;
 }
-
 body header .tablet-size {
   position: absolute;
   top: 50.5%;
@@ -128,7 +108,6 @@ body header .tablet-size {
   width: 300px;
   height: 400px;
 }
-
 body header .tablet-size .tablet-img {
   overflow: hidden;
   position: absolute;
@@ -138,7 +117,6 @@ body header .tablet-size .tablet-img {
   height: 370px;
   border-radius: 8px;
 }
-
 body header .tablet-size .tablet-img img {
   position: absolute;
   top: 0;
@@ -147,7 +125,6 @@ body header .tablet-size .tablet-img img {
   height: 100%;
   border-radius: 8px;
 }
-
 body header .mobile-size {
   position: absolute;
   top: 65%;
@@ -156,7 +133,6 @@ body header .mobile-size {
   width: 110px;
   height: 300px;
 }
-
 body header .mobile-size .mobile-img {
   position: absolute;
   overflow: hidden;
@@ -166,7 +142,6 @@ body header .mobile-size .mobile-img {
   height: 208px;
   border-radius: 10px;
 }
-
 body header .mobile-size .mobile-img img {
   position: absolute;
   top: 0;
@@ -174,7 +149,6 @@ body header .mobile-size .mobile-img img {
   height: 100%;
   border-radius: 10px;
 }
-
 body main section.concept-section {
   position: relative;
   width: 100%;
@@ -183,17 +157,14 @@ body main section.concept-section {
   height: 345px;
   background-color: #ffa801;
 }
-
 body main section.concept-section .concept-title {
   margin-left: 260px;
   padding-top: 75px;
 }
-
 body main section.concept-section .concept-title h2 {
   font-weight: 700;
   font-size: 35px;
 }
-
 body main section.concept-section .concept-title h2::after {
   content: "";
   display: block;
@@ -202,14 +173,12 @@ body main section.concept-section .concept-title h2::after {
   margin-top: 10px;
   background-color: #000;
 }
-
 body main section.concept-section .concept-title p {
   font-weight: 600;
   font-size: 18px;
   margin-top: 40px;
   line-height: 25px;
 }
-
 body main section.typo-section {
   position: relative;
   width: 100%;
@@ -218,17 +187,14 @@ body main section.typo-section {
   height: 345px;
   background-color: #fff;
 }
-
 body main section.typo-section .typo-title {
   margin-left: 260px;
   padding-top: 75px;
 }
-
 body main section.typo-section .typo-title h2 {
   font-weight: 700;
   font-size: 35px;
 }
-
 body main section.typo-section .typo-title h2::after {
   content: "";
   display: block;
@@ -237,44 +203,29 @@ body main section.typo-section .typo-title h2::after {
   margin-top: 10px;
   background-color: #000;
 }
-
 body main section.typo-section .typo-title .typo-font-text {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   margin-top: 30px;
   gap: 30px;
 }
-
 body main section.typo-section .typo-title .typo-font-text > p {
   font-family: Pretendard;
   font-size: 20px;
   font-weight: bold;
 }
-
 body main section.typo-section .typo-title .typo-font-text > p:nth-child(3) {
   font-family: Montserrat;
 }
-
 body main section.typo-section .typo-title .typo-font-text .typo-font-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   font-family: Pretendard;
   line-height: 30px;
 }
-
 body main section.typo-section .typo-title .typo-font-text .typo-font-flex:nth-child(4) p {
   font-family: Montserrat;
 }
-
 body main section.color-section {
   position: relative;
   width: 100%;
@@ -283,17 +234,14 @@ body main section.color-section {
   height: 780px;
   background-color: #ffa801;
 }
-
 body main section.color-section .color-title {
   margin-left: 260px;
   padding-top: 75px;
 }
-
 body main section.color-section .color-title h2 {
   font-weight: 700;
   font-size: 35px;
 }
-
 body main section.color-section .color-title h2::after {
   content: "";
   display: block;
@@ -302,17 +250,12 @@ body main section.color-section .color-title h2::after {
   margin-top: 10px;
   background-color: #000;
 }
-
 body main section.color-section .color-title .color-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
   margin-top: 180px;
   width: 80%;
 }
-
 body main section.color-section .color-title .color-box p {
   font-size: 20px;
   width: 150px;
@@ -320,35 +263,28 @@ body main section.color-section .color-title .color-box p {
   padding: 15px;
   padding-left: 20px;
   background-color: #515259;
-  -webkit-filter: drop-shadow(2px 4px 2px gray);
-          filter: drop-shadow(2px 4px 2px gray);
+  filter: drop-shadow(2px 4px 2px gray);
 }
-
 body main section.color-section .color-title .color-box p:nth-child(2) {
   color: #000;
   background-color: #59a56c;
 }
-
 body main section.color-section .color-title .color-box p:nth-child(3) {
   color: #000;
   background-color: #f1b37e;
 }
-
 body main section.color-section .color-title .color-box p:last-child {
   color: #fff;
   background-color: #000;
 }
-
 body main section.color-section .color-title .color-font {
   margin-top: 120px;
 }
-
 body main section.color-section .color-title .color-font p {
   font-weight: 600;
   font-size: 18px;
   line-height: 25px;
 }
-
 body main section.guide-section {
   position: relative;
   width: 100%;
@@ -357,14 +293,12 @@ body main section.guide-section {
   height: 5850px;
   background-color: #fff;
 }
-
 body main section.guide-section .guide-title h2 {
   margin-left: 260px;
   padding-top: 75px;
   font-weight: 700;
   font-size: 35px;
 }
-
 body main section.guide-section .guide-title h2::after {
   content: "";
   display: block;
@@ -373,23 +307,18 @@ body main section.guide-section .guide-title h2::after {
   margin-top: 10px;
   background-color: #000;
 }
-
 body main section.guide-section .guide-title img {
   margin-top: 150px;
   width: 85%;
   margin-left: 98px;
-  -webkit-filter: drop-shadow(5px 5px 7px gray);
-          filter: drop-shadow(5px 5px 7px gray);
+  filter: drop-shadow(5px 5px 7px gray);
 }
-
 body main section.guide-section .guide-gridbox {
   position: absolute;
   top: 4.5%;
   left: 50%;
-  -webkit-transform: translate(-50%);
-          transform: translate(-50%);
+  transform: translate(-50%);
 }
-
 body main section.guide-section .guide-gridbox span:nth-child(2) {
   display: inline-block;
   position: absolute;
@@ -400,7 +329,6 @@ body main section.guide-section .guide-gridbox span:nth-child(2) {
   background-color: #000;
   opacity: 0.7;
 }
-
 body main section.guide-section .guide-gridbox span:nth-child(3) {
   display: inline-block;
   position: absolute;
@@ -411,7 +339,6 @@ body main section.guide-section .guide-gridbox span:nth-child(3) {
   background-color: #000;
   opacity: 0.7;
 }
-
 body main section.guide-section .guide-gridbox span:last-child {
   display: inline-block;
   position: absolute;
@@ -422,4 +349,3 @@ body main section.guide-section .guide-gridbox span:last-child {
   background-color: #000;
   opacity: 0.7;
 }
-/*# sourceMappingURL=port3.css.map */
