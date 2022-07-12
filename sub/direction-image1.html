@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>깔끔한 코드를 지향합니다.</title>
+    <link rel="stylesheet" href="./css/direction-image1.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tsparticles/2.1.0/tsparticles.bundle.js"></script>
+    
+</head>
+<body>
+    <div class="readability-box">
+        <div class="readability-flex-box">
+            <img src="./images/readability01.png" alt="readability01">
+            <img src="./images/readability02.png" alt="readability02">
+            <img src="./images/readability03.png" alt="readability03">
+            <img src="./images/readability04.png" alt="readability04">
+        </div>
+    </div>
+
+    <script>
+        (async () => {
+            await loadFull(tsParticles);
+            await tsParticles.loadJSON("tsparticles", "../particles/particles.json");
+        })();
+    </script>
+</body>
+</html>
