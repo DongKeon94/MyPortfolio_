@@ -5,7 +5,7 @@ window.onload = function() {
     })();
 
     
-    // skill_Open 모달창
+    // skill_Open, close 모달창
     const openPsModal = document.getElementById("openPsModal");
     const openHtmlModals = document.getElementById("openHtmlModals");
     const openCssModals = document.getElementById("openCssModals");
@@ -113,7 +113,7 @@ $(document).ready(function(){
         $(".typing ul li").eq(liIndex).addClass("on");
 
         if (typingIdx < typingTxt.length) {
-            $(".typing ul li").eq(liIndex).append(typingTxt[typingIdx]); // 한글자씩 이어준다.
+            $(".typing ul li").eq(liIndex).append(typingTxt[typingIdx]);
             typingIdx++;
         } else {
             if (liIndex < liLength - 1) {
@@ -147,7 +147,7 @@ $(document).ready(function(){
     });
 
 
-    // skill 그래프 모션
+    // skill graph motion
     $(function() {
         var charts = $(".skills-charts");
         var chart = $('.skills-chart');
@@ -226,9 +226,9 @@ $(document).ready(function(){
         }
     })
 
-    // $(function(){
-	// 	$("html, body").animate({ scrollTop: 0 }, "slow"); 
-	// });
+    $(function(){
+		$("html, body").animate({ scrollTop: 0 }, "slow"); 
+	});
 
     var scroll_pos = 0;
     $(document).scroll(function() {
