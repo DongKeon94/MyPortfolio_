@@ -262,7 +262,7 @@ body {
 
                     .scroll_txt {
                         position: absolute;
-                        top: 38vh; left: 50%;
+                        top: 60vh; left: 50%;
                         transform: translate(-50%, -50%);
                         color: #fff;
                         @include responsive(tablet-size) {
@@ -279,7 +279,7 @@ body {
                         background: #fff;
                         animation: scrollDown 2s ease infinite;
                         position: absolute;
-                        top: 41vh; left: 50%;
+                        top: 62vh; left: 50%;
                         @include responsive(tablet-size) {
                             top: 64vh; left: 50%;
                         }
@@ -924,9 +924,11 @@ body {
                         transform: translateX(-30%) skewY(-10deg);
                     } // portfolio-2-parallelogra
                     @include port-text();
-
-                    .portfolio-text-box p:nth-child(6){
+                    .portfolio-text-box p:nth-child(7){
                         margin-left: 113px;
+                    }
+                    .portfolio-text-box p:nth-child(5){
+                        margin-left: 97px;
                     }
                 } // portfolio-2
 

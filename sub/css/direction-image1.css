@@ -7,8 +7,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -50,212 +49,163 @@ body {
   overflow-x: hidden;
   overflow-Y: auto;
 }
-
 @media screen and (min-width: 768px) {
   body {
     height: 2200px;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body {
     height: 100%;
     overflow-Y: hidden;
   }
 }
-
 body .readability-box {
   position: absolute;
+  top: 10%;
 }
-
 @media screen and (min-width: 768px) {
   body .readability-box {
     position: absolute;
-    top: 0%;
+    top: 10%;
     left: 50%;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+    transform: translate(-50%);
   }
 }
-
 @media screen and (min-width: 1320px) {
   body .readability-box {
     position: absolute;
     top: 50%;
     left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
-
 body .readability-box .readability-flex-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   gap: 50px;
 }
-
 @media screen and (min-width: 768px) {
   body .readability-box .readability-flex-box {
     width: 80vmin;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body .readability-box .readability-flex-box {
     width: 120vmin;
     gap: 70px;
   }
 }
-
 body .readability-box .readability-flex-box img {
   width: 95%;
   border-radius: 15px;
-  -webkit-box-shadow: 0px 0px 10px #ccc;
-          box-shadow: 0px 0px 10px #ccc;
+  box-shadow: 0px 0px 10px #ccc;
 }
-
 @media screen and (min-width: 768px) {
   body .readability-box .readability-flex-box img {
     width: 80%;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body .readability-box .readability-flex-box img {
     width: 45%;
   }
 }
-
 body .readability-box .readability-flex-box img:nth-child(1) {
-  -webkit-animation: img-animation1 1.5s ease;
-          animation: img-animation1 1.5s ease;
+  -webkit-animation: img-animation1 2s ease;
+          animation: img-animation1 2s ease;
 }
-
 @-webkit-keyframes img-animation1 {
   0% {
-    -webkit-transform: rotate(720deg) scale(0);
-            transform: rotate(720deg) scale(0);
+    transform: scale(0);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotate(0deg) scale(1);
-            transform: rotate(0deg) scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 }
-
 @keyframes img-animation1 {
   0% {
-    -webkit-transform: rotate(720deg) scale(0);
-            transform: rotate(720deg) scale(0);
+    transform: scale(0);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotate(0deg) scale(1);
-            transform: rotate(0deg) scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 }
-
 body .readability-box .readability-flex-box img:nth-child(2) {
-  -webkit-animation: img-animation2 1.5s ease;
-          animation: img-animation2 1.5s ease;
+  -webkit-animation: img-animation2 2s ease;
+          animation: img-animation2 2s ease;
 }
-
 @-webkit-keyframes img-animation2 {
   0% {
-    -webkit-transform: translate(50%, -50%);
-            transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
     opacity: 1;
   }
 }
-
 @keyframes img-animation2 {
   0% {
-    -webkit-transform: translate(50%, -50%);
-            transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
     opacity: 1;
   }
 }
-
 body .readability-box .readability-flex-box img:nth-child(3) {
-  -webkit-animation: img-animation3 1.5s ease;
-          animation: img-animation3 1.5s ease;
+  -webkit-animation: img-animation3 2s ease;
+          animation: img-animation3 2s ease;
 }
-
 @-webkit-keyframes img-animation3 {
   0% {
-    -webkit-transform: translate(-50%, 50%);
-            transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
     opacity: 1;
   }
 }
-
 @keyframes img-animation3 {
   0% {
-    -webkit-transform: translate(-50%, 50%);
-            transform: translate(-50%, 50%);
+    transform: translate(-50%, 50%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translate(0%, 0%);
-            transform: translate(0%, 0%);
+    transform: translate(0%, 0%);
     opacity: 1;
   }
 }
-
 body .readability-box .readability-flex-box img:nth-child(4) {
-  -webkit-animation: img-animation4 1.5s ease;
-          animation: img-animation4 1.5s ease;
+  -webkit-animation: img-animation4 2s ease;
+          animation: img-animation4 2s ease;
 }
-
 @-webkit-keyframes img-animation4 {
   0% {
-    -webkit-transform: rotate(720deg) scale(0);
-            transform: rotate(720deg) scale(0);
+    transform: scale(0);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotate(0deg) scale(1);
-            transform: rotate(0deg) scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 }
-
 @keyframes img-animation4 {
   0% {
-    -webkit-transform: rotate(720deg) scale(0);
-            transform: rotate(720deg) scale(0);
+    transform: scale(0);
     opacity: 0;
   }
   100% {
-    -webkit-transform: rotate(0deg) scale(1);
-            transform: rotate(0deg) scale(1);
+    transform: scale(1);
     opacity: 1;
   }
 }
-/*# sourceMappingURL=direction-image1.css.map */

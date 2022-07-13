@@ -7,8 +7,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -46,11 +45,9 @@ footer {
 
 body {
   color: #f2f2f2;
-  background-color: black;
-  -webkit-transition: background-color 1s;
+  background-color: rgb(0, 0, 0);
   transition: background-color 1s;
 }
-
 body header {
   display: none;
   position: fixed;
@@ -60,37 +57,28 @@ body header {
   height: 20px;
   line-height: 20px;
   text-align: center;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   z-index: 9;
 }
-
 body header h1 {
   font-size: 0.7em;
 }
-
 @media screen and (min-width: 768px) {
   body header h1 {
     font-size: 1em;
   }
 }
-
 body .active {
   background-color: #000;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
-
 body .deactive {
   background-color: transparent;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
-
 body main section.description-1 {
   overflow: hidden;
 }
-
 body main section.description-1 .banner-img {
   display: block;
   width: 100%;
@@ -100,20 +88,16 @@ body main section.description-1 .banner-img {
   padding-top: 20%;
   z-index: -1;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .banner-img {
     padding-top: 0;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-1 .banner-img {
-    -webkit-transform: translateY(-17%);
-            transform: translateY(-17%);
+    transform: translateY(-17%);
   }
 }
-
 body main section.description-1 .confix .main-top {
   padding-top: 2%;
   padding-left: 4%;
@@ -124,55 +108,44 @@ body main section.description-1 .confix .main-top {
   margin: 0 auto;
   height: 580px;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top {
     height: 780px;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-1 .confix .main-top {
     height: 980px;
   }
 }
-
 body main section.description-1 .confix .main-top .hello {
   position: absolute;
   top: 18%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   -webkit-animation: side-right-text 1.2s both;
           animation: side-right-text 1.2s both;
 }
-
 @-webkit-keyframes side-right-text {
   0% {
-    -webkit-transform: translateX(150%);
-            transform: translateX(150%);
+    transform: translateX(150%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
     opacity: 1;
   }
 }
-
 @keyframes side-right-text {
   0% {
-    -webkit-transform: translateX(150%);
-            transform: translateX(150%);
+    transform: translateX(150%);
     opacity: 0;
   }
   100% {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
     opacity: 1;
   }
 }
-
 body main section.description-1 .confix .main-top .hello .hello-left {
   position: absolute;
   top: 0;
@@ -182,16 +155,13 @@ body main section.description-1 .confix .main-top .hello .hello-left {
   color: #ccc;
   opacity: 0.8;
   z-index: 1;
-  -webkit-transform: translateY(-120%);
-          transform: translateY(-120%);
+  transform: translateY(-120%);
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top .hello .hello-left {
     font-size: 1.1em;
   }
 }
-
 body main section.description-1 .confix .main-top .hello .hello-text {
   width: 250px;
   height: 60px;
@@ -199,12 +169,9 @@ body main section.description-1 .confix .main-top .hello .hello-text {
   border-radius: 10px;
   background-color: white;
   cursor: pointer;
-  -webkit-filter: drop-shadow(3px 4px 1px rgba(255, 255, 255, 0.7));
-          filter: drop-shadow(3px 4px 1px rgba(255, 255, 255, 0.7));
-  -webkit-transition: background 0.5s;
+  filter: drop-shadow(3px 4px 1px rgba(255, 255, 255, 0.7));
   transition: background 0.5s;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top .hello .hello-text {
     width: 40vmax;
@@ -212,7 +179,6 @@ body main section.description-1 .confix .main-top .hello .hello-text {
     line-height: 10vmin;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-1 .confix .main-top .hello .hello-text {
     width: 35vmax;
@@ -220,25 +186,21 @@ body main section.description-1 .confix .main-top .hello .hello-text {
     line-height: 11vmin;
   }
 }
-
 body main section.description-1 .confix .main-top .hello .hello-text p {
   font-size: 1.4em;
   text-align: center;
   color: #333;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top .hello .hello-text p {
     font-size: 3vw;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-1 .confix .main-top .hello .hello-text p {
     font-size: 2.5vw;
   }
 }
-
 body main section.description-1 .confix .main-top .hello .balloon_triangle {
   position: absolute;
   bottom: 0%;
@@ -249,84 +211,68 @@ body main section.description-1 .confix .main-top .hello .balloon_triangle {
   border-top: solid 30px #fff;
   border-left: solid 15px transparent;
   border-right: solid 15px transparent;
-  -webkit-filter: drop-shadow(1px 4px 1px rgba(255, 255, 255, 0.7));
-          filter: drop-shadow(1px 4px 1px rgba(255, 255, 255, 0.7));
-  -webkit-transform: translate(-50%, 90%);
-          transform: translate(-50%, 90%);
-  -webkit-transition: all 0.5s;
+  filter: drop-shadow(1px 4px 1px rgba(255, 255, 255, 0.7));
+  transform: translate(-50%, 90%);
   transition: all 0.5s;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top .hello .balloon_triangle {
     border-top: solid 50px #fff;
     border-left: solid 25px transparent;
     border-right: solid 25px transparent;
-    -webkit-transform: translate(-50%, 95%);
-            transform: translate(-50%, 95%);
+    transform: translate(-50%, 95%);
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-1 .confix .main-top .hello .balloon_triangle {
     border-top: solid 70px #fff;
     border-left: solid 35px transparent;
     border-right: solid 35px transparent;
-    -webkit-transform: translate(-50%, 95%);
-            transform: translate(-50%, 95%);
+    transform: translate(-50%, 95%);
   }
 }
-
 body main section.description-1 .confix .main-top .introduce {
   position: absolute;
   top: 43%;
   left: 0%;
   width: 100%;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top .introduce {
     top: 47%;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-1 .confix .main-top .introduce {
     top: 49%;
   }
 }
-
 body main section.description-1 .confix .main-top .introduce .type-text {
   font-size: 1.7em;
   font-weight: bold;
   text-align: center;
   font-family: Pretendard;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top .introduce .type-text {
     font-size: 3em;
     line-height: 55px;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-1 .confix .main-top .introduce .type-text {
     font-size: 4em;
     line-height: 80px;
   }
 }
-
 body main section.description-1 .confix .main-top .introduce .type-text .typing-txt {
   display: none;
 }
-
 body main section.description-1 .confix .main-top .introduce .type-text .typing ul li.on {
   display: inline-block;
   -webkit-animation: cursor 0.5s infinite;
           animation: cursor 0.5s infinite;
 }
-
 @-webkit-keyframes cursor {
   0% {
     border-right: 1px solid #fff;
@@ -338,7 +284,6 @@ body main section.description-1 .confix .main-top .introduce .type-text .typing 
     border-right: 1px solid #fff;
   }
 }
-
 @keyframes cursor {
   0% {
     border-right: 1px solid #fff;
@@ -350,13 +295,11 @@ body main section.description-1 .confix .main-top .introduce .type-text .typing 
     border-right: 1px solid #fff;
   }
 }
-
 body main section.description-1 .confix .main-top .title {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 100%;
   opacity: 1;
   -webkit-animation: text-up 5s 6500ms ease;
@@ -364,19 +307,16 @@ body main section.description-1 .confix .main-top .title {
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top .title {
     top: 54%;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-1 .confix .main-top .title {
     top: 57%;
   }
 }
-
 @-webkit-keyframes text-up {
   0% {
     opacity: 0;
@@ -385,7 +325,6 @@ body main section.description-1 .confix .main-top .title {
     opacity: 1;
   }
 }
-
 @keyframes text-up {
   0% {
     opacity: 0;
@@ -394,72 +333,60 @@ body main section.description-1 .confix .main-top .title {
     opacity: 1;
   }
 }
-
 body main section.description-1 .confix .main-top .title p {
   font-size: 1.5em;
   text-align: center;
   font-family: Pretendard;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top .title p {
     font-size: 2.4rem;
     line-height: 60px;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-1 .confix .main-top .title p {
     font-size: 3.5rem;
     line-height: 80px;
   }
 }
-
 body main section.description-1 .confix .main-top .title p .title-text {
   font-size: 1.3em;
   font-weight: bold;
-  background: -webkit-gradient(linear, left top, right top, from(#55cc7c), to(#f5f97f));
   background: linear-gradient(to right, #55cc7c, #f5f97f);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top .title p .title-text {
     font-size: 4rem;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-1 .confix .main-top .title p .title-text {
-    font-size: 4.0rem;
+    font-size: 4rem;
   }
 }
-
 body main section.description-1 .confix .main-top .scroll_txt {
   position: absolute;
-  top: 38vh;
+  top: 60vh;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   color: #fff;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top .scroll_txt {
     top: 60vh;
     left: 50%;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-1 .confix .main-top .scroll_txt {
     top: 86vh;
     left: 50%;
   }
 }
-
 body main section.description-1 .confix .main-top .scroll_down {
   width: 0.156rem;
   height: 5rem;
@@ -467,169 +394,127 @@ body main section.description-1 .confix .main-top .scroll_down {
   -webkit-animation: scrollDown 2s ease infinite;
           animation: scrollDown 2s ease infinite;
   position: absolute;
-  top: 41vh;
+  top: 62vh;
   left: 50%;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top .scroll_down {
     top: 64vh;
     left: 50%;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-1 .confix .main-top .scroll_down {
     top: 89vh;
     left: 50%;
   }
 }
-
 @-webkit-keyframes scrollDown {
   0% {
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    -webkit-transform: translateX(-50%) scaleY(0);
-            transform: translateX(-50%) scaleY(0);
+    transform-origin: top;
+    transform: translateX(-50%) scaleY(0);
   }
   45% {
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    -webkit-transform: translateX(-50%) scaleY(1);
-            transform: translateX(-50%) scaleY(1);
+    transform-origin: top;
+    transform: translateX(-50%) scaleY(1);
   }
   55% {
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
-    -webkit-transform: translateX(-50%) scaleY(1);
-            transform: translateX(-50%) scaleY(1);
+    transform-origin: bottom;
+    transform: translateX(-50%) scaleY(1);
   }
   100% {
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
-    -webkit-transform: translateX(-50%) scaleY(0);
-            transform: translateX(-50%) scaleY(0);
+    transform-origin: bottom;
+    transform: translateX(-50%) scaleY(0);
   }
 }
-
 @keyframes scrollDown {
   0% {
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    -webkit-transform: translateX(-50%) scaleY(0);
-            transform: translateX(-50%) scaleY(0);
+    transform-origin: top;
+    transform: translateX(-50%) scaleY(0);
   }
   45% {
-    -webkit-transform-origin: top;
-            transform-origin: top;
-    -webkit-transform: translateX(-50%) scaleY(1);
-            transform: translateX(-50%) scaleY(1);
+    transform-origin: top;
+    transform: translateX(-50%) scaleY(1);
   }
   55% {
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
-    -webkit-transform: translateX(-50%) scaleY(1);
-            transform: translateX(-50%) scaleY(1);
+    transform-origin: bottom;
+    transform: translateX(-50%) scaleY(1);
   }
   100% {
-    -webkit-transform-origin: bottom;
-            transform-origin: bottom;
-    -webkit-transform: translateX(-50%) scaleY(0);
-            transform: translateX(-50%) scaleY(0);
+    transform-origin: bottom;
+    transform: translateX(-50%) scaleY(0);
   }
 }
-
 body main section.description-1 .confix .main-top .main-image1 {
   float: right;
   width: 35%;
-  -webkit-transform: translate(67%, -60%);
-          transform: translate(67%, -60%);
+  transform: translate(67%, -60%);
   opacity: 0.9;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top .main-image1 {
-    -webkit-transform: translate(57%, -65%);
-            transform: translate(57%, -65%);
+    transform: translate(57%, -65%);
   }
 }
-
 body main section.description-1 .confix .main-top .main-image1 img {
   width: 100%;
   -webkit-animation: spin-space 20s linear infinite;
           animation: spin-space 20s linear infinite;
 }
-
 @-webkit-keyframes spin-space {
   0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
   }
   100% {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
   }
 }
-
 @keyframes spin-space {
   0% {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+    transform: rotateZ(0deg);
   }
   100% {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
+    transform: rotateZ(360deg);
   }
 }
-
 body main section.description-1 .confix .main-top .main-image3 {
   position: absolute;
   bottom: 0;
   right: 0;
   display: none;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-1 .confix .main-top .main-image3 {
     display: block;
   }
 }
-
 body main section.description-1 .confix .main-top .main-image3 img {
-  -webkit-transform: translate(-90%, -70%);
-          transform: translate(-90%, -70%);
+  transform: translate(-90%, -70%);
   -webkit-animation: up-img1 15s ease;
           animation: up-img1 15s ease;
   -webkit-animation-fill-mode: both;
           animation-fill-mode: both;
 }
-
 @-webkit-keyframes up-img1 {
   0% {
     margin-bottom: 0px;
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
   }
   100% {
     margin-bottom: 80em;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
-
 @keyframes up-img1 {
   0% {
     margin-bottom: 0px;
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    transform: scale(0);
   }
   100% {
     margin-bottom: 80em;
-    -webkit-transform: scale(1);
-            transform: scale(1);
+    transform: scale(1);
   }
 }
-
 body main section.description-2 .confix {
   padding-top: 2%;
   padding-left: 4%;
@@ -639,33 +524,27 @@ body main section.description-2 .confix {
   max-width: 1320px;
   margin: 0 auto;
 }
-
 body main section.description-2 .confix .vision {
   margin-top: 4rem;
   position: relative;
 }
-
 body main section.description-2 .confix .vision h2 span {
   font-size: 3.5rem;
-  background: -webkit-gradient(linear, left top, right top, from(#eee), to(#666));
   background: linear-gradient(to right, #eee, #666);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .vision h2 span {
     font-size: 4.5rem;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-2 .confix .vision h2 span {
     font-size: 5.5rem;
   }
 }
-
 body main section.description-2 .confix .vision p {
   margin-top: 60px;
   padding-bottom: 30px;
@@ -675,41 +554,34 @@ body main section.description-2 .confix .vision p {
   font-family: Pretendard;
   border-bottom: 3px solid #f9f9f9;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .vision p {
     font-size: 0.9rem;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-2 .confix .vision p {
     font-size: 1.15rem;
   }
 }
-
 body main section.description-2 .confix .vision .vision-image {
   position: absolute;
   bottom: -5%;
   right: 0;
 }
-
 body main section.description-2 .confix .vision .vision-image img {
   width: 6rem;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .vision .vision-image img {
     width: 7.5rem;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-2 .confix .vision .vision-image img {
     width: 9rem;
   }
 }
-
 body main section.description-2 .confix .up-img2 {
   position: absolute;
   bottom: -10%;
@@ -717,280 +589,217 @@ body main section.description-2 .confix .up-img2 {
   width: 4vmax;
   display: none;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .up-img2 {
     display: block;
     z-index: 2;
   }
 }
-
 body main section.description-2 .confix .introduction {
   margin-top: 3em;
 }
-
 body main section.description-2 .confix .introduction h2 {
   text-align: left;
   margin-bottom: 1rem;
 }
-
 body main section.description-2 .confix .introduction h2 span {
   font-size: 2.5rem;
-  background: -webkit-gradient(linear, left top, right top, from(#19fff4), to(#aeffae));
   background: linear-gradient(to right, #19fff4, #aeffae);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
-
 @media screen and (min-width: 980px) {
   body main section.description-2 .confix .introduction .introduction-flex .personal-table {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-2 .confix .introduction .introduction-flex .personal-table {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-left table {
   width: 100%;
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-left table {
     width: 100%;
   }
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-left table tr {
   line-height: 5vw;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-left table tr {
     line-height: 2.5rem;
   }
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-left table tr th {
   text-align: left;
   padding-right: 30px;
   font-size: 2.9vw;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-left table tr th {
     font-size: 1.5rem;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-left table tr th {
     padding-right: 70px;
   }
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-left table tr td {
   font-size: 2.5vw;
   font-family: Pretendard;
   font-weight: 200;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-left table tr td {
     font-size: 1.3rem;
   }
 }
-
 @media screen and (min-width: 980px) {
   body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-right {
     margin-left: 4%;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-right {
     margin-left: 10%;
   }
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-right table {
   width: 100%;
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-right table tr {
   line-height: 5vw;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-right table tr {
     line-height: 2.5rem;
   }
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-right table tr th {
   text-align: left;
   padding-right: 17px;
   font-size: 2.9vw;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-right table tr th {
     font-size: 1.5rem;
     padding-right: 0px;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-right table tr th {
     padding-right: 70px;
   }
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-right table tr td {
   font-size: 2.5vw;
   font-weight: 200;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .introduction .introduction-flex .personal-table .personal-right table tr td {
     font-size: 1.1rem;
   }
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability {
   margin-top: 1rem;
   width: 100%;
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .ability-text {
   font-size: 2.5vw;
   font-weight: bold;
   margin-bottom: 3em;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .introduction .introduction-flex .ability .ability-text {
     font-size: 1.5rem;
   }
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills {
   width: 100%;
   margin: 0;
   padding: 0;
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills .skills-charts {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   width: 100%;
   gap: 5px;
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-2 .confix .introduction .introduction-flex .ability .skills .skills-charts {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    justify-content: space-around;
   }
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills .skills-charts .skills-chart {
   position: relative;
   cursor: pointer;
   z-index: 2;
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills .skills-charts .skills-chart img {
   position: absolute;
   left: 50%;
   top: 35%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 55%;
   z-index: 999;
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills .skills-charts .skills-chart h2 {
   font-size: 1rem;
   font-weight: bold;
   text-align: center;
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills .skills-charts .skills-chart:nth-child(1) circle {
   stroke: #4e88e1;
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills .skills-charts .skills-chart:nth-child(2) circle {
   stroke: #b02629;
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills .skills-charts .skills-chart:nth-child(3) circle {
   stroke: #19cdca;
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills .skills-charts .skills-chart:nth-child(4) circle {
   stroke: #e4732a;
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills .skills-charts .skills-chart:nth-child(5) circle {
   stroke: #b24a9c;
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills .skills-charts .skills-chart:nth-child(6) circle {
   stroke: #4550a3;
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills .skills-charts .skills-chart svg {
   width: 132px;
   height: 132px;
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills .skills-charts .skills-chart svg circle {
   fill: #e8f5e9;
   stroke-width: 50;
   stroke-dasharray: 220;
   stroke-dashoffset: 220;
-  -webkit-transform: rotate(-90deg) translate(1%, -3%);
-          transform: rotate(-90deg) translate(1%, -3%);
-  -webkit-transform-origin: 50% 50%;
-          transform-origin: 50% 50%;
+  transform: rotate(-90deg) translate(1%, -3%);
+  transform-origin: 50% 50%;
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box {
   position: fixed;
   top: 10%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   width: 15rem;
   height: 30rem;
   border-radius: 50px;
   background-color: #bdbdbd;
   z-index: 4;
   opacity: 0;
-  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box {
     top: 30%;
@@ -998,60 +807,41 @@ body main section.description-2 .confix .introduction .introduction-flex .abilit
     height: 18rem;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box {
     width: 90vmin;
   }
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box .skills-text {
   padding: 1em;
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 3em;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box .skills-text {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     gap: 2rem;
   }
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box .skills-text img {
   width: 10em;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box .skills-text img {
     width: 25%;
   }
 }
-
 body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box .skills-text p {
   font-size: 1rem;
   text-align: justify;
   color: #333;
   font-family: Pretendard;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-2 .confix .introduction .introduction-flex .ability .skills-modal .skills-modal-box .skills-text p {
     width: 64%;
@@ -1060,7 +850,6 @@ body main section.description-2 .confix .introduction .introduction-flex .abilit
     line-height: 30px;
   }
 }
-
 body main section.description-4 .confix {
   padding-top: 2%;
   padding-left: 4%;
@@ -1071,53 +860,43 @@ body main section.description-4 .confix {
   margin: 0 auto;
   overflow: hidden;
 }
-
 body main section.description-4 .confix .direction-text {
   width: 100%;
   margin-top: 5rem;
   margin-bottom: 2rem;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-4 .confix .direction-text {
     margin-top: 10rem;
     margin-bottom: 5rem;
   }
 }
-
 body main section.description-4 .confix .direction-text h2 {
   text-align: left;
 }
-
 body main section.description-4 .confix .direction-text h2 span {
   font-size: 3.5rem;
-  background: -webkit-gradient(linear, left top, right top, from(#7530e3), to(#e1afcc));
   background: linear-gradient(to right, #7530e3, #e1afcc);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-4 .confix .direction-text h2 span {
     font-size: 4.5rem;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-4 .confix .direction-text h2 span {
     font-size: 5.5rem;
   }
 }
-
 body main section.description-4 .confix .direction-box, body main section.description-4 .confix .coding-box-left, body main section.description-4 .confix .coding-box-right {
   width: 100%;
 }
-
 body main section.description-4 .confix .direction-box .coding-box, body main section.description-4 .confix .coding-box-left .coding-box, body main section.description-4 .confix .coding-box-right .coding-box {
   width: 100%;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-4 .confix .direction-box .coding-box, body main section.description-4 .confix .coding-box-left .coding-box, body main section.description-4 .confix .coding-box-right .coding-box {
     width: 45%;
@@ -1148,7 +927,6 @@ body main section.description-4 .confix .direction-box .coding-box, body main se
     display: none;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-4 .confix .direction-box .coding-box:nth-child(2) br, body main section.description-4 .confix .coding-box-left .coding-box:nth-child(2) br, body main section.description-4 .confix .coding-box-right .coding-box:nth-child(2) br {
     display: block;
@@ -1157,37 +935,30 @@ body main section.description-4 .confix .direction-box .coding-box, body main se
     display: block;
   }
 }
-
 body main section.description-4 .confix .direction-box .coding-box > img, body main section.description-4 .confix .coding-box-left .coding-box > img, body main section.description-4 .confix .coding-box-right .coding-box > img {
   width: 100%;
-  -webkit-box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.6);
-          box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.6);
+  box-shadow: 0px 0px 4px rgba(255, 255, 255, 0.6);
   border-radius: 5px;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-4 .confix .direction-box .coding-box .coding-box-textbox, body main section.description-4 .confix .coding-box-left .coding-box .coding-box-textbox, body main section.description-4 .confix .coding-box-right .coding-box .coding-box-textbox {
     width: 100%;
   }
 }
-
 body main section.description-4 .confix .direction-box .coding-box .coding-box-textbox .coding-box-text, body main section.description-4 .confix .coding-box-left .coding-box .coding-box-textbox .coding-box-text, body main section.description-4 .confix .coding-box-right .coding-box .coding-box-textbox .coding-box-text {
   margin-bottom: 5rem;
 }
-
 body main section.description-4 .confix .direction-box .coding-box .coding-box-textbox .coding-box-text > span, body main section.description-4 .confix .coding-box-left .coding-box .coding-box-textbox .coding-box-text > span, body main section.description-4 .confix .coding-box-right .coding-box .coding-box-textbox .coding-box-text > span {
   display: block;
   font-size: 4.5vw;
   margin-top: 30px;
   color: #8f8f8f;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-4 .confix .direction-box .coding-box .coding-box-textbox .coding-box-text > span, body main section.description-4 .confix .coding-box-left .coding-box .coding-box-textbox .coding-box-text > span, body main section.description-4 .confix .coding-box-right .coding-box .coding-box-textbox .coding-box-text > span {
     font-size: 1.2rem;
   }
 }
-
 body main section.description-4 .confix .direction-box .coding-box .coding-box-textbox .coding-box-text h2, body main section.description-4 .confix .coding-box-left .coding-box .coding-box-textbox .coding-box-text h2, body main section.description-4 .confix .coding-box-right .coding-box .coding-box-textbox .coding-box-text h2 {
   font-size: 7vw;
   font-weight: bold;
@@ -1195,26 +966,22 @@ body main section.description-4 .confix .direction-box .coding-box .coding-box-t
   margin-top: 5px;
   margin-bottom: 15px;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-4 .confix .direction-box .coding-box .coding-box-textbox .coding-box-text h2, body main section.description-4 .confix .coding-box-left .coding-box .coding-box-textbox .coding-box-text h2, body main section.description-4 .confix .coding-box-right .coding-box .coding-box-textbox .coding-box-text h2 {
     font-size: 1.6rem;
   }
 }
-
 body main section.description-4 .confix .direction-box .coding-box .coding-box-textbox .coding-box-text p, body main section.description-4 .confix .coding-box-left .coding-box .coding-box-textbox .coding-box-text p, body main section.description-4 .confix .coding-box-right .coding-box .coding-box-textbox .coding-box-text p {
   font-size: 3.2vw;
   font-family: Pretendard;
   line-height: 4.5vw;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-4 .confix .direction-box .coding-box .coding-box-textbox .coding-box-text p, body main section.description-4 .confix .coding-box-left .coding-box .coding-box-textbox .coding-box-text p, body main section.description-4 .confix .coding-box-right .coding-box .coding-box-textbox .coding-box-text p {
     font-size: 1rem;
     line-height: 2rem;
   }
 }
-
 body main section.description-4 .confix .direction-box .coding-box .coding-box-textbox .coding-box-text a, body main section.description-4 .confix .coding-box-left .coding-box .coding-box-textbox .coding-box-text a, body main section.description-4 .confix .coding-box-right .coding-box .coding-box-textbox .coding-box-text a {
   letter-spacing: 1px;
   margin-top: 3vh;
@@ -1222,22 +989,17 @@ body main section.description-4 .confix .direction-box .coding-box .coding-box-t
   border: 1px solid #fff;
   border-radius: 10px;
   color: #fff;
-  -webkit-transition: background-color 0.5s;
   transition: background-color 0.5s;
 }
-
 body main section.description-4 .confix .direction-box .coding-box .coding-box-textbox .coding-box-text a:hover, body main section.description-4 .confix .coding-box-left .coding-box .coding-box-textbox .coding-box-text a:hover, body main section.description-4 .confix .coding-box-right .coding-box .coding-box-textbox .coding-box-text a:hover {
   color: #000;
   background-color: #fff;
-  -webkit-transition: background-color 1s;
   transition: background-color 1s;
 }
-
 body main section.description-5 {
   clear: both;
   overflow: hidden;
 }
-
 body main section.description-5 .confix {
   padding-top: 2%;
   padding-left: 4%;
@@ -1247,146 +1009,114 @@ body main section.description-5 .confix {
   max-width: 1320px;
   margin: 0 auto;
 }
-
 body main section.description-5 .confix .portfolio-1 {
   position: relative;
   z-index: 5;
   margin-top: 4em;
 }
-
 body main section.description-5 .confix .portfolio-1 .portfolio-header-text {
   position: absolute;
   left: 4%;
   top: 12%;
   z-index: 9;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
-
 body main section.description-5 .confix .portfolio-1 .portfolio-header-text h2 span {
   font-size: 3.5rem;
-  background: -webkit-gradient(linear, left top, right top, from(#f83600), to(#facc22));
   background: linear-gradient(to right, #f83600, #facc22);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-1 .portfolio-header-text h2 span {
     font-size: 4.5rem;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-1 .portfolio-header-text h2 span {
     font-size: 5.5rem;
   }
 }
-
 body main section.description-5 .confix .portfolio-1 .portfolio-1-parallelogra {
   display: block;
   width: 370%;
-  background: -webkit-gradient(linear, left top, right top, from(#515259), to(#515259));
   background: linear-gradient(90deg, #515259, #515259);
-  -webkit-transform: translateX(-50%) skewY(10deg);
-          transform: translateX(-50%) skewY(10deg);
+  transform: translateX(-50%) skewY(10deg);
   height: 1120px;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-1 .portfolio-1-parallelogra {
     height: 825px;
   }
 }
-
 body main section.description-5 .confix .portfolio-1 .portfolio-box {
   width: 80%;
   position: absolute;
   top: 220px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-1 .portfolio-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    justify-content: center;
+    align-items: flex-start;
     margin-bottom: 6em;
   }
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-1 .portfolio-box {
     width: 100%;
   }
 }
-
 body main section.description-5 .confix .portfolio-1 .portfolio-box img {
   width: 100%;
   margin-bottom: 30px;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-1 .portfolio-box img {
     width: 50%;
   }
 }
-
 body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box {
   margin-bottom: 6em;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box {
     width: 40%;
     padding-left: 2rem;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box {
     width: 30%;
     padding-left: 4rem;
   }
 }
-
 body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box h3 {
   width: 12em;
   font-size: 1.5em;
   margin-bottom: 30px;
   color: #000;
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box h3 {
     font-size: 2em;
     margin-bottom: 60px;
   }
 }
-
 body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box p {
   width: 23em;
   line-height: 40px;
   letter-spacing: 2px;
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box p {
     line-height: 50px;
   }
 }
-
 body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box p span {
   display: inline-block;
   width: 15px;
@@ -1394,14 +1124,11 @@ body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-t
   margin-left: 5px;
   border-radius: 50%;
   background-color: #000;
-  -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+  transform: translateY(3px);
 }
-
 body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box p strong {
   font-size: 1.3em;
 }
-
 body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box a {
   font-size: 1rem;
   letter-spacing: 1px;
@@ -1411,123 +1138,95 @@ body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-t
   border: 1px solid #fff;
   border-radius: 10px;
   color: #fff;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box a:hover, body main section.description-5 .confix .portfolio-1 .portfolio-box .portfolio-text-box a:focus {
   color: #000;
   background-color: #fff;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 body main section.description-5 .confix .portfolio-2 {
   position: relative;
   z-index: 4;
 }
-
 body main section.description-5 .confix .portfolio-2 .portfolio-2-parallelogra {
   display: block;
-  background: -webkit-gradient(linear, left top, right top, from(#58a56b), to(#58a56b));
   background: linear-gradient(90deg, #58a56b, #58a56b);
   width: 350%;
   height: 1120px;
-  -webkit-transform: translateX(-30%) skewY(-10deg);
-          transform: translateX(-30%) skewY(-10deg);
+  transform: translateX(-30%) skewY(-10deg);
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-2 .portfolio-2-parallelogra {
     height: 825px;
   }
 }
-
 body main section.description-5 .confix .portfolio-2 .portfolio-box {
   width: 80%;
   position: absolute;
   top: 220px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-2 .portfolio-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    justify-content: center;
+    align-items: flex-start;
     margin-bottom: 6em;
   }
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-2 .portfolio-box {
     width: 100%;
   }
 }
-
 body main section.description-5 .confix .portfolio-2 .portfolio-box img {
   width: 100%;
   margin-bottom: 30px;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-2 .portfolio-box img {
     width: 50%;
   }
 }
-
 body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box {
   margin-bottom: 6em;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box {
     width: 40%;
     padding-left: 2rem;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box {
     width: 30%;
     padding-left: 4rem;
   }
 }
-
 body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box h3 {
   width: 12em;
   font-size: 1.5em;
   margin-bottom: 30px;
   color: #000;
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box h3 {
     font-size: 2em;
     margin-bottom: 60px;
   }
 }
-
 body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box p {
   width: 23em;
   line-height: 40px;
   letter-spacing: 2px;
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box p {
     line-height: 50px;
   }
 }
-
 body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box p span {
   display: inline-block;
   width: 15px;
@@ -1535,14 +1234,11 @@ body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-t
   margin-left: 5px;
   border-radius: 50%;
   background-color: #000;
-  -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+  transform: translateY(3px);
 }
-
 body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box p strong {
   font-size: 1.3em;
 }
-
 body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box a {
   font-size: 1rem;
   letter-spacing: 1px;
@@ -1552,128 +1248,102 @@ body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-t
   border: 1px solid #fff;
   border-radius: 10px;
   color: #fff;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box a:hover, body main section.description-5 .confix .portfolio-2 .portfolio-box .portfolio-text-box a:focus {
   color: #000;
   background-color: #fff;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
-body main section.description-5 .confix .portfolio-2 .portfolio-text-box p:nth-child(6) {
+body main section.description-5 .confix .portfolio-2 .portfolio-text-box p:nth-child(7) {
   margin-left: 113px;
 }
-
+body main section.description-5 .confix .portfolio-2 .portfolio-text-box p:nth-child(5) {
+  margin-left: 97px;
+}
 body main section.description-5 .confix .portfolio-3 {
   position: relative;
   z-index: 2;
   height: 1180px;
 }
-
 body main section.description-5 .confix .portfolio-3 .portfolio-3-parallelogra {
   display: block;
-  background: -webkit-gradient(linear, left top, right top, from(#d8a171), to(#d8a171));
   background: linear-gradient(90deg, #d8a171, #d8a171);
   width: 350%;
   height: 1120px;
-  -webkit-transform: translateX(-40%) skewY(10deg);
-          transform: translateX(-40%) skewY(10deg);
+  transform: translateX(-40%) skewY(10deg);
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-3 .portfolio-3-parallelogra {
     height: 825px;
   }
 }
-
 body main section.description-5 .confix .portfolio-3 .portfolio-box {
   width: 80%;
   position: absolute;
   top: 220px;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-3 .portfolio-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    justify-content: center;
+    align-items: flex-start;
     margin-bottom: 6em;
   }
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-3 .portfolio-box {
     width: 100%;
   }
 }
-
 body main section.description-5 .confix .portfolio-3 .portfolio-box img {
   width: 100%;
   margin-bottom: 30px;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-3 .portfolio-box img {
     width: 50%;
   }
 }
-
 body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box {
   margin-bottom: 6em;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box {
     width: 40%;
     padding-left: 2rem;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box {
     width: 30%;
     padding-left: 4rem;
   }
 }
-
 body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box h3 {
   width: 12em;
   font-size: 1.5em;
   margin-bottom: 30px;
   color: #000;
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box h3 {
     font-size: 2em;
     margin-bottom: 60px;
   }
 }
-
 body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box p {
   width: 23em;
   line-height: 40px;
   letter-spacing: 2px;
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box p {
     line-height: 50px;
   }
 }
-
 body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box p span {
   display: inline-block;
   width: 15px;
@@ -1681,14 +1351,11 @@ body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-t
   margin-left: 5px;
   border-radius: 50%;
   background-color: #000;
-  -webkit-transform: translateY(3px);
-          transform: translateY(3px);
+  transform: translateY(3px);
 }
-
 body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box p strong {
   font-size: 1.3em;
 }
-
 body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box a {
   font-size: 1rem;
   letter-spacing: 1px;
@@ -1698,145 +1365,102 @@ body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-t
   border: 1px solid #fff;
   border-radius: 10px;
   color: #fff;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box a:hover, body main section.description-5 .confix .portfolio-3 .portfolio-box .portfolio-text-box a:focus {
   color: #000;
   background-color: #fff;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 body main section.description-5 .confix .portfolio-3 .portfolio-text-box p:nth-child(6) {
   margin-left: 113px;
 }
-
 body main section.description-5 .confix .js-portfolio {
   position: relative;
   z-index: 1;
   margin-bottom: 0rem;
 }
-
 body main section.description-5 .confix .js-portfolio .js-portfolio-parallelogra {
   display: block;
-  background: -webkit-gradient(linear, left top, right top, from(#f2e9bb), to(#f2e9bb));
   background: linear-gradient(90deg, #f2e9bb, #f2e9bb);
   width: 350%;
   height: 210vw;
-  -webkit-transform: translateX(-60%) skewY(-10deg);
-          transform: translateX(-60%) skewY(-10deg);
+  transform: translateX(-60%) skewY(-10deg);
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .js-portfolio .js-portfolio-parallelogra {
     height: 725px;
-    -webkit-transform: translate(-30%, -48%) skewY(-10deg);
-            transform: translate(-30%, -48%) skewY(-10deg);
+    transform: translate(-30%, -48%) skewY(-10deg);
   }
 }
-
 body main section.description-5 .confix .js-portfolio .js-portfolio-box {
   position: absolute;
   top: 0%;
   left: 0;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .js-portfolio .js-portfolio-box {
     top: -30%;
     left: 0;
   }
 }
-
 body main section.description-5 .confix .js-portfolio .js-portfolio-box h2 {
   margin-bottom: 10vw;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .js-portfolio .js-portfolio-box h2 {
     margin-bottom: 5rem;
   }
 }
-
 body main section.description-5 .confix .js-portfolio .js-portfolio-box h2 span {
   font-size: 9vw;
-  background: -webkit-gradient(linear, left top, right top, from(#294001), to(#f98243));
   background: linear-gradient(to right, #294001, #f98243);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .js-portfolio .js-portfolio-box h2 span {
     font-size: 4.5rem;
   }
 }
-
 @media screen and (min-width: 1320px) {
   body main section.description-5 .confix .js-portfolio .js-portfolio-box h2 span {
     font-size: 5.5rem;
   }
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .js-portfolio .js-portfolio-box .js-portfolio-flex-box {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-transform: translate(2vw);
-            transform: translate(2vw);
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transform: translate(2vw);
   }
 }
-
 body main section.description-5 .confix .js-portfolio .js-portfolio-box .js-portfolio-flex-box .js-portfolio-images {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 5rem;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .js-portfolio .js-portfolio-box .js-portfolio-flex-box .js-portfolio-images {
     width: 30%;
   }
 }
-
 body main section.description-5 .confix .js-portfolio .js-portfolio-box .js-portfolio-flex-box .js-portfolio-images img {
   width: 50vw;
   border-radius: 30px;
-  -webkit-box-shadow: 0px 0px 5px #ccc;
-          box-shadow: 0px 0px 5px #ccc;
+  box-shadow: 0px 0px 5px #ccc;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-5 .confix .js-portfolio .js-portfolio-box .js-portfolio-flex-box .js-portfolio-images img {
     width: 100%;
   }
 }
-
 body main section.description-5 .confix .js-portfolio .js-portfolio-box .js-portfolio-flex-box .js-portfolio-images a {
   font-size: 1rem;
   letter-spacing: 1px;
@@ -1846,24 +1470,19 @@ body main section.description-5 .confix .js-portfolio .js-portfolio-box .js-port
   border: 1px solid #000;
   border-radius: 10px;
   color: #000;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 body main section.description-5 .confix .js-portfolio .js-portfolio-box .js-portfolio-flex-box .js-portfolio-images a:hover, body main section.description-5 .confix .js-portfolio .js-portfolio-box .js-portfolio-flex-box .js-portfolio-images a:focus {
   color: #fff;
   background-color: #000;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
-
 body main section.description-7 {
   clear: both;
   overflow: hidden;
   height: 550px;
   padding-bottom: 650px;
 }
-
 body main section.description-7 .confix {
   padding-top: 2%;
   padding-left: 4%;
@@ -1873,33 +1492,27 @@ body main section.description-7 .confix {
   max-width: 1320px;
   margin: 0 auto;
 }
-
 body main section.description-7 .confix h2 {
   text-align: left;
   margin-bottom: 150px;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-7 .confix h2 {
     margin-bottom: 170px;
   }
 }
-
 body main section.description-7 .confix h2 span {
   font-size: 1.6em;
-  background: -webkit-gradient(linear, left top, right top, from(#0dccff), to(#4760ff));
   background: linear-gradient(to right, #0dccff, #4760ff);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
   background-clip: text;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-7 .confix h2 span {
     font-size: 3.5rem;
   }
 }
-
 body main section.description-7 .confix .contact-text {
   font-size: 1rem;
   text-align: center;
@@ -1907,58 +1520,45 @@ body main section.description-7 .confix .contact-text {
   color: #000;
   font-weight: bold;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-7 .confix .contact-text {
     font-size: 1.3rem;
-    -webkit-transform: translateY(-30%);
-            transform: translateY(-30%);
+    transform: translateY(-30%);
   }
 }
-
 body main section.description-7 .confix .contact-text .contact-text-me {
   margin-bottom: 30px;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-7 .confix .contact-text .contact-text-me {
-    -webkit-transform: translate(1.2%);
-            transform: translate(1.2%);
+    transform: translate(1.2%);
   }
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-7 .confix .contact-text .contact-text-me .contact-br {
     display: none;
   }
 }
-
 body main section.description-7 .confix .contact-text .email-address {
   font-size: 1.7rem;
 }
-
 @media screen and (min-width: 768px) {
   body main section.description-7 .confix .contact-text .email-address {
     font-size: 2rem;
   }
 }
-
 body main section.description-7 .confix .contact-text .email-address a {
   color: #000;
 }
-
 body main section.description-7 .confix .contact-text .email-address a:hover {
   color: #ccc;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
-
 body main section.description-7 .confix .contact-text .email-address-smalltext {
   font-size: 0.7em;
   margin-top: 10px;
   color: #666;
 }
-
 body main #up-arrow {
   position: fixed;
   right: 4%;
@@ -1966,51 +1566,35 @@ body main #up-arrow {
   cursor: pointer;
   z-index: 100;
 }
-
 body main #up-arrow img {
   width: 40px;
   height: 80px;
   -webkit-animation: up-arrow 2s linear infinite alternate;
           animation: up-arrow 2s linear infinite alternate;
 }
-
 @-webkit-keyframes up-arrow {
   0% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    transform: translateY(0%);
   }
   100% {
-    -webkit-transform: translateY(-15%);
-            transform: translateY(-15%);
+    transform: translateY(-15%);
   }
 }
-
 @keyframes up-arrow {
   0% {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    transform: translateY(0%);
   }
   100% {
-    -webkit-transform: translateY(-15%);
-            transform: translateY(-15%);
+    transform: translateY(-15%);
   }
 }
-
 body footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 50px;
   background-color: #333;
 }
-
 body footer h2 {
   margin-left: 30px;
 }
-/*# sourceMappingURL=index.css.map */

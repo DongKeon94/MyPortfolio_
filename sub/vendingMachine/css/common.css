@@ -3,8 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
@@ -30,10 +29,8 @@ a {
   text-decoration: none;
   color: #f2f2f2;
 }
-
 a:hover {
   color: #777;
-  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
@@ -45,4 +42,3 @@ aside,
 footer {
   display: block;
 }
-/*# sourceMappingURL=common.css.map */

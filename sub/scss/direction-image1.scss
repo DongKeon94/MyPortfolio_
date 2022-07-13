@@ -17,9 +17,10 @@ body {
     }
     .readability-box {
         position: absolute;
+        top: 10%;
         @include responsive(tablet-size) {
             position: absolute;
-            top: 0%; left: 50%;
+            top: 10%; left: 50%;
             transform: translate(-50%);
         }
         @include responsive(pc-size) {
@@ -54,14 +55,14 @@ body {
                     width: 45%;
                 }
                 &:nth-child(1) {
-                    animation: img-animation1 1.5s ease;
+                    animation: img-animation1 2s ease;
                     @keyframes img-animation1 {
-                        0% {transform: rotate(720deg) scale(0); opacity: 0;}
-                        100% {transform: rotate(0deg) scale(1); opacity: 1;}
+                        0% {transform: scale(0); opacity: 0;}
+                        100% {transform: scale(1); opacity: 1;}
                     }
                 }
                 &:nth-child(2) {
-                    animation: img-animation2 1.5s ease;
+                    animation: img-animation2 2s ease;
                     @keyframes img-animation2 {
                         0% {transform: translate(50%, -50%); opacity: 0;}
                         100% {transform: translate(0%,0%); opacity: 1;}
@@ -69,7 +70,7 @@ body {
                 }
 
                 &:nth-child(3) {
-                    animation: img-animation3 1.5s ease;
+                    animation: img-animation3 2s ease;
                     @keyframes img-animation3 {
                         0% {transform: translate(-50%, 50%); opacity: 0;}
                         100% {transform: translate(0%,0%); opacity: 1;}
@@ -77,10 +78,10 @@ body {
                 }
 
                 &:nth-child(4) {
-                    animation: img-animation4 1.5s ease;
+                    animation: img-animation4 2s ease;
                     @keyframes img-animation4 {
-                        0% {transform: rotate(720deg) scale(0); opacity: 0;}
-                        100% {transform: rotate(0deg) scale(1); opacity: 1;}
+                        0% {transform: scale(0); opacity: 0;}
+                        100% {transform: scale(1); opacity: 1;}
                     }
                 }
             }
