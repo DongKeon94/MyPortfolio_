@@ -1,0 +1,37 @@
+@charset "utf-8";
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR";
+}
+
+html,
+body {
+    font: 16px "맑은 고딕";
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+}
+
+a {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+header,
+nav,
+article,
+aside,
+section,
+footer {
+    display: block;
+}
