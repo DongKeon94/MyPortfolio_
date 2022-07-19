@@ -962,7 +962,7 @@ body {
                         display: block;
                         background: linear-gradient(90deg, #f2e9bb, #f2e9bb);
                         width: 350%;
-                        height: 210vw;
+                        height: 220vw;
                         transform: translateX(-60%) skewY(-10deg);
                         @include responsive(tablet-size) {
                             height: 725px;
@@ -996,12 +996,13 @@ body {
                             }
                         } 
                         .js-portfolio-flex-box {
+                            
                             @include responsive(tablet-size) {
                                 display: flex;
                                 flex-direction: row;
                                 justify-content: space-around;
                                 align-items: center;
-                                transform: translate(2vw);
+                                transform: translate(2vw,-30px);
                             }
                             .js-portfolio-images {
                                 width: 100%;
@@ -1014,7 +1015,12 @@ body {
                                 @include responsive(tablet-size) {
                                     width: 30%;
                                 }
-
+                                h3 {
+                                    font-family: Pretendard;
+                                    font-size: 1.5rem;
+                                    color: #000;
+                                    margin-bottom: 10px;
+                                }
                                 img {
                                     width: 50vw;
                                     border-radius: 30px;
