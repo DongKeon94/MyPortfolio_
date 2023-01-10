@@ -1,0 +1,679 @@
+@charset "utf-8";
+@import "./_mixin";
+
+
+/**************************************************
+   sub_CSS //  about_us
+**************************************************/
+
+.us_section {
+    position: relative;
+    overflow: hidden;
+
+    .us_visual {
+        position: relative;
+        padding: 0 3rem;
+
+        .visual_img {
+            width: 100%;
+            height: 55.4rem;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .txtbox {
+            @include position(left, 50%, top, 50%);
+            text-align: center;
+            
+            p {
+                &.tit {
+                    @include arponaSemiBold();
+                    font-size: 8rem;
+                    line-height: 1.01;
+                    color: #fff;
+                    text-shadow: 0px 0.2rem 0 rgba(19, 19, 9, 0.18);
+                }
+                &.txt {
+                    font-size: 2.4rem;
+                    font-weight: 500;
+                    line-height: 1.46;
+                    letter-spacing: -0.096rem;
+                    text-align: center;
+                    color: #fff;
+                    text-shadow: 0px 0.2rem 0 rgba(19, 19, 9, 0.18);
+                }
+            }
+        }
+    }
+
+    .bg_sec {
+        position: relative;
+
+        .about_bg01 {
+            position: absolute;
+            top: 0;
+            right: 3rem;
+            width: 77.5rem;
+            height: 44.2rem;
+            background-color: rgba(244, 238, 231, 0.6);
+            z-index: -1;
+        }
+    }
+
+    
+
+    .slogan_section02 {
+        position: relative;
+        margin: 0 auto 14rem;
+        padding: 0 9.6rem;
+        width: 100%;
+        // transition: all 3s;
+        .slogan_box {
+            width: 100%;
+            height: 51.1rem;
+            .slogan_bg {
+                width: 100%;
+                height: 100%;
+                background: url(../images/aboutus/slogan.png) no-repeat center/cover;
+                z-index: -1;
+            }
+        }
+
+        .txtbox {
+            @include position(left, 50%, top, 50%);
+            width: 100%;
+            text-align: center;
+            p {
+                &.tit {
+                    font-size: 2.8rem;
+                    font-weight: 500;
+                    line-height: 1.57;
+                    letter-spacing: -0.112rem;
+                    text-align: center;
+                    color: #d3b5a6;
+                }
+                &.txt {
+                    @include arponaSemiBold();
+                    font-size: 7.5rem;
+                    line-height: 1.08;
+                    color: #d6a48b;
+                }
+            }
+        }
+    }
+
+    .bi_section {
+        @include confix_sub();
+        padding: 0rem 3rem 14rem;
+        display: flex;
+        align-items: center;
+        .txtbox {
+            flex: 1;
+            p {
+                &.tit {
+                    @include arponaSemiBold();
+                    font-size: 7rem;
+                    line-height: 1.16;
+                    color: #d6a48b;
+                }
+                &.txt {
+                    font-size: 2.4rem;
+                    font-weight: 300;
+                    line-height: 1.67;
+                    letter-spacing: -0.096rem;
+                    color: #454545;
+                    opacity: 0.8;
+                }
+            }
+            .downloads {
+                a {
+                    margin-right: 1rem;
+                }
+            }
+        }
+        .img {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 50.1rem;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .history_section {
+        background-image: linear-gradient(to right, #ede3de 30%, #f4eee7 20%);
+        .history_con {
+            @include confix_sub();
+            padding: 0 3rem;
+            padding-top: 14rem;
+            height: 75.3rem;
+            display: flex;
+            
+            .m_tit {
+                display: none;
+            }
+
+            .img {
+                flex: 1;
+
+                img {
+                    width: 60.2rem;
+                    height: 48.1rem;
+                }
+            }
+
+            .txtbox {
+                flex: 1;
+                .tit {
+                    @include arponaSemiBold();
+                    font-size: 7rem;
+                    line-height: 1.16;
+                    color: #d6a48b;
+                }
+
+                ul {
+                    li {
+                        display: flex;
+                        gap: 4rem;
+                        p {
+                            position: relative;
+                            font-size: 2.4rem;
+                            line-height: 2.83;
+                            letter-spacing: -0.096rem;
+                            color: #454545;
+                            opacity: 0.8;
+                            &.year {
+                                font-weight: bold;
+                                // @include content(b) {
+
+                                //     display: inline-block;
+                                //     width: 0.6rem;
+                                //     height: 0.6rem;
+                                //     background-color: #d6a48b;
+                                // }
+                                span {
+                                    margin-right: 1.5rem;
+                                    display: inline-block;
+                                    width: 0.6rem;
+                                    height: 0.6rem;
+                                    background-color: #d6a48b;
+                                    vertical-align: middle;
+                                    border-radius: 100%;
+                                    transform: translateY(-0.2rem);
+                                }
+                            }
+                            &.txt {
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+} // us_section
+.con_section {
+    @include confix_sub();
+    padding: 15rem 3rem;
+
+    display: flex;
+    gap: 5rem;
+    .left_box .txtbox .txt,
+    .right_box .txtbox .txt{
+        padding-bottom: 1rem;
+        opacity: 0.8;
+        font-size: 2.2rem;
+        font-weight: 300;
+        line-height: 1.3;
+        letter-spacing: -0.088rem;
+        color: #454545;
+    }
+    .left_box {
+        .img {
+            width: 65rem;
+            height: 46.7rem;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .txtbox {
+            .tit {
+                font-family: 'Nanum Myeongjo', serif;
+                font-size: 6rem;
+                line-height: 1.3;
+                letter-spacing: -.24rem;
+                color: #d6a48b;
+            }
+            .txt {
+                padding: 1rem 0 8rem;
+            }
+        }
+    }
+    .right_box {
+        .img {
+            width: 100%;
+            height: 50.7rem;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .txtbox{
+            margin-top: 7rem;
+        }
+    }
+}// us_section
+
+/**************************************************
+   sub_CSS //  product
+**************************************************/
+.product_wrap {
+    overflow: hidden;
+    .product_sec {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 65rem;
+        padding: 0 3rem;
+    
+        .product_bg {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background-color: rgba(244, 238, 231, 0.6);
+        }
+    
+        .product_con {
+            @include confix_sub();
+            padding: 0 3rem;
+            display: flex;
+            .txtbox {
+                width: 48%;
+                > p {
+                    &.sub_tit {
+                        width: 26.8rem;
+                        height: 2.6rem;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    &.tit {
+                        padding: 2rem 0 3rem;
+                        font-size: 6rem;
+                        font-weight: bold;
+                        line-height: 1.1;
+                        letter-spacing: -0.24rem;
+                        color: #d6a48b;
+                    }
+                    &.txt {
+                        font-size: 2rem;
+                        font-weight: 300;
+                        line-height: 1.7;
+                        letter-spacing: -0.08rem;
+                        opacity: 0.8;
+                        color: #454545;
+                    }
+                }
+                ul {
+                    margin-top: 5rem;
+                    li {
+                        display: flex;
+                        gap: 1rem;
+                        &:last-child {
+                            p.tit {
+                                border-bottom: 1px solid #000;
+                            }
+    
+                            p.txt {
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                            }
+                        }
+                        p {
+                            height: 5rem;
+                            line-height: 5rem;
+                            font-size: 1.8rem;
+                            letter-spacing: -0.072rem;
+                            &.tit {
+                                flex-basis: 10rem;
+                                font-weight: 500;
+                                text-align: center;
+                                color: #5b5b5b;
+                                border-top: 1px solid #000;
+                            }
+    
+                            &.txt {
+                                width: 45.5rem;
+                                padding-left: 2.4rem;
+                                font-weight: normal;
+                                color: #747474;
+                                border-top: 1px solid rgba(0, 0, 0, 0.2);
+                            }
+                        }
+                    }
+                }
+            }
+            .subpro_swiper {
+                position: relative;
+                flex: 1;
+                .swiper-slide {
+                    display: flex;
+                    align-items: center;
+                    .subpro-slide {
+                        img {
+                            width: 54.4rem;
+                            height: 31.9rem;
+                        }
+                    }
+                }
+                .pagination_bullet {
+                    position: absolute;
+                    left: inherit;
+                    bottom: inherit;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: auto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    .swiper-pagination-bullet {
+                        position: relative;
+                        width: 7rem;
+                        height: 7rem;
+                        border-radius: inherit; 
+                        background: #fff;
+                        border: solid 1px #d1d1d1;
+                        opacity: 1;
+                        span {
+                            display: block;
+                            text-indent: -9999rem;
+                            &::after {
+                                content: '';
+                                @include position(left, 50%, top,50%);
+                                width: 5.6rem;
+                                height: 3.3rem;
+                                background: url(../images/product/ico_pc1.png) no-repeat center/ cover;
+                                opacity: 0.6;
+                            }
+                        }
+                        @for $i from 1 to 6 {
+                            &:nth-child(#{$i}) {
+                                span {
+                                    &::after {
+                                        background: url('../images/product/ico_pc' + $i + '.png') no-repeat center/ cover;
+                                    }
+                                }
+                            }
+                        }
+                        &-active{   
+                            border: solid 2px #d6a48b;
+                            span {
+                                &::after {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } // product_sec
+
+    .product_02 {
+        @include confix_sub();
+        padding: 0 3rem;
+        margin-top: 11rem;
+        .img {
+            width: 100%;
+            height: 47.4rem;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .txtbox {
+            position: absolute;
+            top: 50%;
+            left: 15rem;
+            transform: translateY(-50%);
+            .txt {
+                font-size: 2.4rem;
+                font-weight: 300;
+                line-height: 1.54;
+                letter-spacing: -0.096rem;
+                color: #7f6e65;
+            }
+            .tit {
+                margin-top: 2rem;
+                font-size: 7rem;
+                font-weight: bold;
+                line-height: 0.72;
+                letter-spacing: -.283rem;
+                color: #d6a48b;
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .con_section {
+        @include confix_sub();
+        padding: 15rem 3rem;
+    
+        display: flex;
+        gap: 3rem;
+        .left_box .txtbox .txt,
+        .right_box .txtbox .txt{
+            padding-bottom: 1rem;
+            opacity: 0.8;
+            font-size: 2.2rem;
+            font-weight: 300;
+            line-height: 1.82;
+            letter-spacing: -0.088rem;
+            color: #454545;
+        }
+        .left_box .txtbox .sub_tit,
+        .right_box .txtbox .sub_tit{
+            font-size: 2.5rem;
+            font-weight: 500;
+            line-height: 1.6;
+            letter-spacing: -.1rem;
+            color: #8d837b;
+        }
+        .left_box {
+            .img {
+                margin-top: 4rem;
+                width: 65rem;
+                height: 50.7rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .txtbox {
+                .tit {
+                    @include arponaSemiBold();
+                    font-size: 5.5rem;
+                    line-height: 1.47;
+                    letter-spacing: -.24rem;
+                    color: #d6a48b;
+                }
+                .txt {
+                    padding: 0;
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+        .right_box {
+            .img {
+                width: 100%;
+                height: 65.7rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .txtbox{
+                margin-left: 5.5rem;
+                .tit {
+                    font-family: 'Nanum Myeongjo', serif;
+                    font-size: 5.5rem;
+                    line-height: 1.47;
+                    letter-spacing: -.24rem;
+                    color: #d6a48b;
+                }
+                margin-top: 12rem;
+            }
+        }
+    }
+    .con_section_m {
+        display: none
+    }
+    .product_04 {
+        @include confix_sub();
+        padding: 0 3rem;
+        .slogan_box {
+            width: 100%;
+            height: 43.8rem;
+            .slogan_bg {
+                width: 100%;
+                height: 100%;
+                background: url(../images/product/slogan.png) no-repeat center/cover;
+                z-index: -1;
+            }
+        }
+
+        .txtbox {
+            @include position(left, 50%, top, 50%);
+            width: 100%;
+            text-align: center;
+            p {
+                &.tit {
+                    font-family: 'Nanum Myeongjo', serif;
+                    font-size: 5.5rem;
+                    line-height: 1.47;
+                    letter-spacing: -0.22rem;
+                    color: #8d5593;
+                }
+                &.txt {
+                    font-size: 2.2rem;
+                    font-weight: 300;
+                    line-height: 1.5;
+                    letter-spacing: -.088rem;
+                    color: #8d837b;
+                }
+            }
+        }
+    }
+    .bg_sec {
+        position: relative;
+        .product_bg01 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 96rem;
+            background-color: #f4eee7;
+            z-index: -1;
+        }
+    }
+    .product_05 {
+        @include confix_sub();
+        margin-top: 8.5rem;
+        padding: 0 3rem 11rem ;
+        h2 {
+            margin-bottom: 5rem;
+            font-size: 5.5rem;
+            font-weight: bold;
+            line-height: 0.73;
+            letter-spacing: -.22rem;
+            text-align: center;
+            color: #d6a48b;
+        }
+        > ul {
+            border-top: 0.2rem solid #000;
+            > li {
+                display: flex;
+                vertical-align: middle;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                .left_li, .right_li {
+                    flex: 1;
+                    display: flex;
+                    > p {
+                        padding: 2rem 3rem;
+                        opacity: 0.8;
+                        font-size: 2rem;
+                        letter-spacing: -0.08rem;
+                    }
+                    .tit {
+                        flex-basis: 21rem;
+                        font-weight: 500;
+                        color: #232323;
+                        background-color: rgba(0, 0, 0, 0.03);
+                    }
+                    .txt {
+                        flex: 1;
+                        font-weight: 300;
+                        color: #454545;
+                        b {
+                            font-weight: 500;
+                        }
+                        span {
+                            &.line {
+                                margin: 0 1.3rem;
+                                display: inline-block;
+                                width: 0.1rem;
+                                height: 1.9rem;
+                                background-color: rgba(0, 0, 0, 0.2);
+                                transform: translateY(0.2rem);
+                            }
+                        }
+                    }
+                }
+
+                .txtbox {
+                    padding: 2rem 3rem;
+                    flex: 1;
+                    > .tit {
+                        padding-top: 6rem;
+                    }
+                    > li {
+                        display: flex;
+                        p {
+                            font-size: 2rem;
+                            letter-spacing: -0.08rem;
+                            color: #454545;
+                            opacity: 0.8;
+                            line-height: 2;
+                        }
+                        .tit {
+                            flex-basis: 6.2rem;
+                            font-weight: bold;
+                            background-color: transparent;
+                        }
+                        .txt {
+                            font-weight: 300;
+                            margin-left: 1.2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}// product_wrap

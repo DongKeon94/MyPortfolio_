@@ -1,0 +1,247 @@
+@charset "utf-8";
+$url : '../images/';
+
+$browser-context: 10; // 브라우저의 기본 폰트
+
+// @media (max-width: 767.98px) {
+//     html {font-size: 50%;}
+// }
+
+@function rem($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}rem;
+}
+
+
+@function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em;
+  }
+
+/* viewport size */
+$mobile-size: 750; // 미디어 쿼리에 기준이 되는 수치
+
+/* vw 변환 function */
+@function vw($target) {
+  @if type-of($target) == number {
+    @return (($target * 100) / $mobile-size) * 1vw;
+  } @else if type-of($target) == list {
+    $vw: ();
+    @each $value in $target {
+      @if type-of($value) == number {
+        $vw: append($vw, (($value * 100) / $mobile-size) * 1vw);
+      } @else if type-of($value) == string {
+        $vw: append($vw, $value);
+      }
+    }
+    @return $vw;
+  } @else {
+    @return $target;
+  }
+}
+
+
+@mixin ellipsis($lines: 1) { // 인자 값의 기본 값은 1
+    @if ($lines == 1) {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    } @else {
+      display: -webkit-box;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: $lines;
+      -webkit-box-orient: vertical;
+    }
+}
+
+
+$sqrt_2: 1.41421356237;
+@mixin close($size: 21px, $thick: 2px, $color: #000, $padding: 0, $position: relative) {
+    position: $position;
+    display: inline-block;
+    width: $size + $padding*2;
+    height: $size + $padding*2;
+    &:before, &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: round($size*$sqrt_2 - $thick);
+        height: $thick;
+        background-color: $color;
+    }
+    &:before {
+        -webkit-transform: translate(-50%, -50%) rotate(45deg);
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:after {
+        -webkit-transform: translate(-50%, -50%) rotate(135deg);
+        transform: translate(-50%, -50%) rotate(135deg);
+    }
+}
+
+
+@mixin bar($background: #000,$height: 10px,$width: 1px,$position:absolute) {
+    content:'';
+    display: block;
+    position: $position;
+    width:$width;
+    height:$height;
+    background: $background;
+}
+
+
+@mixin scrollbar($width: 4px,$bg:#999,$barbg:#000) {
+&::-webkit-scrollbar { width: $width; }
+&::-webkit-scrollbar-track { background: transparent; }
+&::-webkit-scrollbar-track-piece { background: $bg; }
+&::-webkit-scrollbar-thumb { background: $barbg; opacity:0.5;}
+
+}
+
+
+@mixin centerCenter() {
+   position:absolute;
+   top:50%;
+   left:50%;
+   transform: translate(-50%, -50%);
+}
+
+@mixin center() {
+    position:absolute;
+    left:50%;
+    transform: translateX(-50%);
+ }
+ 
+
+ @mixin icon-bg($width: 16px,$height: 16px, $iconName:image) {
+  width:$width;
+  height:$height;
+  vertical-align: top;
+  background-position:center;
+  background-repeat: no-repeat;
+  background-size:$width auto;
+  background-image:url('../images/#{$iconName}.png');
+}
+
+@mixin confix {
+  position: relative;
+  width: 100%;
+  max-width: 149rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+}
+
+@mixin confix_sub {
+  position: relative;
+  width: 100%;
+  max-width: 146rem;
+  margin: 0 auto;
+}
+
+@mixin mConfix {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 5rem;
+}
+
+// @mixin padding-set {
+
+// }
+
+@mixin position($x, $xvalue, $y, $yvalue) {
+  position: absolute;
+  #{$x}:$xvalue;
+  #{$y}:$yvalue;
+  @if $xvalue == 50% and $yvalue == 50% {
+      transform: translate(-50%, -50%);
+  }@else if $xvalue == 50% {
+      transform: translateX(-50%);
+  }@else if $yvalue == 50% {
+      transform: translateY(-50%);
+  }
+}
+
+@mixin content($dir) {
+  @if $dir == 'b' or $dir == 'before' {
+      &::before {
+          content: '';
+          @content;
+      }
+  }@else if $dir == 'a' or $dir == 'after' {
+      &::after {
+          content: '';
+          @content;
+      }
+  }
+}
+
+@mixin bg($file, $x:null, $y:null, $bg:null, $w:null, $h:null) {
+  background: url(#{$url}#{$file}) no-repeat $x $y $bg;
+  background-size: $w $h;
+}
+
+
+@mixin arponaRegular {
+  font-family: 'arpona', serif;
+  font-weight: 400;
+}
+
+@mixin arponaSemiBold {
+  font-family: 'arpona', serif;
+  font-weight: 600;
+}
+
+
+// 스크롤바 디자인
+// scroll(방향, 크기, 색)
+@mixin scroll($dir, $w, $bg) {
+  // 바깥 스크롤바 (멈춰있는 영역)
+  &::-webkit-scrollbar { // 익스플로어에서는 적용 안된다.
+      @if $dir == "r" or $dir == "right" {
+          width: $w;
+      } @else if $dir == 'b' or $dir == 'bottom' {
+          height: $w;
+      }
+      background-color: transparent;
+  }
+
+  // 안쪽 스크롤바 (움직이는영역)
+  &::-webkit-scrollbar-thumb {
+      width: $w;
+      background-color: $bg;
+      border-radius: $w;
+  }
+
+  // 바깥스크롤바의 배경색
+  // &::-webkit-scrollbar-track {
+  //     background-color: $greyd7;
+  // }
+  &::-webkit-scrollbar-track {
+      background-color: transparent;
+  }
+
+}  
+
+// 구분자 리스트
+// 선/배경 , 가로, 세로, 좌우여백, 배경 
+@mixin bar($method, $w, $h, $margin, $bg) {
+  display:flex;
+  > li {
+      display: flex;
+      align-items: center;
+      + li {
+          &::before {
+            content: '';
+            margin:0 $margin;
+            width: $w;
+            height: $h;
+
+            @if $method == 'l' or $method == 'line' {
+              background-color: $bg;
+            }
+          }
+      }
+  }
+}

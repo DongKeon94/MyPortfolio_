@@ -1,0 +1,687 @@
+@charset "utf-8";
+@import "./_mixin";
+
+/**************************************************
+   sub_CSS //  about_us
+**************************************************/
+.dim {
+    display: none;
+}
+
+.us_section {
+    position: relative;
+    overflow: hidden;
+
+    .us_visual {
+        @include mConfix();
+        padding: 0 3rem;
+        .visual_img {
+            width: 100%;
+            height: 94.6rem;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .txtbox {
+            @include position(left, 50%, top, 50%);
+            padding: 0 3rem;
+            width: 100%;
+            text-align: center;
+            p {
+                &.tit {
+                    @include arponaSemiBold();
+                    font-size: 7.5rem;
+                    line-height: 1.08;
+                    color: #fff;
+                    text-shadow: 0px 0.2rem 0 rgba(19, 19, 9, 0.18);
+                }
+                &.txt {
+                    font-size: 3rem;
+                    font-weight: 500;
+                    line-height: 1.5;
+                    letter-spacing: -0.12rem;
+                    text-align: center;
+                    color: #fff;
+                    text-shadow: 0px 0.2rem 0 rgba(19, 19, 9, 0.18);
+                }
+            }
+        }
+    }
+
+    .bg_sec {
+        position: relative;
+
+        .about_bg01 {
+            position: absolute;
+            top: 0;
+            right: 3rem;
+            width: 38.4rem;
+            height: 75.7rem;
+            background-color: rgba(244, 238, 231, 0.6);
+            z-index: -1;
+        }
+    }
+
+    .con_section {
+        @include mConfix();
+        padding: 12rem 5rem;
+
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+
+        .m_txtbox {
+            .tit {
+                font-family: 'Nanum Myeongjo', serif;
+                padding-bottom: 1rem;
+                font-size: 6.5rem;
+                line-height: 1.29;
+                letter-spacing: -0.26rem;
+                color: #cea68f;
+            }
+        }
+
+        .m_txtbox .txt,
+        .right_box .txtbox .txt{
+            font-size: 3rem;
+            font-weight: 300;
+            line-height: 1.5;
+            letter-spacing: -0.12rem;
+            color: #454545;
+            opacity: 0.8;
+        }
+        .left_box {
+            order: 3;
+            .img {
+                width: 100%;
+                // height: 46.7rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .right_box {
+            .img {
+                width: 100%;
+                // height: 50.7rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .txtbox{
+                margin-top: 8rem;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .slogan_section02 {
+        position: relative;
+        margin: 0 auto 14rem;
+        padding: 0 5rem;
+        width: 100%;
+        
+        .slogan_box {
+            width: 100%;
+            height: 38rem;
+            .slogan_bg {
+                width: 100%;
+                height: 100%;
+                background: url(../images/aboutus/slogan.png) no-repeat center/cover;
+                z-index: -1;
+            }
+        }
+
+        .txtbox {
+            @include position(left, 50%, top, 30%);
+            width: 100%;
+            text-align: center;
+            padding: 0 3rem;
+            p {
+                &.tit {
+                    font-size: 3rem;
+                    font-weight: 500;
+                    line-height: 1.8;
+                    letter-spacing: -0.12rem;
+                    text-align: center;
+                    color: #ceb6a8;
+                }
+                &.txt {
+                    @include arponaSemiBold();
+                    font-size: 5.1rem;
+                    line-height: 1.08;
+                    color: #cea68f;
+                }
+            }
+        }
+    }
+
+    .bi_section {
+        @include mConfix();
+        padding-bottom: 11rem;
+        display: flex;
+        flex-direction: column;
+        gap: 5rem;
+        .txtbox {
+            flex: 1;
+            p {
+                &.tit {
+                    @include arponaSemiBold();
+                    font-size: 6.5rem;
+                    line-height: 1.25;
+                    color: #d6a48b;
+                }
+                &.txt {
+                    font-size: 3rem;
+                    font-weight: 300;
+                    line-height: 1.5;
+                    letter-spacing: -0.12rem;
+                    color: #454545;
+                    opacity: 0.8;
+                }
+            }
+            .downloads {
+                display: none;
+            }
+        }
+        .img {
+            flex: 1;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                // height: 50.1rem;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .history_section {
+        background-color: #f3eee8;
+        .history_con {
+            @include mConfix();
+            padding: 9rem 5rem 13rem;
+            display: flex;
+            flex-direction: column;
+
+            .m_tit {
+                display: block;
+                @include arponaSemiBold();
+                font-size: 7rem;
+                line-height: 1.16;
+                color: #d6a48b;
+            }
+
+            .img {
+                flex: 1;
+                padding: 4rem 0;
+
+                img {
+                    width: 100%;
+                    // height: 53.4rem;
+                }
+            }
+
+            .txtbox {
+                flex: 1;
+
+                ul {
+                    li {
+                        margin-bottom: 1rem;
+                        p {
+                            font-size: 3.5rem;
+                            letter-spacing: -0.14rem;
+                            color: #454545;
+                            opacity: 0.8;
+                            &.year {
+                                font-weight: bold;
+                                span {
+                                    margin-right: 1.5rem;
+                                    display: inline-block;
+                                    width: 0.6rem;
+                                    height: 0.6rem;
+                                    background-color: #d6a48b;
+                                    vertical-align: middle;
+                                    border-radius: 100%;
+                                    transform: translateY(-0.2rem);
+                                }
+                            }
+                            &.txt {
+                                font-size: 3rem;
+                                margin-left: 2.1rem;
+                                line-height: 1.2;
+                                letter-spacing: -0.12rem;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+} // us_section
+
+/**************************************************
+   sub_CSS //  product
+**************************************************/
+.product_wrap {
+    overflow: hidden;
+    .product_sec {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: auto;
+    
+        .product_bg {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            background-color: rgba(244, 238, 231, 0.6);
+        }
+    
+        .product_con {
+            @include mConfix();
+            padding-top: 10rem;
+            display: flex;
+            flex-direction: column;
+            gap: 7rem;
+            .txtbox {
+                order: 3;
+            }
+            .txtbox, .m_txtbox {
+
+                flex: 1;
+                > p {
+                    &.sub_tit {
+                        width: 26.8rem;
+                        height: 2.6rem;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                    &.tit {
+                        padding: 2rem 0 3rem;
+                        font-size: 6.6rem;
+                        font-weight: bold;
+                        line-height: 1.02;
+                        letter-spacing: -0.26rem;
+                        color: #d6a48b;
+                    }
+                    &.txt {
+                        font-size: 3rem;
+                        font-weight: 300;
+                        line-height: 1.5;
+                        letter-spacing: -0.12rem;
+                        opacity: 0.8;
+                        color: #454545;
+                    }
+                }
+                ul {
+                    padding-bottom: 10rem;
+                    li {
+                        display: flex;
+                        gap: 1rem;
+                        &:last-child {
+                            p.tit {
+                                border-bottom: 1px solid #000;
+                            }
+    
+                            p.txt {
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                            }
+                        }
+                        p {
+                            padding: 2rem 0;
+                            font-size: 3rem;
+                            letter-spacing: -0.12rem;
+                            &.tit {
+                                padding: 4rem 0;
+                                flex-basis: 15rem;
+                                font-weight: 500;
+                                text-align: center;
+                                color: #5b5b5b;
+                                border-top: 1px solid #000;
+                            }
+    
+                            &.txt {
+                                flex: 1;
+                                padding-left: 2.5rem;
+                                font-weight: normal;
+                                color: #747474;
+                                border-top: 1px solid rgba(0, 0, 0, 0.2);
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .subpro_swiper {
+                position: relative;
+                width: 100%;
+                height: 60rem;
+                .swiper-slide {
+                    display: flex;
+                    padding-top: 5rem;
+                    justify-content: center;
+                    .subpro-slide {
+                        img {
+                            width: 54.4rem;
+                            height: 31.9rem;
+                        }
+                    }
+                }
+
+                .pagination_bullet {
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    .swiper-pagination-bullet {
+                        position: relative;
+                        width: 14.688vw;
+                        height: 14.688vw;
+                        border-radius: inherit; 
+                        background: #fff;
+                        border: solid 1px #d1d1d1;
+                        opacity: 1;
+                        span {
+                            display: block;
+                            text-indent: -9999rem;
+                            &::after {
+                                content: '';
+                                @include position(left, 50%, top,50%);
+                                width: 11.587vw;
+                                height: 6.856vw;
+                                background: url(../images/product/ico_m1.png) no-repeat center/ contain;
+                                opacity: 0.6;
+                            }
+                        }
+                        @for $i from 1 to 6 {
+                            &:nth-child(#{$i}) {
+                                span {
+                                    &::after {
+                                        background: url('../images/product/ico_m' + $i + '.png') no-repeat center/ cover;
+                                    }
+                                }
+                            }
+                        }
+                        &-active{   
+                            border: solid 2px #d6a48b;
+                            span {
+                                &::after {
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    } // product_sec
+
+    .product_02 {
+        @include mConfix();
+        margin-top: 10rem;
+        .img {
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .txtbox {
+            position: absolute;
+            top: 14rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            text-align: center;
+            padding: 0 5rem;
+            .txt {
+                font-size: 2.8rem;
+                font-weight: 300;
+                line-height: 1.5;
+                letter-spacing: -0.12rem;
+                color: #7f6e65;
+            }
+            .tit {
+                margin-top: 2rem;
+                font-size: 7rem;
+                font-weight: bold;
+                line-height: 0.72;
+                letter-spacing: -.283rem;
+                color: #d6a48b;
+                span {
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+
+    .con_section {
+        display: none;
+    }
+
+    .con_section_m {
+        @include mConfix();
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        gap: 12rem;
+        .left_box .txtbox .txt,
+        .right_box .txtbox .txt{
+            padding-bottom: 1rem;
+            opacity: 0.8;
+            font-size: 3rem;
+            font-weight: 300;
+            line-height: 1.5;
+            letter-spacing: -0.12rem;
+            color: #454545;
+        }
+        .left_box .txtbox .sub_tit,
+        .right_box .txtbox .sub_tit{
+            padding-bottom: 1.5rem;
+            font-size: 3rem;
+            font-weight: 500;
+            line-height: 1.33;
+            letter-spacing: -.12rem;
+            color: #8d837b;
+        }
+        .left_box {
+            .img {
+                width: 100%;
+                height: 100%;
+                margin: 2rem 0 5rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .txtbox {
+                .tit {
+                    @include arponaSemiBold();
+                    font-size: 6.5rem;
+                    line-height: 1.12;
+                    color: #d6a48b;
+                }
+                .txt {
+                    padding: 0;
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+        .right_box {
+            .img {
+                width: 100%;
+                height: 100%;
+                margin: 2rem 0 5rem;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            .txtbox{
+                .tit {
+                    font-family: 'Nanum Myeongjo', serif;
+                    font-size: 6.5rem;
+                    line-height: 1.25;
+                    letter-spacing: -.26rem;
+                    color: #d6a48b;
+                }
+            }
+        }
+    }
+
+    .product_04 {
+        @include mConfix();
+        margin-top: 12rem;
+        
+        .slogan_box {
+            width: 100%;
+            height: 67.6rem;
+            .slogan_bg {
+                width: 100%;
+                height: 100%;
+                background: url(../images/product/m_slogan.png) no-repeat center/cover;
+                z-index: -1;
+            }
+        }
+
+        .txtbox {
+            @include position(left, 50%, top, 50%);
+            width: 100%;
+            text-align: center;
+            padding: 0 5rem;
+            p {
+                &.tit {
+                    font-family: 'Nanum Myeongjo', serif;
+                    font-size: 5rem;
+                    line-height: 1.47;
+                    letter-spacing: -0.22rem;
+                    color: #8d5593;
+                }
+                &.txt {
+                    font-size: 2.6rem;
+                    font-weight: 300;
+                    line-height: 1.5;
+                    letter-spacing: -.18rem;
+                    color: #8d837b;
+                }
+            }
+        }
+    }
+
+    .bg_sec {
+        position: relative;
+        .product_bg01 {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 115%;
+            background-color: #f4eee7;
+            z-index: -1;
+        }
+    }
+    .product_05 {
+        @include mConfix();
+        padding-top: 10rem;
+        padding-bottom: 13rem;
+
+        h2 {
+            margin-bottom: 5rem;
+            font-size: 6.5rem;
+            font-weight: bold;
+            line-height: 0.62;
+            letter-spacing: -.26rem;
+            text-align: center;
+            color: #d6a48b;
+        }
+        > ul {
+            border-top: 0.2rem solid #000;
+            > li {
+                display: flex;
+                flex-direction: column;
+                .left_li, .right_li {
+                    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+                    flex: 1;
+                    display: flex;
+                    > p {
+                        padding: 2rem 3rem;
+                        opacity: 0.8;
+                        font-size: 3.67197vw;
+                        letter-spacing: -0.12rem;
+                    }
+                    .tit {
+                        flex-basis: 34.5vw;
+                        font-weight: 500;
+                        color: #232323;
+                        background-color: rgba(0, 0, 0, 0.03);
+                    }
+                    .txt {
+                        flex: 1;
+                        font-weight: 300;
+                        color: #454545;
+                        i {
+                            font-weight: normal;
+                        }
+                        b {
+                            display: inline-block;
+                            font-weight: 500;
+                            &.top {
+                                margin-top: 1.5rem;
+                            }
+                        }
+                        span {
+                            display: none
+                        }
+                    }
+                }
+
+                .txtbox {
+                    padding: 2rem 3rem;
+                    flex: 1;
+                    > .tit {
+                        padding-top: 6rem;
+                    }
+                    > li {
+                        display: flex;
+                        flex-direction: column;
+                        p {
+                            font-size: 3.67197vw;
+                            letter-spacing: -0.12rem;
+                            color: #454545;
+                            opacity: 0.8;
+                            line-height: 1.5;
+                        }
+                        .tit {
+                            flex-basis: 4.2rem;
+                            font-weight: bold;
+                            background-color: transparent;
+                        }
+                        .txt {
+                            font-weight: 300;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}// product_wrap
